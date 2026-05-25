@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -19,61 +19,12 @@
 <link rel="stylesheet" href="css/footer.css">
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/responsive.css">
-<style>
-.program-detail{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-16);align-items:center;padding-block:var(--sp-20);border-bottom:1px solid var(--clr-border-light)}
-.program-detail:last-child{border-bottom:none}
-.program-detail--reverse .program-detail__visual{order:-1}
-.program-detail__visual img{width:100%;height:420px;object-fit:cover;border-radius:var(--radius-2xl);box-shadow:var(--shadow-xl)}
-.program-detail__tag{display:inline-block;background:rgba(61,26,95,.08);color:var(--clr-primary);font-size:var(--fs-xs);font-weight:var(--fw-semi);padding:4px var(--sp-4);border-radius:var(--radius-full);letter-spacing:.08em;text-transform:uppercase;margin-bottom:var(--sp-4)}
-.program-detail__title{font-size:clamp(1.75rem,3vw,2.5rem);color:var(--clr-primary);margin-bottom:var(--sp-2)}
-.program-detail__subtitle{font-family:var(--font-accent);font-style:italic;font-size:var(--fs-xl);color:var(--clr-accent);margin-bottom:var(--sp-5)}
-.program-detail__desc{font-size:var(--fs-md);color:var(--clr-text-muted);line-height:1.75;margin-bottom:var(--sp-6)}
-.program-detail__outcomes{display:flex;flex-direction:column;gap:var(--sp-3);margin-bottom:var(--sp-8)}
-.program-outcome{display:flex;align-items:flex-start;gap:var(--sp-3);font-size:var(--fs-sm);color:var(--clr-text-muted)}
-.program-outcome::before{content:"";color:var(--clr-accent);font-weight:700;flex-shrink:0;margin-top:1px}
-.program-meta-row{display:flex;flex-wrap:wrap;gap:var(--sp-4);margin-bottom:var(--sp-8)}
-.program-meta-pill{display:flex;align-items:center;gap:var(--sp-2);background:var(--clr-bg);border:1px solid var(--clr-border);border-radius:var(--radius-full);padding:var(--sp-2) var(--sp-4);font-size:var(--fs-xs);font-weight:var(--fw-semi);color:var(--clr-text-muted)}
-.program-detail__actions{display:flex;flex-wrap:wrap;gap:var(--sp-3)}
-.filter-bar{display:flex;flex-wrap:wrap;gap:var(--sp-3);justify-content:center;margin-bottom:var(--sp-12)}
-.filter-btn{padding:var(--sp-2) var(--sp-5);border-radius:var(--radius-full);border:1.5px solid var(--clr-border);background:var(--clr-surface);font-size:var(--fs-sm);font-weight:var(--fw-medium);color:var(--clr-text-muted);cursor:pointer;transition:var(--transition-fast)}
-.filter-btn:hover,.filter-btn.active{background:var(--clr-primary);border-color:var(--clr-primary);color:var(--clr-white)}
-@media(max-width:768px){
-  .program-detail{grid-template-columns:1fr;gap:var(--sp-8);padding-block:var(--sp-12)}
-  .program-detail--reverse .program-detail__visual{order:0}
-  .program-detail__visual img{height:280px}
-}
-</style>
+<link rel="stylesheet" href="css/pages/programs.css">
+<script src="js/components.js"></script>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<header id="navbar" class="navbar navbar--solid" role="banner">
-  <div class="navbar__inner">
-    <a href="index.html" class="navbar__logo" aria-label="Nivam Home">
-      <img src="assets/images/logo.png" alt="Nivam Logo" class="navbar__logo-img">
-      
-    </a>
-    <nav class="navbar__nav" aria-label="Primary navigation">
-      <a href="index.html" class="navbar__link">Home</a>
-      <a href="about.html" class="navbar__link">About</a>
-      <a href="programs.html" class="navbar__link active">Programs</a>
-      <a href="workshops.html" class="navbar__link">Workshops</a>
-      <a href="contact.html" class="navbar__link">Contact</a>
-    </nav>
-    <div class="navbar__cta"><a href="book.html" class="btn btn--primary btn--sm">Book a Call</a></div>
-    <button id="navbar-hamburger" class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-mobile-menu">
-      <span class="hamburger-bar"></span><span class="hamburger-bar"></span><span class="hamburger-bar"></span>
-    </button>
-  </div>
-</header>
-<div id="navbar-mobile-menu" class="navbar__mobile-menu">
-  <a href="index.html" class="navbar__mobile-link">Home</a>
-  <a href="about.html" class="navbar__mobile-link">About</a>
-  <a href="programs.html" class="navbar__mobile-link active">Programs</a>
-  <a href="workshops.html" class="navbar__mobile-link">Workshops</a>
-  <a href="contact.html" class="navbar__mobile-link">Contact</a>
-  <div class="navbar__mobile-cta"><a href="book.html" class="btn btn--primary btn--full">Book a Free Call</a></div>
-</div>
+<site-navbar page="programs"></site-navbar>
 
 <!-- PAGE HEADER -->
 <div class="page-header">
@@ -300,83 +251,13 @@
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer__main">
-      <div class="footer__brand">
-        <a href="index.html" class="footer__logo">
-          <img src="assets/images/logo.png" alt="Nivam" class="footer__logo-img">
-          
-        </a>
-        <p class="footer__desc" style="margin-bottom: 0.5rem; font-weight: 600;">NIVAM — Guiding Lives Towards Light</p>
-        <p class="footer__desc">Empowering transformation through wisdom, awareness, and conscious growth.</p>
-        <div class="footer__socials">
-          <a href="#" class="footer__social-link" aria-label="Instagram"><i data-lucide="instagram" class="lucide-icon"></i></a>
-          <a href="#" class="footer__social-link" aria-label="Facebook"><i data-lucide="facebook" class="lucide-icon"></i></a>
-          <a href="#" class="footer__social-link" aria-label="YouTube"><i data-lucide="youtube" class="lucide-icon"></i></a>
-        </div>
-      </div>
-      <div class="footer__col">
-        <h3 class="footer__col-title">Programs</h3>
-        <ul class="footer__links">
-          <li><a href="#being-your-best" class="footer__link">Being Your Best</a></li>
-          <li><a href="#rising-leaders" class="footer__link">Rising Leaders</a></li>
-          <li><a href="#parvarish" class="footer__link">Parvarish</a></li>
-          <li><a href="#sambandh-hi-sukh" class="footer__link">Sambandh Hi Sukh</a></li>
-          <li><a href="#super-mom" class="footer__link">Super Mom</a></li>
-          <li><a href="#academic-excellence" class="footer__link">Academic Excellence</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h3 class="footer__col-title">Company</h3>
-        <ul class="footer__links">
-          <li><a href="about.html" class="footer__link">About Us</a></li>
-          <li><a href="workshops.html" class="footer__link">Live Workshops</a></li>
-          <li><a href="book.html" class="footer__link">Book a Call</a></li>
-          <li><a href="contact.html" class="footer__link">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h3 class="footer__col-title">Get in Touch</h3>
-        <div class="footer__contact-item"><span class="footer__contact-icon"><i data-lucide="mail" class="lucide-icon"></i></span><a href="mailto:hello@nivam.in" class="footer__contact-link">hello@nivam.in</a></div>
-        <div class="footer__contact-item"><span class="footer__contact-icon"><i data-lucide="phone" class="lucide-icon"></i></span><a href="tel:+919876543210" class="footer__contact-link">+91 98765 43210</a></div>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <p class="footer__copy">© 2025 Nivam. All rights reserved.</p>
-      <div class="footer__legal-links"><a href="privacy.html" class="footer__legal-link">Privacy</a><a href="terms.html" class="footer__legal-link">Terms</a></div>
-    </div>
-  </div>
-</footer>
-
-<button id="whatsapp-float" class="whatsapp-float" aria-label="Chat on WhatsApp">
-  <span style="font-size:1.75rem"><i data-lucide="message-circle" class="lucide-icon"></i></span>
-  <span class="whatsapp-float__tooltip">Chat with us!</span>
-</button>
+<site-footer></site-footer>
 
 <script src="js/navbar.js"></script>
 <script src="js/whatsapp.js"></script>
 <script src="js/main.js"></script>
-<script>
-// Filter functionality
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const filter = btn.dataset.filter;
-    document.querySelectorAll('.program-detail').forEach(card => {
-      const cat = card.dataset.category;
-      card.style.display = (filter === 'all' || cat === filter) ? '' : 'none';
-    });
-  });
-});
-// Read URL param for direct scroll
-const hash = window.location.hash;
-if (hash) { setTimeout(() => document.querySelector(hash)?.scrollIntoView({behavior:'smooth', block:'start'}), 400); }
-</script>
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>lucide.createIcons();</script>
+<script src="js/pages/programs.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -18,36 +18,12 @@
 <link rel="stylesheet" href="css/footer.css">
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/responsive.css">
-<style>
-.legal-body{max-width:760px;margin-inline:auto}
-.legal-body h2{font-size:var(--fs-xl);color:var(--clr-primary);margin:var(--sp-10) 0 var(--sp-4);padding-top:var(--sp-4);border-top:1px solid var(--clr-border-light)}
-.legal-body h2:first-of-type{margin-top:0;border-top:none;padding-top:0}
-.legal-body p,.legal-body li{font-size:var(--fs-md);color:var(--clr-text-muted);line-height:1.8;margin-bottom:var(--sp-4)}
-.legal-body ul{list-style:disc;padding-left:var(--sp-6)}
-.legal-body li{margin-bottom:var(--sp-2)}
-.legal-body a{color:var(--clr-primary);text-decoration:underline}
-.legal-meta{font-size:var(--fs-sm);color:var(--clr-text-light);margin-bottom:var(--sp-8);padding-bottom:var(--sp-6);border-bottom:1px solid var(--clr-border-light)}
-</style>
+<link rel="stylesheet" href="css/pages/legal.css">
+<script src="js/components.js"></script>
 </head>
 <body>
-<header id="navbar" class="navbar navbar--solid" role="banner">
-  <div class="navbar__inner">
-    <a href="index.html" class="navbar__logo"><img src="assets/images/logo.png" alt="Nivam Logo" class="navbar__logo-img"></a>
-    <nav class="navbar__nav" aria-label="Primary navigation">
-      <a href="index.html" class="navbar__link">Home</a>
-      <a href="about.html" class="navbar__link">About</a>
-      <a href="programs.html" class="navbar__link">Programs</a>
-      <a href="workshops.html" class="navbar__link">Workshops</a>
-      <a href="contact.html" class="navbar__link">Contact</a>
-    </nav>
-    <div class="navbar__cta"><a href="book.html" class="btn btn--primary btn--sm">Book a Call</a></div>
-    <button id="navbar-hamburger" class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-mobile-menu"><span class="hamburger-bar"></span><span class="hamburger-bar"></span><span class="hamburger-bar"></span></button>
-  </div>
-</header>
-<div id="navbar-mobile-menu" class="navbar__mobile-menu">
-  <a href="index.html" class="navbar__mobile-link">Home</a><a href="about.html" class="navbar__mobile-link">About</a><a href="programs.html" class="navbar__mobile-link">Programs</a><a href="workshops.html" class="navbar__mobile-link">Workshops</a><a href="contact.html" class="navbar__mobile-link">Contact</a>
-  <div class="navbar__mobile-cta"><a href="book.html" class="btn btn--primary btn--full">Book a Free Call</a></div>
-</div>
+
+<site-navbar page=""></site-navbar>
 
 <div class="page-header">
   <div class="container">
@@ -102,7 +78,7 @@
         <li>Withdraw consent for marketing communications at any time.</li>
         <li>Lodge a complaint with the relevant data protection authority.</li>
       </ul>
-      <p>To exercise any of these rights, contact us at <a href="mailto:hello@nivam.in">hello@nivam.in</a>.</p>
+      <p>To exercise any of these rights, contact us at <a href="mailto:nivamlifeconsultant@gmail.com">nivamlifeconsultant@gmail.com</a>.</p>
 
       <h2>8. Cookies</h2>
       <p>Our website uses minimal cookies for functionality and analytics. You can disable cookies in your browser settings. Disabling cookies may affect some website features.</p>
@@ -115,26 +91,18 @@
 
       <h2>11. Contact Us</h2>
       <p>If you have questions about this Privacy Policy, please contact us at:<br>
-      <i data-lucide="mail" class="lucide-icon"></i> <a href="mailto:hello@nivam.in">hello@nivam.in</a><br>
-      <i data-lucide="phone" class="lucide-icon"></i> <a href="tel:+919876543210">+91 98765 43210</a><br>
+      <i data-lucide="mail" class="lucide-icon"></i> <a href="mailto:nivamlifeconsultant@gmail.com">nivamlifeconsultant@gmail.com</a><br>
+      <i data-lucide="phone" class="lucide-icon"></i> <a href="tel:+918866067671">+91 8866067671</a><br>
       <i data-lucide="map-pin" class="lucide-icon"></i> Mumbai, India</p>
     </div>
   </div>
 </section>
 
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer__bottom" style="padding-top:var(--sp-8)">
-      <p class="footer__copy">© 2025 Nivam. All rights reserved.</p>
-      <div class="footer__legal-links"><a href="privacy.html" class="footer__legal-link">Privacy</a><a href="terms.html" class="footer__legal-link">Terms</a></div>
-    </div>
-  </div>
-</footer>
+<site-footer></site-footer>
 
 <script src="js/navbar.js"></script>
 <script src="js/main.js"></script>
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>lucide.createIcons();</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -20,53 +20,12 @@
 <link rel="stylesheet" href="css/footer.css">
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/responsive.css">
-<style>
-.contact-layout{display:grid;grid-template-columns:1fr 1.3fr;gap:var(--sp-12);align-items:start}
-.contact-methods{display:flex;flex-direction:column;gap:var(--sp-4);margin-bottom:var(--sp-8)}
-.contact-method{display:flex;align-items:center;gap:var(--sp-4);padding:var(--sp-5);background:var(--clr-surface);border:1px solid var(--clr-border-light);border-radius:var(--radius-xl);box-shadow:var(--shadow-sm);transition:var(--transition-base)}
-.contact-method:hover{box-shadow:var(--shadow-md);transform:translateX(4px)}
-.contact-method__icon{width:52px;height:52px;border-radius:var(--radius-md);background:var(--grad-primary);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0}
-.contact-method__label{font-size:var(--fs-xs);font-weight:var(--fw-semi);letter-spacing:.08em;text-transform:uppercase;color:var(--clr-accent);margin-bottom:2px}
-.contact-method__value{font-size:var(--fs-md);font-weight:var(--fw-semi);color:var(--clr-primary)}
-.contact-method__sub{font-size:var(--fs-xs);color:var(--clr-text-muted);margin-top:2px}
-.contact-hours{background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-xl);padding:var(--sp-6)}
-.contact-hours__title{font-weight:var(--fw-bold);color:var(--clr-primary);margin-bottom:var(--sp-4)}
-.hours-row{display:flex;justify-content:space-between;font-size:var(--fs-sm);color:var(--clr-text-muted);padding-block:var(--sp-2);border-bottom:1px solid var(--clr-border-light)}
-.hours-row:last-child{border-bottom:none}
-.hours-row strong{color:var(--clr-text);font-weight:var(--fw-medium)}
-@media(max-width:900px){.contact-layout{grid-template-columns:1fr}}
-</style>
+<link rel="stylesheet" href="css/pages/contact.css">
+<script src="js/components.js"></script>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<header id="navbar" class="navbar navbar--solid" role="banner">
-  <div class="navbar__inner">
-    <a href="index.html" class="navbar__logo" aria-label="Nivam Home">
-      <img src="assets/images/logo.png" alt="Nivam Logo" class="navbar__logo-img">
-      
-    </a>
-    <nav class="navbar__nav" aria-label="Primary navigation">
-      <a href="index.html" class="navbar__link">Home</a>
-      <a href="about.html" class="navbar__link">About</a>
-      <a href="programs.html" class="navbar__link">Programs</a>
-      <a href="workshops.html" class="navbar__link">Workshops</a>
-      <a href="contact.html" class="navbar__link active">Contact</a>
-    </nav>
-    <div class="navbar__cta"><a href="book.html" class="btn btn--primary btn--sm">Book a Call</a></div>
-    <button id="navbar-hamburger" class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-mobile-menu">
-      <span class="hamburger-bar"></span><span class="hamburger-bar"></span><span class="hamburger-bar"></span>
-    </button>
-  </div>
-</header>
-<div id="navbar-mobile-menu" class="navbar__mobile-menu">
-  <a href="index.html" class="navbar__mobile-link">Home</a>
-  <a href="about.html" class="navbar__mobile-link">About</a>
-  <a href="programs.html" class="navbar__mobile-link">Programs</a>
-  <a href="workshops.html" class="navbar__mobile-link">Workshops</a>
-  <a href="contact.html" class="navbar__mobile-link active">Contact</a>
-  <div class="navbar__mobile-cta"><a href="book.html" class="btn btn--primary btn--full">Book a Free Call</a></div>
-</div>
+<site-navbar page="contact"></site-navbar>
 
 <!-- PAGE HEADER -->
 <div class="page-header">
@@ -91,27 +50,27 @@
         <p style="font-size:var(--fs-md);color:var(--clr-text-muted);margin-bottom:var(--sp-8);line-height:1.7">Have a question about a program? Want to book a session? Or just curious about what we do? Reach us in whatever way is most comfortable for you.</p>
 
         <div class="contact-methods">
-          <a href="https://wa.me/919876543210" class="contact-method" target="_blank" rel="noopener" id="contact-whatsapp-link">
+          <a href="https://wa.me/918866067671" class="contact-method" target="_blank" rel="noopener" id="contact-whatsapp-link">
             <div class="contact-method__icon"><i data-lucide="message-circle" class="lucide-icon"></i></div>
             <div>
               <div class="contact-method__label">WhatsApp (Fastest)</div>
-              <div class="contact-method__value">+91 98765 43210</div>
+              <div class="contact-method__value">+91 8866067671</div>
               <div class="contact-method__sub">Usually responds within 1 hour</div>
             </div>
           </a>
-          <a href="tel:+919876543210" class="contact-method" id="contact-phone-link">
+          <a href="tel:+918866067671" class="contact-method" id="contact-phone-link">
             <div class="contact-method__icon"><i data-lucide="phone" class="lucide-icon"></i></div>
             <div>
               <div class="contact-method__label">Phone Call</div>
-              <div class="contact-method__value">+91 98765 43210</div>
+              <div class="contact-method__value">+91 8866067671</div>
               <div class="contact-method__sub">Mon–Sat, 9 AM to 8 PM IST</div>
             </div>
           </a>
-          <a href="mailto:hello@nivam.in" class="contact-method" id="contact-email-link">
+          <a href="mailto:nivamlifeconsultant@gmail.com" class="contact-method" id="contact-email-link">
             <div class="contact-method__icon"><i data-lucide="mail" class="lucide-icon"></i></div>
             <div>
               <div class="contact-method__label">Email</div>
-              <div class="contact-method__value">hello@nivam.in</div>
+              <div class="contact-method__value">nivamlifeconsultant@gmail.com</div>
               <div class="contact-method__sub">We respond within 24 hours</div>
             </div>
           </a>
@@ -194,63 +153,13 @@
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer__main">
-      <div class="footer__brand">
-        <a href="index.html" class="footer__logo">
-          <img src="assets/images/logo.png" alt="Nivam" class="footer__logo-img">
-          
-        </a>
-        <p class="footer__desc" style="margin-bottom: 0.5rem; font-weight: 600;">NIVAM — Guiding Lives Towards Light</p>
-        <p class="footer__desc">Empowering transformation through wisdom, awareness, and conscious growth.</p>
-        <div class="footer__socials">
-          <a href="#" class="footer__social-link" aria-label="Instagram"><i data-lucide="instagram" class="lucide-icon"></i></a>
-          <a href="#" class="footer__social-link" aria-label="Facebook"><i data-lucide="facebook" class="lucide-icon"></i></a>
-          <a href="#" class="footer__social-link" aria-label="YouTube"><i data-lucide="youtube" class="lucide-icon"></i></a>
-        </div>
-      </div>
-      <div class="footer__col">
-        <h3 class="footer__col-title">Programs</h3>
-        <ul class="footer__links">
-          <li><a href="programs.html" class="footer__link">All Programs</a></li>
-          <li><a href="workshops.html" class="footer__link">Live Workshops</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h3 class="footer__col-title">Company</h3>
-        <ul class="footer__links">
-          <li><a href="about.html" class="footer__link">About Us</a></li>
-          <li><a href="book.html" class="footer__link">Book a Call</a></li>
-          <li><a href="privacy.html" class="footer__link">Privacy Policy</a></li>
-          <li><a href="terms.html" class="footer__link">Terms of Service</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h3 class="footer__col-title">Get in Touch</h3>
-        <div class="footer__contact-item"><span class="footer__contact-icon"><i data-lucide="mail" class="lucide-icon"></i></span><a href="mailto:hello@nivam.in" class="footer__contact-link">hello@nivam.in</a></div>
-        <div class="footer__contact-item"><span class="footer__contact-icon"><i data-lucide="phone" class="lucide-icon"></i></span><a href="tel:+919876543210" class="footer__contact-link">+91 98765 43210</a></div>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <p class="footer__copy">© 2025 Nivam. All rights reserved.</p>
-      <div class="footer__legal-links"><a href="privacy.html" class="footer__legal-link">Privacy</a><a href="terms.html" class="footer__legal-link">Terms</a></div>
-    </div>
-  </div>
-</footer>
-
-<button id="whatsapp-float" class="whatsapp-float" aria-label="Chat on WhatsApp">
-  <span style="font-size:1.75rem"><i data-lucide="message-circle" class="lucide-icon"></i></span>
-  <span class="whatsapp-float__tooltip">Chat with us!</span>
-</button>
+<site-footer></site-footer>
 
 <script src="js/navbar.js"></script>
 <script src="js/whatsapp.js"></script>
 <script src="js/form.js"></script>
 <script src="js/main.js"></script>
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>lucide.createIcons();</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

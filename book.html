@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -20,51 +20,12 @@
 <link rel="stylesheet" href="css/footer.css">
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/responsive.css">
-<style>
-.book-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:var(--sp-12);align-items:start}
-.book-info__title{font-size:clamp(1.75rem,3vw,2.5rem);color:var(--clr-primary);margin-bottom:var(--sp-4)}
-.book-info__subtitle{font-size:var(--fs-md);color:var(--clr-text-muted);line-height:1.7;margin-bottom:var(--sp-8)}
-.book-perks{display:flex;flex-direction:column;gap:var(--sp-4);margin-bottom:var(--sp-8)}
-.book-perk{display:flex;align-items:flex-start;gap:var(--sp-4);background:var(--clr-surface);border:1px solid var(--clr-border-light);border-radius:var(--radius-lg);padding:var(--sp-4) var(--sp-5);box-shadow:var(--shadow-sm)}
-.book-perk__icon{font-size:1.5rem;flex-shrink:0}
-.book-perk__title{font-weight:var(--fw-semi);color:var(--clr-primary);font-size:var(--fs-sm);margin-bottom:2px}
-.book-perk__text{font-size:var(--fs-xs);color:var(--clr-text-muted);line-height:1.5}
-.book-testimonial{background:var(--grad-primary);border-radius:var(--radius-xl);padding:var(--sp-6);color:var(--clr-white)}
-.book-testimonial__text{font-family:var(--font-accent);font-style:italic;font-size:var(--fs-lg);line-height:1.6;margin-bottom:var(--sp-4);color:rgba(240,235,248,.9)}
-.book-testimonial__name{font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--clr-accent-light)}
-@media(max-width:900px){.book-layout{grid-template-columns:1fr}}
-</style>
+<link rel="stylesheet" href="css/pages/book.css">
+<script src="js/components.js"></script>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<header id="navbar" class="navbar navbar--solid" role="banner">
-  <div class="navbar__inner">
-    <a href="index.html" class="navbar__logo" aria-label="Nivam Home">
-      <img src="assets/images/logo.png" alt="Nivam Logo" class="navbar__logo-img">
-      
-    </a>
-    <nav class="navbar__nav" aria-label="Primary navigation">
-      <a href="index.html" class="navbar__link">Home</a>
-      <a href="about.html" class="navbar__link">About</a>
-      <a href="programs.html" class="navbar__link">Programs</a>
-      <a href="workshops.html" class="navbar__link">Workshops</a>
-      <a href="contact.html" class="navbar__link">Contact</a>
-    </nav>
-    <div class="navbar__cta"><a href="book.html" class="btn btn--primary btn--sm">Book a Call</a></div>
-    <button id="navbar-hamburger" class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-mobile-menu">
-      <span class="hamburger-bar"></span><span class="hamburger-bar"></span><span class="hamburger-bar"></span>
-    </button>
-  </div>
-</header>
-<div id="navbar-mobile-menu" class="navbar__mobile-menu">
-  <a href="index.html" class="navbar__mobile-link">Home</a>
-  <a href="about.html" class="navbar__mobile-link">About</a>
-  <a href="programs.html" class="navbar__mobile-link">Programs</a>
-  <a href="workshops.html" class="navbar__mobile-link">Workshops</a>
-  <a href="contact.html" class="navbar__mobile-link">Contact</a>
-  <div class="navbar__mobile-cta"><a href="book.html" class="btn btn--primary btn--full">Book a Free Call</a></div>
-</div>
+<site-navbar page="book"></site-navbar>
 
 <!-- PAGE HEADER -->
 <div class="page-header">
@@ -95,7 +56,7 @@
             </div>
           </div>
           <div class="book-perk">
-            <div class="book-perk__icon"><i data-lucide="map" class="lucide-icon"></i>️</div>
+            <div class="book-perk__icon"><i data-lucide="map" class="lucide-icon"></i></div>
             <div>
               <div class="book-perk__title">Get Personalised Guidance</div>
               <p class="book-perk__text">We recommend the right program or approach for your unique situation.</p>
@@ -130,7 +91,6 @@
             <p class="form-container__subtitle">Fill in your details and we'll reach out to schedule your session.</p>
           </div>
 
-          <!-- Success Message -->
           <div id="booking-success" class="form-success-msg">
             <div class="form-success-icon"><i data-lucide="check-circle" class="lucide-icon"></i></div>
             <div class="form-success-title">Request Received!</div>
@@ -143,13 +103,11 @@
           <form id="booking-form" action="https://formspree.io/f/YOUR_BOOKING_ID" method="POST" novalidate>
             <div class="form-grid" style="gap:var(--sp-5)">
 
-              <!-- Name -->
               <div class="form-group">
                 <label class="form-label" for="booking-name">Full Name <span class="required">*</span></label>
                 <input type="text" id="booking-name" name="name" class="form-input" placeholder="Your full name" required autocomplete="name">
               </div>
 
-              <!-- Phone -->
               <div class="form-group">
                 <label class="form-label" for="booking-phone">WhatsApp Number <span class="required">*</span></label>
                 <div class="form-phone-wrap">
@@ -158,13 +116,11 @@
                 </div>
               </div>
 
-              <!-- Email -->
               <div class="form-group">
                 <label class="form-label" for="booking-email">Email Address</label>
                 <input type="email" id="booking-email" name="email" class="form-input" placeholder="your@email.com" autocomplete="email">
               </div>
 
-              <!-- Program -->
               <div class="form-group">
                 <label class="form-label">Program of Interest <span class="required">*</span></label>
                 <div class="program-selector" role="radiogroup">
@@ -177,7 +133,6 @@
                 </div>
               </div>
 
-              <!-- Preferred time -->
               <div class="form-group">
                 <label class="form-label" for="booking-time">Preferred Call Time</label>
                 <select id="booking-time" name="preferred_time" class="form-select">
@@ -188,13 +143,11 @@
                 </select>
               </div>
 
-              <!-- Message -->
               <div class="form-group">
                 <label class="form-label" for="booking-message">Tell Us a Little About Your Situation</label>
                 <textarea id="booking-message" name="message" class="form-textarea" placeholder="What brings you here? What would you like to work on?"></textarea>
               </div>
 
-              <!-- Consent -->
               <div class="form-group">
                 <label class="form-check">
                   <input type="checkbox" name="consent" required>
@@ -211,67 +164,14 @@
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer__main">
-      <div class="footer__brand">
-        <a href="index.html" class="footer__logo">
-          <img src="assets/images/logo.png" alt="Nivam" class="footer__logo-img">
-          
-        </a>
-        <p class="footer__desc" style="margin-bottom: 0.5rem; font-weight: 600;">NIVAM — Guiding Lives Towards Light</p>
-        <p class="footer__desc">Empowering transformation through wisdom, awareness, and conscious growth.</p>
-      </div>
-      <div class="footer__col">
-        <h3 class="footer__col-title">Programs</h3>
-        <ul class="footer__links">
-          <li><a href="programs.html" class="footer__link">All Programs</a></li>
-          <li><a href="workshops.html" class="footer__link">Live Workshops</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h3 class="footer__col-title">Company</h3>
-        <ul class="footer__links">
-          <li><a href="about.html" class="footer__link">About Us</a></li>
-          <li><a href="contact.html" class="footer__link">Contact</a></li>
-          <li><a href="privacy.html" class="footer__link">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h3 class="footer__col-title">Get in Touch</h3>
-        <div class="footer__contact-item"><span class="footer__contact-icon"><i data-lucide="mail" class="lucide-icon"></i></span><a href="mailto:hello@nivam.in" class="footer__contact-link">hello@nivam.in</a></div>
-        <div class="footer__contact-item"><span class="footer__contact-icon"><i data-lucide="phone" class="lucide-icon"></i></span><a href="tel:+919876543210" class="footer__contact-link">+91 98765 43210</a></div>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <p class="footer__copy">© 2025 Nivam. All rights reserved.</p>
-      <div class="footer__legal-links"><a href="privacy.html" class="footer__legal-link">Privacy</a><a href="terms.html" class="footer__legal-link">Terms</a></div>
-    </div>
-  </div>
-</footer>
-
-<button id="whatsapp-float" class="whatsapp-float" aria-label="Chat on WhatsApp">
-  <span style="font-size:1.75rem"><i data-lucide="message-circle" class="lucide-icon"></i></span>
-  <span class="whatsapp-float__tooltip">Chat with us!</span>
-</button>
+<site-footer></site-footer>
 
 <script src="js/navbar.js"></script>
 <script src="js/whatsapp.js"></script>
 <script src="js/form.js"></script>
 <script src="js/main.js"></script>
-<script>
-// Pre-select program from URL param
-const params = new URLSearchParams(window.location.search);
-const prog = params.get('program');
-if (prog) {
-  document.querySelectorAll('input[name="program"]').forEach(r => {
-    if (r.value.toLowerCase().replace(/\s+/g,'-') === prog) r.checked = true;
-  });
-}
-</script>
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>lucide.createIcons();</script>
+<script src="js/pages/book.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>

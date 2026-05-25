@@ -24,44 +24,11 @@
 <link rel="stylesheet" href="css/footer.css">
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/responsive.css">
+<script src="js/components.js"></script>
 </head>
 <body>
 
-<!-- ══ NAVBAR ══════════════════════════════════════════════ -->
-<header id="navbar" class="navbar navbar--transparent" role="banner">
-  <div class="navbar__inner">
-    <a href="index.html" class="navbar__logo" aria-label="Nivam Home">
-      <img src="assets/images/logo.png" alt="Nivam Logo" class="navbar__logo-img">
-    </a>
-    <nav class="navbar__nav" aria-label="Primary navigation">
-      <a href="index.html" class="navbar__link active">Home</a>
-      <a href="about.html" class="navbar__link">About</a>
-      <a href="programs.html" class="navbar__link">Programs</a>
-      <a href="workshops.html" class="navbar__link">Workshops</a>
-      <a href="contact.html" class="navbar__link">Contact</a>
-    </nav>
-    <div class="navbar__cta">
-      <a href="book.html" class="btn btn--primary btn--sm" id="nav-book-btn">Book a Call</a>
-    </div>
-    <button id="navbar-hamburger" class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-mobile-menu">
-      <span class="hamburger-bar"></span>
-      <span class="hamburger-bar"></span>
-      <span class="hamburger-bar"></span>
-    </button>
-  </div>
-</header>
-
-<!-- Mobile Menu -->
-<div id="navbar-mobile-menu" class="navbar__mobile-menu" role="navigation" aria-label="Mobile navigation">
-  <a href="index.html" class="navbar__mobile-link active">Home</a>
-  <a href="about.html" class="navbar__mobile-link">About</a>
-  <a href="programs.html" class="navbar__mobile-link">Programs</a>
-  <a href="workshops.html" class="navbar__mobile-link">Workshops</a>
-  <a href="contact.html" class="navbar__mobile-link">Contact</a>
-  <div class="navbar__mobile-cta">
-    <a href="book.html" class="btn btn--primary btn--full" id="mobile-book-btn">Book a Free Call</a>
-  </div>
-</div>
+<site-navbar page="home" transparent></site-navbar>
 
 <!-- ══ HERO ════════════════════════════════════════════════ -->
 <section class="hero" id="hero" aria-label="Hero">
@@ -86,7 +53,7 @@
           <a href="book.html" class="btn btn--primary btn--lg" id="hero-cta-primary">Start Your Journey <i data-lucide="arrow-right" class="lucide-icon cta-arrow"></i></a>
           <a href="programs.html" class="btn btn--secondary btn--lg" id="hero-cta-secondary">Explore Programs</a>
         </div>
-        <p style="margin-top: 1.5rem; font-size: 0.875rem; color: rgba(240, 235, 248, 0.7); font-weight: 500;">Helping individuals build clarity, confidence, emotional balance, and conscious growth.</p>
+        <p style="margin-top:1.5rem;font-size:0.875rem;color:rgba(240,235,248,0.7);font-weight:500;">Helping individuals build clarity, confidence, emotional balance, and conscious growth.</p>
         <div class="hero__stats">
           <div class="hero__stat-item">
             <span class="hero__stat-num" data-counter="5000" data-counter-suffix="+">0</span>
@@ -197,7 +164,7 @@
       <h2 class="section-title">A Journey of <span>Conscious Growth</span></h2>
       <p class="section-subtitle">We help you navigate life's complexities through structured learning and inner mastery.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:var(--sp-6);margin-top:var(--sp-10)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--sp-6);margin-top:var(--sp-10)">
       <div class="card" style="padding:var(--sp-8);" data-aos="fade-up" data-aos-delay="0">
         <div style="font-size:2rem;margin-bottom:var(--sp-3);color:var(--color-gold);"><i data-lucide="brain" class="lucide-icon"></i></div>
         <h3 style="color:var(--clr-primary);font-size:var(--fs-lg);margin-bottom:var(--sp-2);">Emotional Intelligence</h3>
@@ -205,7 +172,7 @@
       </div>
       <div class="card" style="padding:var(--sp-8);" data-aos="fade-up" data-aos-delay="80">
         <div style="font-size:2rem;margin-bottom:var(--sp-3);color:var(--color-gold);"><i data-lucide="heart" class="lucide-icon"></i></div>
-        <h3 style="color:var(--clr-primary);font-size:var(--fs-lg);margin-bottom:var(--sp-2);">Family & Relationship Growth</h3>
+        <h3 style="color:var(--clr-primary);font-size:var(--fs-lg);margin-bottom:var(--sp-2);">Family &amp; Relationship Growth</h3>
         <p style="color:var(--clr-text-muted);font-size:var(--fs-sm);line-height:1.7;">Create deep, meaningful connections rooted in understanding and conscious communication.</p>
       </div>
       <div class="card" style="padding:var(--sp-8);" data-aos="fade-up" data-aos-delay="160">
@@ -231,7 +198,6 @@
       <p class="section-subtitle">Structured learning experiences designed for personal evolution and conscious growth.</p>
     </div>
     <div class="programs-grid stagger-children">
-      <!-- Card 1 -->
       <article class="program-card" data-aos="fade-up" data-aos-delay="0">
         <div class="program-card__img-wrap">
           <img src="assets/images/programs/being-your-best.webp" alt="Being Your Best Program" class="program-card__img" loading="lazy">
@@ -248,7 +214,6 @@
           <a href="programs.html#being-your-best" class="btn btn--outline btn--sm">Learn More</a>
         </div>
       </article>
-      <!-- Card 2 -->
       <article class="program-card" data-aos="fade-up" data-aos-delay="100">
         <div class="program-card__img-wrap">
           <img src="assets/images/programs/rising-leaders.webp" alt="Rising Leaders Program" class="program-card__img" loading="lazy">
@@ -265,7 +230,6 @@
           <a href="programs.html#rising-leaders" class="btn btn--outline btn--sm">Learn More</a>
         </div>
       </article>
-      <!-- Card 3 -->
       <article class="program-card" data-aos="fade-up" data-aos-delay="200">
         <div class="program-card__img-wrap">
           <img src="assets/images/programs/parvarish.webp" alt="Parvarish Parenting Program" class="program-card__img" loading="lazy">
@@ -297,7 +261,7 @@
       <h2 class="section-title">We Don't Give Motivation. <span>We Build Systems.</span></h2>
       <p class="section-subtitle">Real growth is not random — it is designed through a structured, step-by-step transformation process.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:var(--sp-6);margin-top:var(--sp-10)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--sp-6);margin-top:var(--sp-10)">
       <div class="card" style="padding:var(--sp-7);text-align:center;" data-aos="fade-up" data-aos-delay="0">
         <div style="width:52px;height:52px;background:var(--grad-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.25rem;margin:0 auto var(--sp-4);">1</div>
         <h4 style="color:var(--clr-primary);margin-bottom:var(--sp-2);">Deep Life Analysis</h4>
@@ -434,77 +398,13 @@
   </div>
 </section>
 
-<!-- ══ FOOTER ═══════════════════════════════════════════════ -->
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer__main">
-      <div class="footer__brand">
-        <a href="index.html" class="footer__logo">
-          <img src="assets/images/logo.png" alt="Nivam" class="footer__logo-img">
-        </a>
-        <p class="footer__desc" style="margin-bottom: 0.5rem; font-weight: 600;">NIVAM — Guiding Lives Towards Light</p>
-        <p class="footer__desc">Empowering transformation through wisdom, awareness, and conscious growth.</p>
-        <div class="footer__socials">
-          <a href="#" class="footer__social-link" aria-label="Instagram"><i data-lucide="instagram" class="lucide-icon"></i></a>
-          <a href="#" class="footer__social-link" aria-label="Facebook"><i data-lucide="facebook" class="lucide-icon"></i></a>
-          <a href="#" class="footer__social-link" aria-label="YouTube"><i data-lucide="youtube" class="lucide-icon"></i></a>
-          <a href="#" class="footer__social-link" aria-label="LinkedIn"><i data-lucide="linkedin" class="lucide-icon"></i></a>
-        </div>
-      </div>
-      <div class="footer__col">
-        <h3 class="footer__col-title">Programs</h3>
-        <ul class="footer__links">
-          <li><a href="programs.html#being-your-best" class="footer__link">Being Your Best</a></li>
-          <li><a href="programs.html#rising-leaders" class="footer__link">Rising Leaders</a></li>
-          <li><a href="programs.html#parvarish" class="footer__link">Parvarish</a></li>
-          <li><a href="programs.html#sambandh-hi-sukh" class="footer__link">Sambandh Hi Sukh</a></li>
-          <li><a href="programs.html#super-mom" class="footer__link">Super Mom</a></li>
-          <li><a href="programs.html#academic-excellence" class="footer__link">Academic Excellence</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h3 class="footer__col-title">Company</h3>
-        <ul class="footer__links">
-          <li><a href="about.html" class="footer__link">About Us</a></li>
-          <li><a href="workshops.html" class="footer__link">Live Workshops</a></li>
-          <li><a href="book.html" class="footer__link">Book a Call</a></li>
-          <li><a href="contact.html" class="footer__link">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h3 class="footer__col-title">Get in Touch</h3>
-        <div class="footer__contact-item">
-          <span class="footer__contact-icon"><i data-lucide="mail" class="lucide-icon"></i></span>
-          <a href="mailto:hello@nivam.in" class="footer__contact-link">hello@nivam.in</a>
-        </div>
-        <div class="footer__contact-item">
-          <span class="footer__contact-icon"><i data-lucide="phone" class="lucide-icon"></i></span>
-          <a href="tel:+919876543210" class="footer__contact-link">+91 98765 43210</a>
-        </div>
-        <div class="footer__contact-item">
-          <span class="footer__contact-icon"><i data-lucide="map-pin" class="lucide-icon"></i></span>
-          <span>Mumbai, India</span>
-        </div>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <p class="footer__copy">© 2025 Nivam. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
-
-<!-- WhatsApp Float -->
-<button id="whatsapp-float" class="whatsapp-float" aria-label="Chat on WhatsApp">
-  <span style="font-size:1.75rem;"><i data-lucide="message-circle" class="lucide-icon"></i></span>
-  <span class="whatsapp-float__tooltip">Chat with us!</span>
-</button>
+<site-footer></site-footer>
 
 <script src="js/navbar.js"></script>
 <script src="js/hero-animation.js"></script>
 <script src="js/whatsapp.js"></script>
 <script src="js/counter.js"></script>
 <script src="js/main.js"></script>
-<!-- Lucide Icons -->
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>lucide.createIcons();</script>
 </body>
