@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Nivam Coaching</title>
+<meta name="description" content="Meet the Nivam team — certified life coaches passionate about transforming families, parents, and young leaders across India.">
+<link rel="icon" href="assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<style>
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-6);margin-top:var(--sp-10)}
+.value-item{background:var(--clr-surface);border-radius:var(--radius-xl);padding:var(--sp-8);border:1px solid var(--clr-border-light);box-shadow:var(--shadow-sm);text-align:center;transition:var(--transition-base)}
+.value-item:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
+.value-item__icon{font-size:2.5rem;margin-bottom:var(--sp-4)}
+.value-item__title{font-size:var(--fs-lg);font-weight:var(--fw-bold);color:var(--clr-primary);margin-bottom:var(--sp-2)}
+.value-item__text{font-size:var(--fs-sm);color:var(--clr-text-muted);line-height:1.65}
+.timeline{display:flex;flex-direction:column;gap:0;position:relative;max-width:720px;margin-inline:auto}
+.timeline::before{content:'';position:absolute;left:24px;top:0;bottom:0;width:2px;background:var(--grad-accent);opacity:.35}
+.timeline-item{display:grid;grid-template-columns:52px 1fr;gap:var(--sp-5);padding-bottom:var(--sp-8)}
+.timeline-dot{width:52px;height:52px;border-radius:var(--radius-full);background:var(--grad-accent);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;box-shadow:var(--shadow-glow);z-index:1}
+.timeline-body{}
+.timeline-year{font-size:var(--fs-xs);font-weight:var(--fw-semi);letter-spacing:.1em;text-transform:uppercase;color:var(--clr-accent);margin-bottom:var(--sp-1)}
+.timeline-title{font-size:var(--fs-lg);font-weight:var(--fw-bold);color:var(--clr-primary);margin-bottom:var(--sp-2)}
+.timeline-text{font-size:var(--fs-sm);color:var(--clr-text-muted);line-height:1.65}
+@media(max-width:768px){.values-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.values-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header id="navbar" class="navbar navbar--solid" role="banner">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__logo" aria-label="Nivam Home">
+      <img src="assets/images/logo.png" alt="Nivam Logo" class="navbar__logo-img">
+      
+    </a>
+    <nav class="navbar__nav" aria-label="Primary navigation">
+      <a href="index.html" class="navbar__link">Home</a>
+      <a href="about.html" class="navbar__link active">About</a>
+      <a href="programs.html" class="navbar__link">Programs</a>
+      <a href="workshops.html" class="navbar__link">Workshops</a>
+      <a href="contact.html" class="navbar__link">Contact</a>
+    </nav>
+    <div class="navbar__cta"><a href="book.html" class="btn btn--primary btn--sm">Book a Call</a></div>
+    <button id="navbar-hamburger" class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-mobile-menu">
+      <span class="hamburger-bar"></span><span class="hamburger-bar"></span><span class="hamburger-bar"></span>
+    </button>
+  </div>
+</header>
+<div id="navbar-mobile-menu" class="navbar__mobile-menu">
+  <a href="index.html" class="navbar__mobile-link">Home</a>
+  <a href="about.html" class="navbar__mobile-link active">About</a>
+  <a href="programs.html" class="navbar__mobile-link">Programs</a>
+  <a href="workshops.html" class="navbar__mobile-link">Workshops</a>
+  <a href="contact.html" class="navbar__mobile-link">Contact</a>
+  <div class="navbar__mobile-cta"><a href="book.html" class="btn btn--primary btn--full">Book a Free Call</a></div>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>About</span>
+    </nav>
+    <h1>The Vision Behind NIVAM</h1>
+    <p>A transformational academy designed to help individuals create meaningful growth in every area of life.</p>
+  </div>
+</div>
+
+<!-- FOUNDER SECTION -->
+<section class="section" id="founder">
+  <div class="container">
+    <div class="founder-strip" data-aos="fade-up">
+      <img src="assets/images/founder.webp" alt="Nivam Founder" class="founder-strip__img" loading="lazy">
+      <div class="founder-strip__content">
+        <div class="founder-strip__role">Founder &amp; Lead Coach</div>
+        <h2 class="founder-strip__name">Meet Our Founder</h2>
+        <p class="founder-strip__bio">With over 12 years of experience in life coaching, NLP, and family counselling, our founder has helped thousands of individuals and families rediscover joy, purpose, and deeper connection. Her approach blends evidence-based psychology with the warmth of lived experience and cultural understanding.</p>
+        <p class="founder-strip__bio" style="margin-top:1rem">"I started Nivam because I saw too many families struggling in silence. Every person deserves a guide who truly listens — and the tools to become the best version of themselves."</p>
+        <div class="founder-strip__credentials">
+          <span class="credential-tag"><i data-lucide="sparkles" class="lucide-icon"></i> ICF Certified Coach</span>
+          <span class="credential-tag"><i data-lucide="sparkles" class="lucide-icon"></i> NLP Practitioner</span>
+          <span class="credential-tag"><i data-lucide="sparkles" class="lucide-icon"></i> Family Therapist</span>
+          <span class="credential-tag"><i data-lucide="sparkles" class="lucide-icon"></i> TEDx Speaker</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section section--light" id="values">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-eyebrow">What We Stand For</span>
+      <h2 class="section-title">Our Core <span>Values</span></h2>
+    </div>
+    <div class="values-grid stagger-children">
+      <div class="value-item" data-aos="fade-up" data-aos-delay="0">
+        <div class="value-item__icon"><i data-lucide="heart" class="lucide-icon"></i></div>
+        <div class="value-item__title">Compassion First</div>
+        <p class="value-item__text">Every session begins with genuine empathy. We meet you exactly where you are, without judgment.</p>
+      </div>
+      <div class="value-item" data-aos="fade-up" data-aos-delay="80">
+        <div class="value-item__icon"><i data-lucide="microscope" class="lucide-icon"></i></div>
+        <div class="value-item__title">Evidence-Based</div>
+        <p class="value-item__text">Our methods draw from positive psychology, neuroscience, and proven coaching frameworks.</p>
+      </div>
+      <div class="value-item" data-aos="fade-up" data-aos-delay="160">
+        <div class="value-item__icon"><i data-lucide="globe" class="lucide-icon"></i></div>
+        <div class="value-item__title">Culturally Rooted</div>
+        <p class="value-item__text">We honour Indian family values while bringing modern coaching perspectives to every conversation.</p>
+      </div>
+      <div class="value-item" data-aos="fade-up" data-aos-delay="0">
+        <div class="value-item__icon"><i data-lucide="target" class="lucide-icon"></i></div>
+        <div class="value-item__title">Results-Oriented</div>
+        <p class="value-item__text">We track progress, celebrate wins, and pivot when needed. Your transformation is our success.</p>
+      </div>
+      <div class="value-item" data-aos="fade-up" data-aos-delay="80">
+        <div class="value-item__icon"><i data-lucide="lock" class="lucide-icon"></i></div>
+        <div class="value-item__title">Safe & Confidential</div>
+        <p class="value-item__text">Everything shared in a session stays in the session. Complete privacy is non-negotiable.</p>
+      </div>
+      <div class="value-item" data-aos="fade-up" data-aos-delay="160">
+        <div class="value-item__icon"><i data-lucide="infinity" class="lucide-icon"></i>️</div>
+        <div class="value-item__title">Lifelong Support</div>
+        <p class="value-item__text">Our relationship doesn't end when the program does. We're here for your ongoing journey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE AREAS -->
+<section class="section" id="core-areas">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-eyebrow">Our Core Areas of Transformation</span>
+      <h2 class="section-title">We Work On <span>What Matters Most</span></h2>
+    </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:var(--sp-4);margin-top:var(--sp-10);">
+      <div style="display:flex;gap:var(--sp-3);align-items:flex-start;padding:var(--sp-5);background:var(--clr-surface);border-radius:var(--radius-xl);border:1px solid var(--clr-border-light);" data-aos="fade-up" data-aos-delay="0"><span style="color:var(--color-gold);font-size:1.2rem;"><i data-lucide="brain" class="lucide-icon"></i></span><span>Emotional Intelligence</span></div>
+      <div style="display:flex;gap:var(--sp-3);align-items:flex-start;padding:var(--sp-5);background:var(--clr-surface);border-radius:var(--radius-xl);border:1px solid var(--clr-border-light);" data-aos="fade-up" data-aos-delay="50"><span style="color:var(--color-gold);font-size:1.2rem;"><i data-lucide="heart" class="lucide-icon"></i></span><span>Family & Relationship Growth</span></div>
+      <div style="display:flex;gap:var(--sp-3);align-items:flex-start;padding:var(--sp-5);background:var(--clr-surface);border-radius:var(--radius-xl);border:1px solid var(--clr-border-light);" data-aos="fade-up" data-aos-delay="100"><span style="color:var(--color-gold);font-size:1.2rem;"><i data-lucide="shield-check" class="lucide-icon"></i></span><span>Confidence Building</span></div>
+      <div style="display:flex;gap:var(--sp-3);align-items:flex-start;padding:var(--sp-5);background:var(--clr-surface);border-radius:var(--radius-xl);border:1px solid var(--clr-border-light);" data-aos="fade-up" data-aos-delay="150"><span style="color:var(--color-gold);font-size:1.2rem;"><i data-lucide="crown" class="lucide-icon"></i></span><span>Conscious Leadership</span></div>
+      <div style="display:flex;gap:var(--sp-3);align-items:flex-start;padding:var(--sp-5);background:var(--clr-surface);border-radius:var(--radius-xl);border:1px solid var(--clr-border-light);" data-aos="fade-up" data-aos-delay="200"><span style="color:var(--color-gold);font-size:1.2rem;"><i data-lucide="zap" class="lucide-icon"></i></span><span>Mindset Transformation</span></div>
+      <div style="display:flex;gap:var(--sp-3);align-items:flex-start;padding:var(--sp-5);background:var(--clr-surface);border-radius:var(--radius-xl);border:1px solid var(--clr-border-light);" data-aos="fade-up" data-aos-delay="250"><span style="color:var(--color-gold);font-size:1.2rem;"><i data-lucide="sparkles" class="lucide-icon"></i></span><span>Spiritual Awareness</span></div>
+      <div style="display:flex;gap:var(--sp-3);align-items:flex-start;padding:var(--sp-5);background:var(--clr-surface);border-radius:var(--radius-xl);border:1px solid var(--clr-border-light);" data-aos="fade-up" data-aos-delay="300"><span style="color:var(--color-gold);font-size:1.2rem;"><i data-lucide="target" class="lucide-icon"></i></span><span>Purpose Alignment</span></div>
+      <div style="display:flex;gap:var(--sp-3);align-items:flex-start;padding:var(--sp-5);background:var(--clr-surface);border-radius:var(--radius-xl);border:1px solid var(--clr-border-light);" data-aos="fade-up" data-aos-delay="350"><span style="color:var(--color-gold);font-size:1.2rem;"><i data-lucide="settings" class="lucide-icon"></i></span><span>Personal Growth Systems</span></div>
+    </div>
+      <div style="display:flex;gap:var(--sp-3);align-items:flex-start;padding:var(--sp-5);background:var(--clr-surface);border-radius:var(--radius-xl);border:1px solid var(--clr-border-light);" data-aos="fade-up" data-aos-delay="50"><span style="color:var(--clr-accent);font-size:1.2rem;"><i data-lucide="check-circle" class="lucide-icon"></i></span><span>Purposeful Parenting</span></div>
+      <div style="display:flex;gap:var(--sp-3);align-items:flex-start;padding:var(--sp-5);background:var(--clr-surface);border-radius:var(--radius-xl);border:1px solid var(--clr-border-light);" data-aos="fade-up" data-aos-delay="100"><span style="color:var(--clr-accent);font-size:1.2rem;"><i data-lucide="check-circle" class="lucide-icon"></i></span><span>Husband-Wife &amp; Family Relationships</span></div>
+      <div style="display:flex;gap:var(--sp-3);align-items:flex-start;padding:var(--sp-5);background:var(--clr-surface);border-radius:var(--radius-xl);border:1px solid var(--clr-border-light);" data-aos="fade-up" data-aos-delay="150"><span style="color:var(--clr-accent);font-size:1.2rem;"><i data-lucide="check-circle" class="lucide-icon"></i></span><span>Youth Clarity &amp; Leadership Development</span></div>
+      <div style="display:flex;gap:var(--sp-3);align-items:flex-start;padding:var(--sp-5);background:var(--clr-surface);border-radius:var(--radius-xl);border:1px solid var(--clr-border-light);" data-aos="fade-up" data-aos-delay="200"><span style="color:var(--clr-accent);font-size:1.2rem;"><i data-lucide="check-circle" class="lucide-icon"></i></span><span>Academic Growth &amp; Discipline</span></div>
+      <div style="display:flex;gap:var(--sp-3);align-items:flex-start;padding:var(--sp-5);background:var(--clr-surface);border-radius:var(--radius-xl);border:1px solid var(--clr-border-light);" data-aos="fade-up" data-aos-delay="250"><span style="color:var(--clr-accent);font-size:1.2rem;"><i data-lucide="check-circle" class="lucide-icon"></i></span><span>Habit Transformation &amp; Life Systems</span></div>
+      <div style="display:flex;gap:var(--sp-3);align-items:flex-start;padding:var(--sp-5);background:var(--clr-surface);border-radius:var(--radius-xl);border:1px solid var(--clr-border-light);" data-aos="fade-up" data-aos-delay="300"><span style="color:var(--clr-accent);font-size:1.2rem;"><i data-lucide="check-circle" class="lucide-icon"></i></span><span>Garbh Shiksha &amp; Conscious Parenting</span></div>
+      <div style="display:flex;gap:var(--sp-3);align-items:flex-start;padding:var(--sp-5);background:var(--clr-surface);border-radius:var(--radius-xl);border:1px solid var(--clr-border-light);" data-aos="fade-up" data-aos-delay="350"><span style="color:var(--clr-accent);font-size:1.2rem;"><i data-lucide="check-circle" class="lucide-icon"></i></span><span>Identity &amp; Personal Growth</span></div>
+    </div>
+    <div class="cta-banner" style="margin-top:var(--sp-16);" data-aos="zoom-in">
+      <p style="font-size:var(--fs-xl);font-weight:600;color:var(--clr-primary);margin-bottom:var(--sp-4)"><i data-lucide="arrow-right" class="lucide-icon"></i> Strong Individuals Create Strong Families</p>
+      <p style="font-size:var(--fs-xl);font-weight:600;color:var(--clr-primary);margin-bottom:var(--sp-4)"><i data-lucide="arrow-right" class="lucide-icon"></i> Strong Families Create Strong Society</p>
+      <p style="font-size:var(--fs-xl);font-weight:600;color:var(--clr-primary);margin-bottom:var(--sp-8)"><i data-lucide="arrow-right" class="lucide-icon"></i> Strong Society Creates Strong Bharat</p>
+      <p style="font-style:italic;color:var(--clr-text-muted);">And transformation begins from within.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section" id="team">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-eyebrow">The People</span>
+      <h2 class="section-title">Meet the <span>Team</span></h2>
+      <p class="section-subtitle">A passionate group of certified coaches, counsellors and educators united by one mission.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-8);margin-top:var(--sp-10)">
+      <div class="card" style="text-align:center;padding:var(--sp-8)" data-aos="fade-up" data-aos-delay="0">
+        <img src="assets/images/about-team.webp" alt="Team member" style="width:100px;height:100px;border-radius:50%;object-fit:cover;margin:0 auto var(--sp-4);border:4px solid var(--clr-border)" loading="lazy">
+        <h3 style="font-size:var(--fs-lg);color:var(--clr-primary);margin-bottom:4px">Coaching Lead</h3>
+        <p style="font-size:var(--fs-xs);color:var(--clr-accent);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:var(--sp-3)">Relationships &amp; Family</p>
+        <p style="font-size:var(--fs-sm);color:var(--clr-text-muted)">Specialises in couples coaching and family dynamics with 8 years of practice.</p>
+      </div>
+      <div class="card" style="text-align:center;padding:var(--sp-8)" data-aos="fade-up" data-aos-delay="100">
+        <div style="width:100px;height:100px;border-radius:50%;background:var(--grad-primary);display:flex;align-items:center;justify-content:center;font-size:2.5rem;margin:0 auto var(--sp-4)"><i data-lucide="graduation-cap" class="lucide-icon"></i></div>
+        <h3 style="font-size:var(--fs-lg);color:var(--clr-primary);margin-bottom:4px">Youth Coach</h3>
+        <p style="font-size:var(--fs-xs);color:var(--clr-accent);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:var(--sp-3)">Teen &amp; Young Adult</p>
+        <p style="font-size:var(--fs-sm);color:var(--clr-text-muted)">Works with teens aged 13–22 on confidence, career clarity and emotional regulation.</p>
+      </div>
+      <div class="card" style="text-align:center;padding:var(--sp-8)" data-aos="fade-up" data-aos-delay="200">
+        <div style="width:100px;height:100px;border-radius:50%;background:var(--grad-accent);display:flex;align-items:center;justify-content:center;font-size:2.5rem;margin:0 auto var(--sp-4)"><i data-lucide="leaf" class="lucide-icon"></i></div>
+        <h3 style="font-size:var(--fs-lg);color:var(--clr-primary);margin-bottom:4px">Parenting Coach</h3>
+        <p style="font-size:var(--fs-xs);color:var(--clr-accent);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:var(--sp-3)">Parvarish &amp; Super Mom</p>
+        <p style="font-size:var(--fs-sm);color:var(--clr-text-muted)">Certified in positive parenting, child psychology and mindful motherhood coaching.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY TIMELINE -->
+<section class="section section--light" id="journey">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-eyebrow">Our Journey</span>
+      <h2 class="section-title">From Vision <span>to Impact</span></h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item" data-aos="fade-left">
+        <div class="timeline-dot"><i data-lucide="leaf" class="lucide-icon"></i></div>
+        <div class="timeline-body">
+          <div class="timeline-year">2012</div>
+          <div class="timeline-title">Nivam Is Founded</div>
+          <p class="timeline-text">Started as a one-on-one coaching practice in Mumbai, with a focus on personal growth and family wellness.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-aos="fade-left" data-aos-delay="80">
+        <div class="timeline-dot"><i data-lucide="rocket" class="lucide-icon"></i></div>
+        <div class="timeline-body">
+          <div class="timeline-year">2015</div>
+          <div class="timeline-title">First Group Program Launched</div>
+          <p class="timeline-text">Parvarish debuted as our first structured group coaching program, enrolling 40 families in the first cohort.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-aos="fade-left" data-aos-delay="160">
+        <div class="timeline-dot"><i data-lucide="award" class="lucide-icon"></i></div>
+        <div class="timeline-body">
+          <div class="timeline-year">2018</div>
+          <div class="timeline-title">National Recognition</div>
+          <p class="timeline-text">Awarded Best Family Coaching Organisation at the India Wellness Summit. Expanded to Delhi and Pune.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-aos="fade-left" data-aos-delay="240">
+        <div class="timeline-dot"><i data-lucide="laptop" class="lucide-icon"></i></div>
+        <div class="timeline-body">
+          <div class="timeline-year">2020</div>
+          <div class="timeline-title">Going Online</div>
+          <p class="timeline-text">Launched live Zoom workshops and digital programs, reaching families across India and the globe.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-aos="fade-left" data-aos-delay="320">
+        <div class="timeline-dot"><i data-lucide="sparkles" class="lucide-icon"></i></div>
+        <div class="timeline-body">
+          <div class="timeline-year">2025</div>
+          <div class="timeline-title">5,000+ Lives Transformed</div>
+          <p class="timeline-text">Today, Nivam has touched over 5,000 lives with 6 signature programs, 200+ workshops and a thriving community.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" aria-label="Call to action">
+  <div class="container">
+    <div class="cta-banner" data-aos="zoom-in">
+      <h2 class="cta-banner__title">Your Transformation Journey Starts Here</h2>
+      <p class="cta-banner__text">A better life does not happen by chance. It is created through awareness, right guidance, emotional strength, and consistent action.</p>
+      <p class="cta-banner__text" style="font-style:italic;margin-top:.5rem;">Don't Just Live Life. Design It Consciously.</p>
+      <div class="cta-banner__actions">
+        <a href="book.html" class="btn btn--dark btn--lg">Book Your Consulting Session</a>
+        <a href="workshops.html" class="btn btn--secondary btn--lg">Join a Live Workshop</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">
+          <img src="assets/images/logo.png" alt="Nivam" class="footer__logo-img">
+          
+        </a>
+        <p class="footer__desc" style="margin-bottom: 0.5rem; font-weight: 600;">NIVAM — Guiding Lives Towards Light</p>
+        <p class="footer__desc">Empowering transformation through wisdom, awareness, and conscious growth.</p>
+        <div class="footer__socials">
+          <a href="#" class="footer__social-link" aria-label="Instagram"><i data-lucide="instagram" class="lucide-icon"></i></a>
+          <a href="#" class="footer__social-link" aria-label="Facebook"><i data-lucide="facebook" class="lucide-icon"></i></a>
+          <a href="#" class="footer__social-link" aria-label="YouTube"><i data-lucide="youtube" class="lucide-icon"></i></a>
+          <a href="#" class="footer__social-link" aria-label="LinkedIn"><i data-lucide="linkedin" class="lucide-icon"></i></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__col-title">Programs</h3>
+        <ul class="footer__links">
+          <li><a href="programs.html#being-your-best" class="footer__link">Being Your Best</a></li>
+          <li><a href="programs.html#rising-leaders" class="footer__link">Rising Leaders</a></li>
+          <li><a href="programs.html#parvarish" class="footer__link">Parvarish</a></li>
+          <li><a href="programs.html#sambandh-hi-sukh" class="footer__link">Sambandh Hi Sukh</a></li>
+          <li><a href="programs.html#super-mom" class="footer__link">Super Mom</a></li>
+          <li><a href="programs.html#academic-excellence" class="footer__link">Academic Excellence</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__col-title">Company</h3>
+        <ul class="footer__links">
+          <li><a href="about.html" class="footer__link">About Us</a></li>
+          <li><a href="workshops.html" class="footer__link">Live Workshops</a></li>
+          <li><a href="book.html" class="footer__link">Book a Call</a></li>
+          <li><a href="contact.html" class="footer__link">Contact</a></li>
+          <li><a href="privacy.html" class="footer__link">Privacy Policy</a></li>
+          <li><a href="terms.html" class="footer__link">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__col-title">Get in Touch</h3>
+        <div class="footer__contact-item"><span class="footer__contact-icon"><i data-lucide="mail" class="lucide-icon"></i></span><a href="mailto:hello@nivam.in" class="footer__contact-link">hello@nivam.in</a></div>
+        <div class="footer__contact-item"><span class="footer__contact-icon"><i data-lucide="phone" class="lucide-icon"></i></span><a href="tel:+919876543210" class="footer__contact-link">+91 98765 43210</a></div>
+        <div class="footer__contact-item"><span class="footer__contact-icon"><i data-lucide="map-pin" class="lucide-icon"></i></span><span>Mumbai, India · Online Worldwide</span></div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 Nivam. All rights reserved.</p>
+      <div class="footer__legal-links">
+        <a href="privacy.html" class="footer__legal-link">Privacy</a>
+        <a href="terms.html" class="footer__legal-link">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="whatsapp-float" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <span style="font-size:1.75rem"><i data-lucide="message-circle" class="lucide-icon"></i></span>
+  <span class="whatsapp-float__tooltip">Chat with us!</span>
+</button>
+
+<script src="js/navbar.js"></script>
+<script src="js/whatsapp.js"></script>
+<script src="js/main.js"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

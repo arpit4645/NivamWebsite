@@ -1,0 +1,289 @@
+/* ================================================
+   NIVAM — Hero Section
+   ================================================ */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ── Background Layers ── */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background: var(--grad-hero);
+  z-index: 0;
+}
+
+.hero__bg-img {
+  position: absolute;
+  inset: 0;
+  background: url('../assets/images/hero-graphic.png') center/cover no-repeat;
+  opacity: 0.18;
+  mix-blend-mode: luminosity;
+  z-index: 1;
+}
+
+.hero__particles {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(26,10,46,0.6) 85%,
+    var(--clr-bg) 100%
+  );
+  z-index: 3;
+}
+
+/* ── Content ── */
+.hero__content {
+  position: relative;
+  z-index: 4;
+  padding-top: var(--nav-height);
+  padding-bottom: var(--sp-20);
+  width: 100%;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--sp-12);
+  min-height: calc(100vh - var(--nav-height));
+}
+
+/* ── Text Side ── */
+.hero__text {
+  max-width: 580px;
+}
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-3);
+  background: rgba(245, 197, 24, 0.15); /* Gold with low opacity */
+  border: 1px solid rgba(245, 197, 24, 0.3);
+  border-radius: var(--radius-full);
+  padding: var(--sp-2) var(--sp-4);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semi);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clr-accent-light);
+  margin-bottom: var(--sp-6);
+  animation: fadeInDown 0.8s var(--ease-out) 0.1s both;
+}
+
+.hero__eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--color-gold);
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+.hero__heading {
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-weight: var(--fw-black);
+  color: var(--clr-white);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--sp-6);
+  animation: fadeInUp 0.9s var(--ease-out) 0.25s both;
+}
+
+.hero__heading .accent-line {
+  display: block;
+  font-family: var(--font-accent);
+  font-weight: var(--fw-light);
+  font-style: italic;
+  font-size: 0.85em;
+  color: var(--clr-accent-light);
+  letter-spacing: 0.01em;
+}
+
+.hero__subtitle {
+  font-size: var(--fs-lg);
+  color: rgba(240,235,248,0.78);
+  line-height: 1.7;
+  margin-bottom: var(--sp-10);
+  font-weight: var(--fw-light);
+  animation: fadeInUp 0.9s var(--ease-out) 0.4s both;
+}
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--sp-4);
+  animation: fadeInUp 0.9s var(--ease-out) 0.55s both;
+}
+
+/* ── Stats Bar ── */
+.hero__stats {
+  display: flex;
+  gap: var(--sp-8);
+  margin-top: var(--sp-12);
+  padding-top: var(--sp-8);
+  border-top: 1px solid rgba(255,255,255,0.12);
+  animation: fadeInUp 0.9s var(--ease-out) 0.7s both;
+}
+
+.hero__stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__stat-num {
+  font-family: var(--font-heading);
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-bold);
+  color: var(--clr-white);
+  line-height: 1;
+}
+
+.hero__stat-label {
+  font-size: var(--fs-xs);
+  color: rgba(240,235,248,0.6);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: var(--sp-1);
+}
+
+/* ── Visual Side ── */
+.hero__visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  animation: fadeInRight 1s var(--ease-out) 0.3s both;
+}
+
+.hero__img-frame {
+  position: relative;
+  width: 420px;
+  height: 520px;
+}
+
+.hero__img-main {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-xl), var(--shadow-glow);
+}
+
+.hero__img-badge {
+  position: absolute;
+  bottom: -24px;
+  left: -24px;
+  border-radius: var(--radius-lg);
+  padding: var(--sp-4) var(--sp-5);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  animation: float 4s ease-in-out infinite;
+  
+  /* Glassmorphism effect */
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: var(--shadow-lg), 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.hero__img-badge-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--color-gold);
+  color: var(--color-dark-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(245, 197, 24, 0.4);
+}
+
+.hero__img-badge-text strong {
+  display: block;
+  font-size: var(--fs-base);
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary);
+  line-height: 1.2;
+}
+
+.hero__img-badge-text span {
+  font-size: var(--fs-xs);
+  color: var(--clr-text-muted);
+}
+
+.hero__img-ring {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-full);
+  border: 2px solid rgba(245, 197, 24, 0.3);
+  animation: spin-slow 15s linear infinite;
+}
+
+.hero__img-ring::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border-radius: var(--radius-full);
+  border: 2px dashed rgba(245, 197, 24, 0.5);
+}
+
+/* ── Scroll Indicator ── */
+.hero__scroll {
+  position: absolute;
+  bottom: var(--sp-8);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-2);
+  color: rgba(240,235,248,0.5);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  animation: fadeInUp 1s var(--ease-out) 1s both;
+}
+
+.hero__scroll-mouse {
+  width: 24px;
+  height: 40px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__scroll-wheel {
+  width: 4px;
+  height: 8px;
+  background: rgba(255,255,255,0.6);
+  border-radius: var(--radius-full);
+  margin-top: 6px;
+  animation: scroll-wheel 2s ease-in-out infinite;
+}

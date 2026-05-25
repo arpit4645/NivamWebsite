@@ -1,0 +1,382 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programs — Nivam Coaching</title>
+<meta name="description" content="Explore Nivam's signature coaching programs: Being Your Best, Rising Leaders, Parvarish, Sambandh Hi Sukh, Super Mom, and Academic Excellence.">
+<link rel="icon" href="assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<style>
+.program-detail{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-16);align-items:center;padding-block:var(--sp-20);border-bottom:1px solid var(--clr-border-light)}
+.program-detail:last-child{border-bottom:none}
+.program-detail--reverse .program-detail__visual{order:-1}
+.program-detail__visual img{width:100%;height:420px;object-fit:cover;border-radius:var(--radius-2xl);box-shadow:var(--shadow-xl)}
+.program-detail__tag{display:inline-block;background:rgba(61,26,95,.08);color:var(--clr-primary);font-size:var(--fs-xs);font-weight:var(--fw-semi);padding:4px var(--sp-4);border-radius:var(--radius-full);letter-spacing:.08em;text-transform:uppercase;margin-bottom:var(--sp-4)}
+.program-detail__title{font-size:clamp(1.75rem,3vw,2.5rem);color:var(--clr-primary);margin-bottom:var(--sp-2)}
+.program-detail__subtitle{font-family:var(--font-accent);font-style:italic;font-size:var(--fs-xl);color:var(--clr-accent);margin-bottom:var(--sp-5)}
+.program-detail__desc{font-size:var(--fs-md);color:var(--clr-text-muted);line-height:1.75;margin-bottom:var(--sp-6)}
+.program-detail__outcomes{display:flex;flex-direction:column;gap:var(--sp-3);margin-bottom:var(--sp-8)}
+.program-outcome{display:flex;align-items:flex-start;gap:var(--sp-3);font-size:var(--fs-sm);color:var(--clr-text-muted)}
+.program-outcome::before{content:"";color:var(--clr-accent);font-weight:700;flex-shrink:0;margin-top:1px}
+.program-meta-row{display:flex;flex-wrap:wrap;gap:var(--sp-4);margin-bottom:var(--sp-8)}
+.program-meta-pill{display:flex;align-items:center;gap:var(--sp-2);background:var(--clr-bg);border:1px solid var(--clr-border);border-radius:var(--radius-full);padding:var(--sp-2) var(--sp-4);font-size:var(--fs-xs);font-weight:var(--fw-semi);color:var(--clr-text-muted)}
+.program-detail__actions{display:flex;flex-wrap:wrap;gap:var(--sp-3)}
+.filter-bar{display:flex;flex-wrap:wrap;gap:var(--sp-3);justify-content:center;margin-bottom:var(--sp-12)}
+.filter-btn{padding:var(--sp-2) var(--sp-5);border-radius:var(--radius-full);border:1.5px solid var(--clr-border);background:var(--clr-surface);font-size:var(--fs-sm);font-weight:var(--fw-medium);color:var(--clr-text-muted);cursor:pointer;transition:var(--transition-fast)}
+.filter-btn:hover,.filter-btn.active{background:var(--clr-primary);border-color:var(--clr-primary);color:var(--clr-white)}
+@media(max-width:768px){
+  .program-detail{grid-template-columns:1fr;gap:var(--sp-8);padding-block:var(--sp-12)}
+  .program-detail--reverse .program-detail__visual{order:0}
+  .program-detail__visual img{height:280px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header id="navbar" class="navbar navbar--solid" role="banner">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__logo" aria-label="Nivam Home">
+      <img src="assets/images/logo.png" alt="Nivam Logo" class="navbar__logo-img">
+      
+    </a>
+    <nav class="navbar__nav" aria-label="Primary navigation">
+      <a href="index.html" class="navbar__link">Home</a>
+      <a href="about.html" class="navbar__link">About</a>
+      <a href="programs.html" class="navbar__link active">Programs</a>
+      <a href="workshops.html" class="navbar__link">Workshops</a>
+      <a href="contact.html" class="navbar__link">Contact</a>
+    </nav>
+    <div class="navbar__cta"><a href="book.html" class="btn btn--primary btn--sm">Book a Call</a></div>
+    <button id="navbar-hamburger" class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-mobile-menu">
+      <span class="hamburger-bar"></span><span class="hamburger-bar"></span><span class="hamburger-bar"></span>
+    </button>
+  </div>
+</header>
+<div id="navbar-mobile-menu" class="navbar__mobile-menu">
+  <a href="index.html" class="navbar__mobile-link">Home</a>
+  <a href="about.html" class="navbar__mobile-link">About</a>
+  <a href="programs.html" class="navbar__mobile-link active">Programs</a>
+  <a href="workshops.html" class="navbar__mobile-link">Workshops</a>
+  <a href="contact.html" class="navbar__mobile-link">Contact</a>
+  <div class="navbar__mobile-cta"><a href="book.html" class="btn btn--primary btn--full">Book a Free Call</a></div>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>Programs</span>
+    </nav>
+    <h1>Our Transformational Programs</h1>
+    <p>Structured learning experiences designed for personal evolution and conscious growth.</p>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<section class="section" style="padding-bottom:0">
+  <div class="container">
+    <div class="filter-bar" role="group" aria-label="Filter programs">
+      <button class="filter-btn active" data-filter="all" id="filter-all">All Programs</button>
+      <button class="filter-btn" data-filter="personal" id="filter-personal">Personal Evolution</button>
+      <button class="filter-btn" data-filter="parenting" id="filter-parenting">Conscious Parenting</button>
+      <button class="filter-btn" data-filter="youth" id="filter-youth">Youth Mastery</button>
+      <button class="filter-btn" data-filter="relationships" id="filter-relationships">Relationship Growth</button>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="section" id="programs-list">
+<div class="container">
+
+  <!-- Being Your Best -->
+  <div class="program-detail" id="being-your-best" data-category="personal" data-aos="fade-up">
+    <div class="program-detail__content">
+      <span class="program-detail__tag">Personal Growth</span>
+      <h2 class="program-detail__title">Being Your Best</h2>
+      <div class="program-detail__subtitle">Become the person you were meant to be</div>
+      <p class="program-detail__desc">An intensive 8-week journey that helps you identify your core values, break limiting beliefs, build powerful daily habits, and step into your highest potential with clarity and confidence.</p>
+      <div class="program-meta-row">
+        <span class="program-meta-pill"><i data-lucide="calendar" class="lucide-icon"></i> 8 Weeks</span>
+        <span class="program-meta-pill"><i data-lucide="users" class="lucide-icon"></i> Group + 1:1</span>
+        <span class="program-meta-pill"><i data-lucide="laptop" class="lucide-icon"></i> Online &amp; Offline</span>
+        <span class="program-meta-pill"><i data-lucide="calendar" class="lucide-icon"></i> Next Batch: June 2025</span>
+      </div>
+      <div class="program-detail__outcomes">
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Discover your core identity and values</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Overcome fear, self-doubt and procrastination</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Build habits that create lasting change</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Develop unshakeable daily confidence</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Create a clear, exciting life roadmap</div>
+      </div>
+      <div class="program-detail__actions">
+        <a href="book.html?program=being-your-best" class="btn btn--primary" id="enrol-being-best">Enrol Now</a>
+        <button class="btn btn--whatsapp" data-whatsapp="Being Your Best"><i data-lucide="message-circle" class="lucide-icon"></i> Ask on WhatsApp</button>
+      </div>
+    </div>
+    <div class="program-detail__visual">
+      <img src="assets/images/programs/being-your-best.webp" alt="Being Your Best program" loading="lazy">
+    </div>
+  </div>
+
+  <!-- Rising Leaders -->
+  <div class="program-detail program-detail--reverse" id="rising-leaders" data-category="youth" data-aos="fade-up">
+    <div class="program-detail__content">
+      <span class="program-detail__tag">Youth Leadership</span>
+      <h2 class="program-detail__title">Rising Leaders</h2>
+      <div class="program-detail__subtitle">Empowering the next generation</div>
+      <p class="program-detail__desc">A dynamic 6-week program for teenagers and young adults (14–24) that builds confidence, emotional intelligence, communication skills, and a clear vision for their future career and life.</p>
+      <div class="program-meta-row">
+        <span class="program-meta-pill"><i data-lucide="calendar" class="lucide-icon"></i> 6 Weeks</span>
+        <span class="program-meta-pill"><i data-lucide="users" class="lucide-icon"></i> Age 14–24</span>
+        <span class="program-meta-pill"><i data-lucide="laptop" class="lucide-icon"></i> Zoom Sessions</span>
+        <span class="program-meta-pill"><i data-lucide="calendar" class="lucide-icon"></i> Rolling Enrolment</span>
+      </div>
+      <div class="program-detail__outcomes">
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Build authentic confidence and self-belief</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Develop emotional intelligence and resilience</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Master effective communication and leadership</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Overcome exam stress and peer pressure</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Create a roadmap for their goals and dreams</div>
+      </div>
+      <div class="program-detail__actions">
+        <a href="book.html?program=rising-leaders" class="btn btn--primary" id="enrol-rising-leaders">Enrol Now</a>
+        <button class="btn btn--whatsapp" data-whatsapp="Rising Leaders"><i data-lucide="message-circle" class="lucide-icon"></i> Ask on WhatsApp</button>
+      </div>
+    </div>
+    <div class="program-detail__visual">
+      <img src="assets/images/programs/rising-leaders.webp" alt="Rising Leaders program" loading="lazy">
+    </div>
+  </div>
+
+  <!-- Parvarish -->
+  <div class="program-detail" id="parvarish" data-category="parenting" data-aos="fade-up">
+    <div class="program-detail__content">
+      <span class="program-detail__tag">Parenting</span>
+      <h2 class="program-detail__title">Parvarish</h2>
+      <div class="program-detail__subtitle">The art of nurturing with love and wisdom</div>
+      <p class="program-detail__desc">A 10-week deep-dive into conscious, compassionate parenting. Learn to truly understand your child, respond instead of react, and create a family environment where everyone flourishes.</p>
+      <div class="program-meta-row">
+        <span class="program-meta-pill"><i data-lucide="calendar" class="lucide-icon"></i> 10 Weeks</span>
+        <span class="program-meta-pill"><i data-lucide="users" class="lucide-icon"></i> Parents</span>
+        <span class="program-meta-pill"><i data-lucide="laptop" class="lucide-icon"></i> Online &amp; Offline</span>
+        <span class="program-meta-pill"><i data-lucide="calendar" class="lucide-icon"></i> Next: July 2025</span>
+      </div>
+      <div class="program-detail__outcomes">
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Understand child development and psychology</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Build a deep, trusting parent-child bond</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Handle tantrums and conflict with calm</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Set loving boundaries that children respect</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Create harmony and joy at home every day</div>
+      </div>
+      <div class="program-detail__actions">
+        <a href="book.html?program=parvarish" class="btn btn--primary" id="enrol-parvarish">Enrol Now</a>
+        <button class="btn btn--whatsapp" data-whatsapp="Parvarish"><i data-lucide="message-circle" class="lucide-icon"></i> Ask on WhatsApp</button>
+      </div>
+    </div>
+    <div class="program-detail__visual">
+      <img src="assets/images/programs/parvarish.webp" alt="Parvarish parenting program" loading="lazy">
+    </div>
+  </div>
+
+  <!-- Sambandh Hi Sukh -->
+  <div class="program-detail program-detail--reverse" id="sambandh-hi-sukh" data-category="relationships" data-aos="fade-up">
+    <div class="program-detail__content">
+      <span class="program-detail__tag">Relationships</span>
+      <h2 class="program-detail__title">Sambandh Hi Sukh</h2>
+      <div class="program-detail__subtitle">Relationships are happiness</div>
+      <p class="program-detail__desc">An 8-week transformative program for couples and families that rebuilds communication, trust, and intimacy. Learn to love better, fight less, and build the relationship of your dreams.</p>
+      <div class="program-meta-row">
+        <span class="program-meta-pill"><i data-lucide="calendar" class="lucide-icon"></i> 8 Weeks</span>
+        <span class="program-meta-pill"><i data-lucide="users" class="lucide-icon"></i> Couples &amp; Families</span>
+        <span class="program-meta-pill"><i data-lucide="laptop" class="lucide-icon"></i> Private Sessions</span>
+        <span class="program-meta-pill"><i data-lucide="lock" class="lucide-icon"></i> Confidential</span>
+      </div>
+      <div class="program-detail__outcomes">
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Master the language of love and appreciation</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Resolve long-standing conflicts peacefully</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Rebuild trust and emotional intimacy</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Strengthen in-law and extended family bonds</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Create shared visions and goals as a couple</div>
+      </div>
+      <div class="program-detail__actions">
+        <a href="book.html?program=sambandh-hi-sukh" class="btn btn--primary" id="enrol-sambandh">Enrol Now</a>
+        <button class="btn btn--whatsapp" data-whatsapp="Sambandh Hi Sukh"><i data-lucide="message-circle" class="lucide-icon"></i> Ask on WhatsApp</button>
+      </div>
+    </div>
+    <div class="program-detail__visual">
+      <img src="assets/images/programs/sambandh-hi-sukh.webp" alt="Sambandh Hi Sukh relationships program" loading="lazy">
+    </div>
+  </div>
+
+  <!-- Super Mom -->
+  <div class="program-detail" id="super-mom" data-category="parenting" data-aos="fade-up">
+    <div class="program-detail__content">
+      <span class="program-detail__tag">Mothers</span>
+      <h2 class="program-detail__title">Super Mom</h2>
+      <div class="program-detail__subtitle">You can't pour from an empty cup</div>
+      <p class="program-detail__desc">A 6-week empowerment journey exclusively for mothers. Rediscover your identity beyond motherhood, reclaim your energy and joy, and show up as the best mum you can be — without burning out.</p>
+      <div class="program-meta-row">
+        <span class="program-meta-pill"><i data-lucide="calendar" class="lucide-icon"></i> 6 Weeks</span>
+        <span class="program-meta-pill"><i data-lucide="users" class="lucide-icon"></i> Mothers Only</span>
+        <span class="program-meta-pill"><i data-lucide="laptop" class="lucide-icon"></i> Women's Circle</span>
+        <span class="program-meta-pill"><i data-lucide="calendar" class="lucide-icon"></i> Ongoing Cohorts</span>
+      </div>
+      <div class="program-detail__outcomes">
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Reclaim your identity and sense of self</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Eliminate mum-guilt and people-pleasing</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Master energy management and self-care</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Build a supportive sisterhood community</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Lead your family with calm and confidence</div>
+      </div>
+      <div class="program-detail__actions">
+        <a href="book.html?program=super-mom" class="btn btn--primary" id="enrol-super-mom">Enrol Now</a>
+        <button class="btn btn--whatsapp" data-whatsapp="Super Mom"><i data-lucide="message-circle" class="lucide-icon"></i> Ask on WhatsApp</button>
+      </div>
+    </div>
+    <div class="program-detail__visual">
+      <img src="assets/images/programs/super-mom.webp" alt="Super Mom program" loading="lazy">
+    </div>
+  </div>
+
+  <!-- Academic Excellence -->
+  <div class="program-detail program-detail--reverse" id="academic-excellence" data-category="youth" data-aos="fade-up">
+    <div class="program-detail__content">
+      <span class="program-detail__tag">Students</span>
+      <h2 class="program-detail__title">Academic Excellence</h2>
+      <div class="program-detail__subtitle">Study smarter, not harder</div>
+      <p class="program-detail__desc">A 4-week intensive for students that combines mindset coaching, proven study techniques, and emotional resilience training to help them perform at their absolute best — in exams and in life.</p>
+      <div class="program-meta-row">
+        <span class="program-meta-pill"><i data-lucide="calendar" class="lucide-icon"></i> 4 Weeks</span>
+        <span class="program-meta-pill"><i data-lucide="users" class="lucide-icon"></i> Students (Class 8–12)</span>
+        <span class="program-meta-pill"><i data-lucide="laptop" class="lucide-icon"></i> Online Sessions</span>
+        <span class="program-meta-pill"><i data-lucide="calendar" class="lucide-icon"></i> Pre-Exam Batches</span>
+      </div>
+      <div class="program-detail__outcomes">
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Eliminate exam anxiety and performance fear</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Build a high-performance study system</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Improve memory retention and concentration</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Develop a growth mindset for learning</div>
+        <div class="program-outcome"><i data-lucide="check-circle" class="lucide-icon"></i> Balance academics, health and wellbeing</div>
+      </div>
+      <div class="program-detail__actions">
+        <a href="book.html?program=academic-excellence" class="btn btn--primary" id="enrol-academic">Enrol Now</a>
+        <button class="btn btn--whatsapp" data-whatsapp="Academic Excellence"><i data-lucide="message-circle" class="lucide-icon"></i> Ask on WhatsApp</button>
+      </div>
+    </div>
+    <div class="program-detail__visual">
+      <img src="assets/images/programs/academic-excellence.webp" alt="Academic Excellence program" loading="lazy">
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- CTA -->
+<section class="section section--light" aria-label="Call to action">
+  <div class="container">
+    <div class="cta-banner" data-aos="zoom-in">
+      <h2 class="cta-banner__title">Not Sure Which Program is Right for You?</h2>
+      <p class="cta-banner__text">Book a free 30-minute discovery call and we'll guide you to the perfect fit.</p>
+      <div class="cta-banner__actions">
+        <a href="book.html" class="btn btn--dark btn--lg">Book Free Discovery Call</a>
+        <button class="btn btn--whatsapp btn--lg" data-whatsapp="true"><i data-lucide="message-circle" class="lucide-icon"></i> Chat on WhatsApp</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">
+          <img src="assets/images/logo.png" alt="Nivam" class="footer__logo-img">
+          
+        </a>
+        <p class="footer__desc" style="margin-bottom: 0.5rem; font-weight: 600;">NIVAM — Guiding Lives Towards Light</p>
+        <p class="footer__desc">Empowering transformation through wisdom, awareness, and conscious growth.</p>
+        <div class="footer__socials">
+          <a href="#" class="footer__social-link" aria-label="Instagram"><i data-lucide="instagram" class="lucide-icon"></i></a>
+          <a href="#" class="footer__social-link" aria-label="Facebook"><i data-lucide="facebook" class="lucide-icon"></i></a>
+          <a href="#" class="footer__social-link" aria-label="YouTube"><i data-lucide="youtube" class="lucide-icon"></i></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__col-title">Programs</h3>
+        <ul class="footer__links">
+          <li><a href="#being-your-best" class="footer__link">Being Your Best</a></li>
+          <li><a href="#rising-leaders" class="footer__link">Rising Leaders</a></li>
+          <li><a href="#parvarish" class="footer__link">Parvarish</a></li>
+          <li><a href="#sambandh-hi-sukh" class="footer__link">Sambandh Hi Sukh</a></li>
+          <li><a href="#super-mom" class="footer__link">Super Mom</a></li>
+          <li><a href="#academic-excellence" class="footer__link">Academic Excellence</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__col-title">Company</h3>
+        <ul class="footer__links">
+          <li><a href="about.html" class="footer__link">About Us</a></li>
+          <li><a href="workshops.html" class="footer__link">Live Workshops</a></li>
+          <li><a href="book.html" class="footer__link">Book a Call</a></li>
+          <li><a href="contact.html" class="footer__link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__col-title">Get in Touch</h3>
+        <div class="footer__contact-item"><span class="footer__contact-icon"><i data-lucide="mail" class="lucide-icon"></i></span><a href="mailto:hello@nivam.in" class="footer__contact-link">hello@nivam.in</a></div>
+        <div class="footer__contact-item"><span class="footer__contact-icon"><i data-lucide="phone" class="lucide-icon"></i></span><a href="tel:+919876543210" class="footer__contact-link">+91 98765 43210</a></div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 Nivam. All rights reserved.</p>
+      <div class="footer__legal-links"><a href="privacy.html" class="footer__legal-link">Privacy</a><a href="terms.html" class="footer__legal-link">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<button id="whatsapp-float" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <span style="font-size:1.75rem"><i data-lucide="message-circle" class="lucide-icon"></i></span>
+  <span class="whatsapp-float__tooltip">Chat with us!</span>
+</button>
+
+<script src="js/navbar.js"></script>
+<script src="js/whatsapp.js"></script>
+<script src="js/main.js"></script>
+<script>
+// Filter functionality
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.program-detail').forEach(card => {
+      const cat = card.dataset.category;
+      card.style.display = (filter === 'all' || cat === filter) ? '' : 'none';
+    });
+  });
+});
+// Read URL param for direct scroll
+const hash = window.location.hash;
+if (hash) { setTimeout(() => document.querySelector(hash)?.scrollIntoView({behavior:'smooth', block:'start'}), 400); }
+</script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

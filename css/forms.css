@@ -1,0 +1,259 @@
+/* ================================================
+   NIVAM — Forms
+   ================================================ */
+
+/* ── Form Group ── */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: var(--fw-medium);
+  color: var(--color-dark-text);
+}
+
+.form-label .required {
+  color: #E53935;
+  margin-left: 2px;
+}
+
+/* ── Inputs ── */
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  color: var(--clr-text);
+  background: var(--clr-surface);
+  border: 1.5px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: var(--transition-fast);
+  appearance: none;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--clr-text-light);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: var(--color-primary-green);
+  box-shadow: 0 0 0 2px rgba(27,107,47,0.15);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 130px;
+  line-height: 1.6;
+}
+
+.form-select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236B5C8A' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+/* ── Error State ── */
+.form-input.error,
+.form-textarea.error,
+.form-select.error {
+  border-color: #B71C1C;
+  box-shadow: 0 0 0 2px rgba(183,28,28,0.1);
+}
+
+.form-error {
+  font-size: var(--fs-xs);
+  color: #B71C1C;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+}
+
+/* ── Success State ── */
+.form-input.success,
+.form-textarea.success {
+  border-color: #27500A;
+  box-shadow: 0 0 0 2px rgba(39,80,10,0.1);
+}
+
+/* ── Form Grid ── */
+.form-grid {
+  display: grid;
+  gap: var(--sp-5);
+}
+
+.form-grid--2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* ── Form Container ── */
+.form-container {
+  background: var(--clr-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--sp-10) var(--sp-10);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--clr-border-light);
+}
+
+.form-container__header {
+  margin-bottom: var(--sp-8);
+}
+
+.form-container__title {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary);
+  margin-bottom: var(--sp-2);
+}
+
+.form-container__subtitle {
+  font-size: var(--fs-sm);
+  color: var(--clr-text-muted);
+}
+
+/* ── Phone Input ── */
+.form-phone-wrap {
+  display: flex;
+  gap: 0;
+}
+
+.form-phone-prefix {
+  padding: 0.75rem 0.875rem;
+  background: var(--clr-bg);
+  border: 1.5px solid var(--clr-border);
+  border-right: none;
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+  font-size: var(--fs-sm);
+  color: var(--clr-text-muted);
+  font-weight: var(--fw-semi);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.form-phone-wrap .form-input {
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+/* ── Checkbox / Radio ── */
+.form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  cursor: pointer;
+}
+
+.form-check input[type="checkbox"],
+.form-check input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--clr-border);
+  border-radius: 4px;
+  background: var(--clr-surface);
+  cursor: pointer;
+  accent-color: var(--clr-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.form-check-label {
+  font-size: var(--fs-sm);
+  color: var(--clr-text-muted);
+  line-height: 1.5;
+}
+
+.form-check-label a {
+  color: var(--clr-primary);
+  text-decoration: underline;
+}
+
+/* ── Submit Feedback ── */
+.form-success-msg {
+  display: none;
+  text-align: center;
+  padding: var(--sp-8);
+}
+
+.form-success-msg.show { display: block; }
+
+.form-success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #43A047, #66BB6A);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--sp-4);
+  font-size: 2rem;
+}
+
+.form-success-title {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary);
+  margin-bottom: var(--sp-2);
+}
+
+.form-success-text {
+  color: var(--clr-text-muted);
+}
+
+/* ── Booking Form Specific ── */
+.program-selector {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-3);
+}
+
+.program-option {
+  position: relative;
+}
+
+.program-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.program-option__label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--sp-2);
+  padding: var(--sp-4);
+  border: 2px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--clr-text-muted);
+}
+
+.program-option__label .emoji {
+  font-size: 2rem;
+}
+
+.program-option input:checked + .program-option__label {
+  border-color: var(--clr-primary);
+  background: rgba(61,26,95,0.05);
+  color: var(--clr-primary);
+  box-shadow: 0 0 0 3px rgba(61,26,95,0.1);
+}
+
+.program-option__label:hover {
+  border-color: var(--clr-primary-light);
+}

@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Workshops — Nivam Coaching</title>
+<meta name="description" content="Join Nivam's live Zoom workshops on parenting, relationships, mindset and more. Upcoming sessions open for registration.">
+<link rel="icon" href="assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<style>
+.zoom-badge{display:inline-flex;align-items:center;gap:var(--sp-2);background:#2D8CFF;color:#fff;font-size:var(--fs-xs);font-weight:var(--fw-semi);padding:4px var(--sp-3);border-radius:var(--radius-full);letter-spacing:.06em}
+.workshops-header-info{display:flex;flex-wrap:wrap;gap:var(--sp-6);justify-content:center;margin-top:var(--sp-8)}
+.workshops-header-stat{text-align:center}
+.workshops-header-stat strong{display:block;font-size:var(--fs-2xl);font-weight:var(--fw-bold);color:var(--clr-white)}
+.workshops-header-stat span{font-size:var(--fs-xs);color:rgba(240,235,248,.65);text-transform:uppercase;letter-spacing:.08em}
+.past-workshops-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-6)}
+.past-card{background:var(--clr-surface);border-radius:var(--radius-xl);padding:var(--sp-6);border:1px solid var(--clr-border-light);box-shadow:var(--shadow-sm);transition:var(--transition-base)}
+.past-card:hover{box-shadow:var(--shadow-md);transform:translateY(-4px)}
+.past-card__emoji{font-size:2rem;margin-bottom:var(--sp-3)}
+.past-card__title{font-size:var(--fs-lg);font-weight:var(--fw-bold);color:var(--clr-primary);margin-bottom:var(--sp-2)}
+.past-card__meta{font-size:var(--fs-xs);color:var(--clr-text-light);margin-bottom:var(--sp-3)}
+.past-card__attendees{font-size:var(--fs-sm);color:var(--clr-text-muted)}
+.faq-list{display:flex;flex-direction:column;gap:var(--sp-3);max-width:720px;margin-inline:auto}
+.faq-item{background:var(--clr-surface);border-radius:var(--radius-lg);border:1px solid var(--clr-border-light);overflow:hidden}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:var(--sp-5) var(--sp-6);cursor:pointer;font-weight:var(--fw-semi);color:var(--clr-primary);gap:var(--sp-4)}
+.faq-q::after{content:'＋';font-size:1.25rem;color:var(--clr-accent);flex-shrink:0;transition:transform .3s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{display:none;padding:0 var(--sp-6) var(--sp-5);font-size:var(--fs-sm);color:var(--clr-text-muted);line-height:1.7}
+.faq-item.open .faq-a{display:block}
+@media(max-width:768px){.past-workshops-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.past-workshops-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header id="navbar" class="navbar navbar--solid" role="banner">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__logo" aria-label="Nivam Home">
+      <img src="assets/images/logo.png" alt="Nivam Logo" class="navbar__logo-img">
+      
+    </a>
+    <nav class="navbar__nav" aria-label="Primary navigation">
+      <a href="index.html" class="navbar__link">Home</a>
+      <a href="about.html" class="navbar__link">About</a>
+      <a href="programs.html" class="navbar__link">Programs</a>
+      <a href="workshops.html" class="navbar__link active">Workshops</a>
+      <a href="contact.html" class="navbar__link">Contact</a>
+    </nav>
+    <div class="navbar__cta"><a href="book.html" class="btn btn--primary btn--sm">Book a Call</a></div>
+    <button id="navbar-hamburger" class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-mobile-menu">
+      <span class="hamburger-bar"></span><span class="hamburger-bar"></span><span class="hamburger-bar"></span>
+    </button>
+  </div>
+</header>
+<div id="navbar-mobile-menu" class="navbar__mobile-menu">
+  <a href="index.html" class="navbar__mobile-link">Home</a>
+  <a href="about.html" class="navbar__mobile-link">About</a>
+  <a href="programs.html" class="navbar__mobile-link">Programs</a>
+  <a href="workshops.html" class="navbar__mobile-link active">Workshops</a>
+  <a href="contact.html" class="navbar__mobile-link">Contact</a>
+  <div class="navbar__mobile-cta"><a href="book.html" class="btn btn--primary btn--full">Book a Free Call</a></div>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>Workshops</span>
+    </nav>
+    <h1>Live Transformational Workshops</h1>
+    <p>Interactive learning experiences designed to inspire clarity, growth, awareness, and real-life transformation.</p>
+    <div class="workshops-header-info">
+      <div class="workshops-header-stat"><strong>200+</strong><span>Workshops Held</span></div>
+      <div class="workshops-header-stat"><strong>15K+</strong><span>Attendees</span></div>
+      <div class="workshops-header-stat"><strong>4.9<i data-lucide="star" class="lucide-icon"></i></strong><span>Average Rating</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- UPCOMING WORKSHOPS -->
+<section class="section" id="upcoming">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-eyebrow">Register Now</span>
+      <h2 class="section-title">Upcoming <span>Workshops</span></h2>
+      <p class="section-subtitle">All workshops are held live on Zoom. Join from anywhere. Recording provided to registered attendees.</p>
+    </div>
+    <div class="workshops-list" style="max-width:800px;margin-inline:auto">
+
+      <div class="workshop-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="workshop-card__date"><div class="workshop-card__day">14</div><div class="workshop-card__month">Jun</div></div>
+        <div class="workshop-card__body">
+          <span class="workshop-card__tag">Parenting</span>
+          <h3 class="workshop-card__title">Raising Emotionally Intelligent Children</h3>
+          <div class="workshop-card__meta">
+            <span class="workshop-card__meta-item"><i data-lucide="clock" class="lucide-icon"></i> 6:00–7:30 PM IST</span>
+            <span class="workshop-card__meta-item"><i data-lucide="laptop" class="lucide-icon"></i> Zoom</span>
+            <span class="workshop-card__meta-item"><i data-lucide="gift" class="lucide-icon"></i> Free</span>
+          </div>
+          <button class="btn btn--primary btn--sm" data-whatsapp-workshop="Raising Emotionally Intelligent Children" id="reg-workshop-1">Register Now</button>
+        </div>
+      </div>
+
+      <div class="workshop-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="workshop-card__date"><div class="workshop-card__day">21</div><div class="workshop-card__month">Jun</div></div>
+        <div class="workshop-card__body">
+          <span class="workshop-card__tag">Relationships</span>
+          <h3 class="workshop-card__title">The 5 Love Languages — Applying Them in Real Life</h3>
+          <div class="workshop-card__meta">
+            <span class="workshop-card__meta-item"><i data-lucide="clock" class="lucide-icon"></i> 7:00–8:30 PM IST</span>
+            <span class="workshop-card__meta-item"><i data-lucide="laptop" class="lucide-icon"></i> Zoom</span>
+            <span class="workshop-card__meta-item">₹ 199 Only</span>
+          </div>
+          <button class="btn btn--primary btn--sm" data-whatsapp-workshop="The 5 Love Languages" id="reg-workshop-2">Register Now</button>
+        </div>
+      </div>
+
+      <div class="workshop-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="workshop-card__date"><div class="workshop-card__day">28</div><div class="workshop-card__month">Jun</div></div>
+        <div class="workshop-card__body">
+          <span class="workshop-card__tag">Youth</span>
+          <h3 class="workshop-card__title">Exam Stress Buster — Mindset Masterclass for Students</h3>
+          <div class="workshop-card__meta">
+            <span class="workshop-card__meta-item"><i data-lucide="clock" class="lucide-icon"></i> 4:00–5:30 PM IST</span>
+            <span class="workshop-card__meta-item"><i data-lucide="laptop" class="lucide-icon"></i> Zoom</span>
+            <span class="workshop-card__meta-item"><i data-lucide="gift" class="lucide-icon"></i> Free</span>
+          </div>
+          <button class="btn btn--primary btn--sm" data-whatsapp-workshop="Exam Stress Buster Mindset Masterclass" id="reg-workshop-3">Register Now</button>
+        </div>
+      </div>
+
+      <div class="workshop-card" data-aos="fade-up" data-aos-delay="240">
+        <div class="workshop-card__date"><div class="workshop-card__day">5</div><div class="workshop-card__month">Jul</div></div>
+        <div class="workshop-card__body">
+          <span class="workshop-card__tag">Mothers</span>
+          <h3 class="workshop-card__title">The Super Mom Summit — Self-Care for Busy Mothers</h3>
+          <div class="workshop-card__meta">
+            <span class="workshop-card__meta-item"><i data-lucide="clock" class="lucide-icon"></i> 11:00 AM–1:00 PM IST</span>
+            <span class="workshop-card__meta-item"><i data-lucide="laptop" class="lucide-icon"></i> Zoom</span>
+            <span class="workshop-card__meta-item">₹ 299 Only</span>
+          </div>
+          <button class="btn btn--primary btn--sm" data-whatsapp-workshop="The Super Mom Summit" id="reg-workshop-4">Register Now</button>
+        </div>
+      </div>
+
+      <div class="workshop-card" data-aos="fade-up" data-aos-delay="320">
+        <div class="workshop-card__date"><div class="workshop-card__day">12</div><div class="workshop-card__month">Jul</div></div>
+        <div class="workshop-card__body">
+          <span class="workshop-card__tag">Personal Growth</span>
+          <h3 class="workshop-card__title">Breaking Limiting Beliefs — A NLP Workshop</h3>
+          <div class="workshop-card__meta">
+            <span class="workshop-card__meta-item"><i data-lucide="clock" class="lucide-icon"></i> 7:00–9:00 PM IST</span>
+            <span class="workshop-card__meta-item"><i data-lucide="laptop" class="lucide-icon"></i> Zoom</span>
+            <span class="workshop-card__meta-item">₹ 499 Only</span>
+          </div>
+          <button class="btn btn--primary btn--sm" data-whatsapp-workshop="Breaking Limiting Beliefs NLP Workshop" id="reg-workshop-5">Register Now</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PAST WORKSHOPS -->
+<section class="section section--light" id="past">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-eyebrow">Archive</span>
+      <h2 class="section-title">Past <span>Workshop Highlights</span></h2>
+    </div>
+    <div class="past-workshops-grid">
+      <div class="past-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="past-card__emoji"><i data-lucide="brain" class="lucide-icon"></i></div>
+        <div class="past-card__title">The Mindful Parent</div>
+        <div class="past-card__meta">March 2025 · 90 mins</div>
+        <div class="past-card__attendees"><i data-lucide="users" class="lucide-icon"></i> 340 attendees · 4.9<i data-lucide="star" class="lucide-icon"></i></div>
+      </div>
+      <div class="past-card" data-aos="fade-up" data-aos-delay="60">
+        <div class="past-card__emoji"><i data-lucide="heart" class="lucide-icon"></i></div>
+        <div class="past-card__title">Communication in Marriage</div>
+        <div class="past-card__meta">February 2025 · 2 hrs</div>
+        <div class="past-card__attendees"><i data-lucide="users" class="lucide-icon"></i> 220 attendees · 4.8<i data-lucide="star" class="lucide-icon"></i></div>
+      </div>
+      <div class="past-card" data-aos="fade-up" data-aos-delay="120">
+        <div class="past-card__emoji"><i data-lucide="target" class="lucide-icon"></i></div>
+        <div class="past-card__title">Goal Setting for 2025</div>
+        <div class="past-card__meta">January 2025 · 2 hrs</div>
+        <div class="past-card__attendees"><i data-lucide="users" class="lucide-icon"></i> 580 attendees · 5<i data-lucide="star" class="lucide-icon"></i></div>
+      </div>
+      <div class="past-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="past-card__emoji"><i data-lucide="smartphone" class="lucide-icon"></i></div>
+        <div class="past-card__title">Screen Time &amp; Kids</div>
+        <div class="past-card__meta">December 2024 · 90 mins</div>
+        <div class="past-card__attendees"><i data-lucide="users" class="lucide-icon"></i> 410 attendees · 4.9<i data-lucide="star" class="lucide-icon"></i></div>
+      </div>
+      <div class="past-card" data-aos="fade-up" data-aos-delay="60">
+        <div class="past-card__emoji"><i data-lucide="activity" class="lucide-icon"></i></div>
+        <div class="past-card__title">Building Resilience in Teens</div>
+        <div class="past-card__meta">November 2024 · 2 hrs</div>
+        <div class="past-card__attendees"><i data-lucide="users" class="lucide-icon"></i> 290 attendees · 4.8<i data-lucide="star" class="lucide-icon"></i></div>
+      </div>
+      <div class="past-card" data-aos="fade-up" data-aos-delay="120">
+        <div class="past-card__emoji"><i data-lucide="flower" class="lucide-icon"></i></div>
+        <div class="past-card__title">Mum's Wellness Day</div>
+        <div class="past-card__meta">October 2024 · 3 hrs</div>
+        <div class="past-card__attendees"><i data-lucide="users" class="lucide-icon"></i> 510 attendees · 5<i data-lucide="star" class="lucide-icon"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-eyebrow">Questions</span>
+      <h2 class="section-title">Frequently <span>Asked Questions</span></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item" data-aos="fade-up">
+        <div class="faq-q">How do I join a workshop?</div>
+        <div class="faq-a">Click "Register Now" and you'll be redirected to WhatsApp. Our team will confirm your registration and send you the Zoom link before the session.</div>
+      </div>
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="60">
+        <div class="faq-q">Will I get a recording?</div>
+        <div class="faq-a">Yes! All registered attendees receive a recording of the full session within 24 hours of the workshop ending.</div>
+      </div>
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="120">
+        <div class="faq-q">Are workshops in Hindi or English?</div>
+        <div class="faq-a">Most workshops are conducted in Hinglish (a mix of Hindi and English) to make them accessible and comfortable for all attendees.</div>
+      </div>
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="180">
+        <div class="faq-q">Can I attend from outside India?</div>
+        <div class="faq-a">Absolutely! Our Zoom workshops are open to participants worldwide. Times are listed in IST but recordings are available for all time zones.</div>
+      </div>
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="240">
+        <div class="faq-q">How do I pay for paid workshops?</div>
+        <div class="faq-a">Payment details are shared via WhatsApp after registration. We accept UPI, bank transfer, and credit/debit cards.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">
+          <img src="assets/images/logo.png" alt="Nivam" class="footer__logo-img">
+          
+        </a>
+        <p class="footer__desc" style="margin-bottom: 0.5rem; font-weight: 600;">NIVAM — Guiding Lives Towards Light</p>
+        <p class="footer__desc">Empowering transformation through wisdom, awareness, and conscious growth.</p>
+        <div class="footer__socials">
+          <a href="#" class="footer__social-link" aria-label="Instagram"><i data-lucide="instagram" class="lucide-icon"></i></a>
+          <a href="#" class="footer__social-link" aria-label="Facebook"><i data-lucide="facebook" class="lucide-icon"></i></a>
+          <a href="#" class="footer__social-link" aria-label="YouTube"><i data-lucide="youtube" class="lucide-icon"></i></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__col-title">Programs</h3>
+        <ul class="footer__links">
+          <li><a href="programs.html" class="footer__link">All Programs</a></li>
+          <li><a href="workshops.html" class="footer__link">Live Workshops</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__col-title">Company</h3>
+        <ul class="footer__links">
+          <li><a href="about.html" class="footer__link">About Us</a></li>
+          <li><a href="book.html" class="footer__link">Book a Call</a></li>
+          <li><a href="contact.html" class="footer__link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__col-title">Get in Touch</h3>
+        <div class="footer__contact-item"><span class="footer__contact-icon"><i data-lucide="mail" class="lucide-icon"></i></span><a href="mailto:hello@nivam.in" class="footer__contact-link">hello@nivam.in</a></div>
+        <div class="footer__contact-item"><span class="footer__contact-icon"><i data-lucide="phone" class="lucide-icon"></i></span><a href="tel:+919876543210" class="footer__contact-link">+91 98765 43210</a></div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 Nivam. All rights reserved.</p>
+      <div class="footer__legal-links"><a href="privacy.html" class="footer__legal-link">Privacy</a><a href="terms.html" class="footer__legal-link">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<button id="whatsapp-float" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <span style="font-size:1.75rem"><i data-lucide="message-circle" class="lucide-icon"></i></span>
+  <span class="whatsapp-float__tooltip">Chat with us!</span>
+</button>
+
+<script src="js/navbar.js"></script>
+<script src="js/whatsapp.js"></script>
+<script src="js/main.js"></script>
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

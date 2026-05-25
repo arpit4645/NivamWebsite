@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — Nivam Coaching</title>
+<meta name="description" content="Get in touch with the Nivam team. We're here to answer your questions and help you find the right coaching program.">
+<link rel="icon" href="assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<style>
+.contact-layout{display:grid;grid-template-columns:1fr 1.3fr;gap:var(--sp-12);align-items:start}
+.contact-methods{display:flex;flex-direction:column;gap:var(--sp-4);margin-bottom:var(--sp-8)}
+.contact-method{display:flex;align-items:center;gap:var(--sp-4);padding:var(--sp-5);background:var(--clr-surface);border:1px solid var(--clr-border-light);border-radius:var(--radius-xl);box-shadow:var(--shadow-sm);transition:var(--transition-base)}
+.contact-method:hover{box-shadow:var(--shadow-md);transform:translateX(4px)}
+.contact-method__icon{width:52px;height:52px;border-radius:var(--radius-md);background:var(--grad-primary);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0}
+.contact-method__label{font-size:var(--fs-xs);font-weight:var(--fw-semi);letter-spacing:.08em;text-transform:uppercase;color:var(--clr-accent);margin-bottom:2px}
+.contact-method__value{font-size:var(--fs-md);font-weight:var(--fw-semi);color:var(--clr-primary)}
+.contact-method__sub{font-size:var(--fs-xs);color:var(--clr-text-muted);margin-top:2px}
+.contact-hours{background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-xl);padding:var(--sp-6)}
+.contact-hours__title{font-weight:var(--fw-bold);color:var(--clr-primary);margin-bottom:var(--sp-4)}
+.hours-row{display:flex;justify-content:space-between;font-size:var(--fs-sm);color:var(--clr-text-muted);padding-block:var(--sp-2);border-bottom:1px solid var(--clr-border-light)}
+.hours-row:last-child{border-bottom:none}
+.hours-row strong{color:var(--clr-text);font-weight:var(--fw-medium)}
+@media(max-width:900px){.contact-layout{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header id="navbar" class="navbar navbar--solid" role="banner">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__logo" aria-label="Nivam Home">
+      <img src="assets/images/logo.png" alt="Nivam Logo" class="navbar__logo-img">
+      
+    </a>
+    <nav class="navbar__nav" aria-label="Primary navigation">
+      <a href="index.html" class="navbar__link">Home</a>
+      <a href="about.html" class="navbar__link">About</a>
+      <a href="programs.html" class="navbar__link">Programs</a>
+      <a href="workshops.html" class="navbar__link">Workshops</a>
+      <a href="contact.html" class="navbar__link active">Contact</a>
+    </nav>
+    <div class="navbar__cta"><a href="book.html" class="btn btn--primary btn--sm">Book a Call</a></div>
+    <button id="navbar-hamburger" class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-mobile-menu">
+      <span class="hamburger-bar"></span><span class="hamburger-bar"></span><span class="hamburger-bar"></span>
+    </button>
+  </div>
+</header>
+<div id="navbar-mobile-menu" class="navbar__mobile-menu">
+  <a href="index.html" class="navbar__mobile-link">Home</a>
+  <a href="about.html" class="navbar__mobile-link">About</a>
+  <a href="programs.html" class="navbar__mobile-link">Programs</a>
+  <a href="workshops.html" class="navbar__mobile-link">Workshops</a>
+  <a href="contact.html" class="navbar__mobile-link active">Contact</a>
+  <div class="navbar__mobile-cta"><a href="book.html" class="btn btn--primary btn--full">Book a Free Call</a></div>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>Contact</span>
+    </nav>
+    <h1>Get in Touch</h1>
+    <p>We'd love to hear from you. Our team responds within 24 hours.</p>
+  </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- Contact Info -->
+      <div data-aos="fade-right">
+        <span class="section-eyebrow" style="margin-bottom:var(--sp-5)">Reach Us</span>
+        <h2 style="font-size:var(--fs-2xl);color:var(--clr-primary);margin-bottom:var(--sp-3)">We're Here for You</h2>
+        <p style="font-size:var(--fs-md);color:var(--clr-text-muted);margin-bottom:var(--sp-8);line-height:1.7">Have a question about a program? Want to book a session? Or just curious about what we do? Reach us in whatever way is most comfortable for you.</p>
+
+        <div class="contact-methods">
+          <a href="https://wa.me/919876543210" class="contact-method" target="_blank" rel="noopener" id="contact-whatsapp-link">
+            <div class="contact-method__icon"><i data-lucide="message-circle" class="lucide-icon"></i></div>
+            <div>
+              <div class="contact-method__label">WhatsApp (Fastest)</div>
+              <div class="contact-method__value">+91 98765 43210</div>
+              <div class="contact-method__sub">Usually responds within 1 hour</div>
+            </div>
+          </a>
+          <a href="tel:+919876543210" class="contact-method" id="contact-phone-link">
+            <div class="contact-method__icon"><i data-lucide="phone" class="lucide-icon"></i></div>
+            <div>
+              <div class="contact-method__label">Phone Call</div>
+              <div class="contact-method__value">+91 98765 43210</div>
+              <div class="contact-method__sub">Mon–Sat, 9 AM to 8 PM IST</div>
+            </div>
+          </a>
+          <a href="mailto:hello@nivam.in" class="contact-method" id="contact-email-link">
+            <div class="contact-method__icon"><i data-lucide="mail" class="lucide-icon"></i></div>
+            <div>
+              <div class="contact-method__label">Email</div>
+              <div class="contact-method__value">hello@nivam.in</div>
+              <div class="contact-method__sub">We respond within 24 hours</div>
+            </div>
+          </a>
+          <div class="contact-method">
+            <div class="contact-method__icon"><i data-lucide="map-pin" class="lucide-icon"></i></div>
+            <div>
+              <div class="contact-method__label">Location</div>
+              <div class="contact-method__value">Mumbai, India</div>
+              <div class="contact-method__sub">Online sessions available worldwide</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-hours">
+          <div class="contact-hours__title"><i data-lucide="calendar" class="lucide-icon"></i> Office Hours</div>
+          <div class="hours-row"><strong>Monday – Friday</strong><span>9:00 AM – 8:00 PM IST</span></div>
+          <div class="hours-row"><strong>Saturday</strong><span>10:00 AM – 6:00 PM IST</span></div>
+          <div class="hours-row"><strong>Sunday</strong><span>Closed (WhatsApp only)</span></div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div data-aos="fade-left" data-aos-delay="100">
+        <div class="form-container">
+          <div class="form-container__header">
+            <h2 class="form-container__title">Send Us a Message</h2>
+            <p class="form-container__subtitle">We read every message and respond personally.</p>
+          </div>
+
+          <div id="contact-success" class="form-success-msg">
+            <div class="form-success-icon"><i data-lucide="check-circle" class="lucide-icon"></i></div>
+            <div class="form-success-title">Message Sent!</div>
+            <p class="form-success-text">Thank you for reaching out. We'll reply within 24 hours.</p>
+          </div>
+
+          <form id="contact-form" action="https://formspree.io/f/YOUR_CONTACT_ID" method="POST" novalidate>
+            <div class="form-grid" style="gap:var(--sp-5)">
+              <div class="form-grid--2" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-4)">
+                <div class="form-group">
+                  <label class="form-label" for="contact-name">Name <span class="required">*</span></label>
+                  <input type="text" id="contact-name" name="name" class="form-input" placeholder="Your name" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contact-phone">Phone</label>
+                  <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="98765 43210" autocomplete="tel">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email <span class="required">*</span></label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="your@email.com" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">Subject <span class="required">*</span></label>
+                <select id="contact-subject" name="subject" class="form-select" required>
+                  <option value="">Select a topic</option>
+                  <option>Program Enquiry</option>
+                  <option>Workshop Registration</option>
+                  <option>Book a Session</option>
+                  <option>Corporate / Bulk Booking</option>
+                  <option>Media / Press</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-message">Message <span class="required">*</span></label>
+                <textarea id="contact-message" name="message" class="form-textarea" placeholder="How can we help you?" required style="min-height:160px"></textarea>
+              </div>
+              <div class="form-group">
+                <label class="form-check">
+                  <input type="checkbox" name="consent" required>
+                  <span class="form-check-label">I agree to the <a href="privacy.html">Privacy Policy</a> and consent to being contacted.</span>
+                </label>
+              </div>
+              <button type="submit" class="btn btn--primary btn--lg btn--full" id="contact-submit-btn">Send Message →</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">
+          <img src="assets/images/logo.png" alt="Nivam" class="footer__logo-img">
+          
+        </a>
+        <p class="footer__desc" style="margin-bottom: 0.5rem; font-weight: 600;">NIVAM — Guiding Lives Towards Light</p>
+        <p class="footer__desc">Empowering transformation through wisdom, awareness, and conscious growth.</p>
+        <div class="footer__socials">
+          <a href="#" class="footer__social-link" aria-label="Instagram"><i data-lucide="instagram" class="lucide-icon"></i></a>
+          <a href="#" class="footer__social-link" aria-label="Facebook"><i data-lucide="facebook" class="lucide-icon"></i></a>
+          <a href="#" class="footer__social-link" aria-label="YouTube"><i data-lucide="youtube" class="lucide-icon"></i></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__col-title">Programs</h3>
+        <ul class="footer__links">
+          <li><a href="programs.html" class="footer__link">All Programs</a></li>
+          <li><a href="workshops.html" class="footer__link">Live Workshops</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__col-title">Company</h3>
+        <ul class="footer__links">
+          <li><a href="about.html" class="footer__link">About Us</a></li>
+          <li><a href="book.html" class="footer__link">Book a Call</a></li>
+          <li><a href="privacy.html" class="footer__link">Privacy Policy</a></li>
+          <li><a href="terms.html" class="footer__link">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__col-title">Get in Touch</h3>
+        <div class="footer__contact-item"><span class="footer__contact-icon"><i data-lucide="mail" class="lucide-icon"></i></span><a href="mailto:hello@nivam.in" class="footer__contact-link">hello@nivam.in</a></div>
+        <div class="footer__contact-item"><span class="footer__contact-icon"><i data-lucide="phone" class="lucide-icon"></i></span><a href="tel:+919876543210" class="footer__contact-link">+91 98765 43210</a></div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 Nivam. All rights reserved.</p>
+      <div class="footer__legal-links"><a href="privacy.html" class="footer__legal-link">Privacy</a><a href="terms.html" class="footer__legal-link">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<button id="whatsapp-float" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <span style="font-size:1.75rem"><i data-lucide="message-circle" class="lucide-icon"></i></span>
+  <span class="whatsapp-float__tooltip">Chat with us!</span>
+</button>
+
+<script src="js/navbar.js"></script>
+<script src="js/whatsapp.js"></script>
+<script src="js/form.js"></script>
+<script src="js/main.js"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

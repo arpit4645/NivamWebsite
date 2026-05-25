@@ -1,0 +1,199 @@
+/* ================================================
+   NIVAM — Buttons
+   ================================================ */
+
+/* ── Base ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  padding: 0.75rem 1.75rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-size: 15px; /* Premium size */
+  font-weight: 600; /* Semi-bold */
+  text-decoration: none;
+  border-radius: var(--radius-full);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Cinematic ease */
+  cursor: pointer;
+  line-height: 1.2;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.btn:active {
+  transform: scale(0.98) !important; /* Soft press interaction */
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.1);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease-out);
+}
+
+.btn:hover::before { transform: scaleX(1); }
+
+/* ── Primary ── */
+.btn--primary {
+  background: var(--color-gold);
+  color: var(--color-dark-green);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  border: 1px solid transparent;
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px) scale(1.01);
+  background: linear-gradient(135deg, #F9D038, #D4A800); /* Smooth gradient shift */
+  box-shadow: 0 8px 24px rgba(245, 197, 24, 0.3); /* Softer, branded shadow */
+  color: var(--color-dark-green);
+}
+
+.btn--primary:active {
+  transform: translateY(0);
+}
+
+/* ── Secondary (Outline) ── */
+.btn--secondary {
+  background: transparent;
+  color: var(--color-primary-green);
+  border-color: var(--color-primary-green);
+}
+
+.btn--secondary:hover {
+  background: var(--color-light-green);
+  color: var(--color-primary-green);
+  transform: translateY(-2px);
+}
+
+/* ── Outline Primary ── */
+.btn--outline {
+  background: transparent;
+  color: var(--clr-primary);
+  border-color: var(--clr-primary);
+}
+
+.btn--outline::before { background: rgba(61,26,95,0.05); }
+
+.btn--outline:hover {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ── Ghost ── */
+.btn--ghost {
+  background: transparent;
+  color: var(--clr-white);
+  border-color: var(--clr-white);
+  padding-inline: var(--sp-4);
+}
+
+.btn--ghost::before { display: none; }
+
+.btn--ghost:hover {
+  background: rgba(255,255,255,0.1);
+  color: var(--clr-white);
+}
+
+/* ── Dark (on light bg) ── */
+.btn--dark {
+  background: var(--grad-primary);
+  color: var(--clr-white);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--dark:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ── WhatsApp ── */
+.btn--whatsapp {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: var(--clr-white);
+  box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+}
+
+.btn--whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(37,211,102,0.45);
+}
+
+/* ── Sizes ── */
+.btn--sm {
+  padding: 0.5rem 1.25rem;
+  font-size: var(--fs-xs);
+}
+
+.btn--lg {
+  padding: 1rem 2.5rem;
+  font-size: var(--fs-md);
+}
+
+.btn--full {
+  width: 100%;
+}
+
+/* ── Icon ── */
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s var(--ease-out);
+}
+
+.btn:hover .btn-icon--arrow { transform: translateX(4px); }
+.btn:hover .btn-icon--play  { transform: scale(1.15); }
+
+/* ── WhatsApp Float Button ── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(37,211,102,0.45);
+  z-index: var(--z-modal);
+  transition: var(--transition-base);
+  animation: float 3s ease-in-out infinite;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.12);
+  box-shadow: 0 12px 40px rgba(37,211,102,0.55);
+}
+
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+}
+
+.whatsapp-float__tooltip {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--clr-text);
+  color: var(--clr-white);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition-fast);
+}
+
+.whatsapp-float:hover .whatsapp-float__tooltip { opacity: 1; }
