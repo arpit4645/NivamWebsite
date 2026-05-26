@@ -33,7 +33,7 @@
 .past-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
 .past-card__emoji { font-size: 2rem; margin-bottom: var(--sp-3); }
 .past-card__title { font-size: var(--fs-lg); font-weight: var(--fw-bold); color: var(--clr-primary); margin-bottom: var(--sp-2); }
-.past-card__meta { font-size: var(--fs-xs); color: var(--clr-text-light); margin-bottom: var(--sp-3); }
+.past-card__meta { font-size: var(--fs-xs); color: var(--clr-text-muted-dark); margin-bottom: var(--sp-3); }
 .past-card__attendees { font-size: var(--fs-sm); color: var(--clr-text-muted); }
 
 .faq-list { display: flex; flex-direction: column; gap: var(--sp-3); max-width: 720px; margin-inline: auto; }

@@ -17,7 +17,7 @@
 }
 .program-detail__tag {
   display: inline-block;
-  background: rgba(61, 26, 95, .08);
+  background: var(--clr-green-light);
   color: var(--clr-primary);
   font-size: var(--fs-xs);
   font-weight: var(--fw-semi);

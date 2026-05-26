@@ -12,7 +12,7 @@
 .form-label {
   font-size: 14px;
   font-weight: var(--fw-medium);
-  color: var(--color-dark-text);
+  color: var(--clr-text-dark);
 }
 
 .form-label .required {
@@ -39,7 +39,7 @@
 
 .form-input::placeholder,
 .form-textarea::placeholder {
-  color: var(--clr-text-light);
+  color: var(--clr-text-muted-dark);
 }
 
 .form-input:focus,

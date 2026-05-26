@@ -110,4 +110,54 @@
   --container-max: 1280px;
   --container-pad: clamp(1.25rem, 5vw, 3rem);
   --section-py:    clamp(5rem, 10vw, 9rem);
+
+  /* ── BACKWARD COMPATIBILITY ALIASES & WEIGHTS ── */
+  --clr-primary:        var(--clr-green);
+  --clr-primary-dark:   var(--clr-green-dark);
+  --clr-primary-light:  var(--clr-green-light);
+  --clr-accent:         var(--clr-gold);
+  --clr-accent-light:   var(--clr-gold-light);
+  --clr-dark:           var(--clr-bg-darkest);
+  --clr-charcoal:       var(--clr-bg-dark);
+  --clr-text:           var(--clr-text-dark);
+  --clr-text-muted:     var(--clr-text-muted-dark);
+  --clr-border:         var(--clr-border-light);
+  --clr-bg:             var(--clr-bg-ivory);
+  --clr-bg-gold:        var(--clr-bg-gold-tint);
+  --clr-surface:        var(--clr-white);
+
+  --ff-heading:         var(--ff-display);
+  --font-heading:       var(--ff-display);
+  --font-body:          var(--ff-body);
+  --font-primary:       var(--ff-body);
+  --font-devanagari:    'Noto Sans Devanagari', sans-serif;
+
+  --fw-light:   300;
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semi:    600;
+  --fw-bold:    700;
+  --fw-black:   900;
+
+  --transition-fast:   all var(--duration-fast) var(--ease-out);
+  --transition-base:   all var(--duration-mid) var(--ease-smooth);
+  --transition-slow:   all var(--duration-slow) var(--ease-out);
+
+  --shadow-sm:         var(--shadow-card-light);
+  --shadow-md:         var(--shadow-hover);
+  --shadow-lg:         var(--shadow-hover);
+  --shadow-xl:         var(--shadow-hover);
+  --shadow-glow:       var(--shadow-gold);
+
+  --container-wide:    1400px;
+  --nav-height:        72px;
+
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  32px;
+  --space-2xl: 48px;
+  --space-3xl: 60px;
+
 }

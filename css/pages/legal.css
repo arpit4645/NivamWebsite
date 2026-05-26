@@ -14,7 +14,7 @@
 .legal-body a { color: var(--clr-primary); text-decoration: underline; }
 .legal-meta {
   font-size: var(--fs-sm);
-  color: var(--clr-text-light);
+  color: var(--clr-text-muted-dark);
   margin-bottom: var(--sp-8);
   padding-bottom: var(--sp-6);
   border-bottom: 1px solid var(--clr-border-light);

@@ -7,8 +7,15 @@
   .hero__subtitle { margin: 0 auto var(--sp-8); }
   .about-split { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  #vision-mission > .container > div,
-  #why-nivam > .container > div { grid-template-columns: 1fr; }
+  
+  /* Inline grid overrides for tablet/mobile */
+  #vision-mission > .container > div[style*="display:grid"],
+  #why-nivam > .container > div[style*="display:grid"] { 
+    grid-template-columns: 1fr !important; 
+  }
+  #team .container > div[style*="display:grid"] {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 /* ── MOBILE (max 768px) ── */
@@ -27,9 +34,23 @@
   .cta-banner { border-radius: var(--radius-lg); padding: 2.5rem 1.5rem; }
   .cta-banner__actions { flex-direction: column; align-items: center; }
   .hero__stats { gap: var(--sp-4); }
-  .navbar__links { display: none; }
-  .navbar__burger { display: flex; }
+  
+  /* Correct classes to hide nav links and show hamburger */
+  .navbar__nav { display: none !important; }
+  .navbar__cta { display: none !important; }
+  .navbar__hamburger { display: flex !important; }
+  
   .btn--lg { padding: 0.8rem 1.8rem; font-size: var(--fs-sm); }
+
+  .form-grid--2 {
+    grid-template-columns: 1fr !important;
+  }
+  .program-selector {
+    grid-template-columns: 1fr !important;
+  }
+  .form-container {
+    padding: var(--sp-6) var(--sp-4) !important;
+  }
 }
 
 /* ── SMALL MOBILE (max 480px) ── */
