@@ -59,26 +59,23 @@ const map = {
   '💛': 'heart'
 };
 
-const files = fs.readdirSync('.').filter(f => f.endsWith('.html'));
+const files = fs.readdirSync('..').filter(f => f.endsWith('.html'));
 
 files.forEach(f => {
-  let content = fs.readFileSync(f, 'utf8');
-  
-  // Replace emojis
+  let content = fs.readFileSync('../' + f, 'utf8');
+
   for (const [emoji, icon] of Object.entries(map)) {
     content = content.split(emoji).join(`<i data-lucide="${icon}" class="lucide-icon"></i>`);
   }
-  
-  // Clean up any weird leftovers or combinations
+
   content = content.replace(/🇮\s*🇳/g, `<i data-lucide="map-pin" class="lucide-icon"></i>`);
   content = content.replace(/👨\s*👩\s*👧/g, `<i data-lucide="users" class="lucide-icon"></i>`);
-  
-  // Inject script
+
   if (!content.includes('unpkg.com/lucide')) {
-    content = content.replace('</body>', `  <!-- Lucide Icons -->\n  <script src="https://unpkg.com/lucide@latest"></script>\n  <script>lucide.createIcons();</script>\n</body>`);
+    content = content.replace('</body>', `  <script src="https://unpkg.com/lucide@latest"></script>\n  <script>lucide.createIcons();</script>\n</body>`);
   }
-  
-  fs.writeFileSync(f, content);
+
+  fs.writeFileSync('../' + f, content);
 });
 
 console.log('Icons replaced successfully.');
