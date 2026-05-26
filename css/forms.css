@@ -16,7 +16,7 @@
 }
 
 .form-label .required {
-  color: #E53935;
+  color: var(--clr-gold);
   margin-left: 2px;
 }
 
@@ -67,13 +67,13 @@
 .form-input.error,
 .form-textarea.error,
 .form-select.error {
-  border-color: #B71C1C;
+  border-color: var(--clr-gold);
   box-shadow: 0 0 0 2px rgba(183,28,28,0.1);
 }
 
 .form-error {
   font-size: var(--fs-xs);
-  color: #B71C1C;
+  color: var(--clr-gold);
   display: flex;
   align-items: center;
   gap: var(--sp-1);
@@ -82,7 +82,7 @@
 /* ── Success State ── */
 .form-input.success,
 .form-textarea.success {
-  border-color: #27500A;
+  border-color: var(--clr-green);
   box-shadow: 0 0 0 2px rgba(39,80,10,0.1);
 }
 
@@ -190,7 +190,7 @@
   width: 64px;
   height: 64px;
   border-radius: var(--radius-full);
-  background: linear-gradient(135deg, #43A047, #66BB6A);
+  background: var(--grad-green);
   display: flex;
   align-items: center;
   justify-content: center;

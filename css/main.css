@@ -2,148 +2,91 @@
    NIVAM — Main: Global Layout & Typography
    ================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ── Base ── */
+html { scroll-behavior: smooth; font-size: 16px; }
+
 body {
   font-family: var(--ff-body);
-  font-size: var(--fs-base);
-  font-weight: var(--fw-regular);
-  color: var(--clr-text);
-  background-color: var(--clr-bg);
+  color: var(--clr-text-dark);
+  background: var(--clr-bg-ivory);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-/* ── Container ── */
+/* Dark-bg sections inherit light text */
+.dark-section {
+  color: var(--clr-text-light);
+  background: var(--clr-bg-dark);
+}
+
 .container {
-  width: 100%;
   max-width: var(--container-max);
-  margin-inline: auto;
-  padding-inline: var(--sp-6);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
 }
 
-.container--wide {
-  max-width: var(--container-wide);
-}
+.section { padding: var(--section-py) 0; }
+.section--light { background: var(--grad-section-light); }
+.section--dark  { background: var(--clr-bg-dark); }
+.section--darkest { background: var(--clr-bg-darkest); }
 
-/* ── Typography ── */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--ff-heading);
-  line-height: 1.2;
-  color: var(--clr-primary);
-  font-weight: var(--fw-bold);
-}
-
-h1 { font-size: clamp(var(--fs-3xl), 5vw, var(--fs-6xl)); }
-h2 { font-size: clamp(var(--fs-2xl), 4vw, 3.25rem); }
-h3 { font-size: clamp(var(--fs-xl), 2.5vw, var(--fs-3xl)); }
-h4 { font-size: clamp(var(--fs-lg), 2vw, var(--fs-2xl)); }
-h5 { font-size: var(--fs-lg); }
-h6 { font-size: var(--fs-md); }
-
-p {
-  font-size: var(--fs-md);
-  line-height: 1.75;
-  color: var(--clr-text-muted);
-}
-
-.lead {
-  font-size: var(--fs-xl);
-  line-height: 1.6;
-  font-weight: var(--fw-light);
-  color: var(--clr-text-muted);
-}
-
-.italic-accent {
-  font-family: var(--font-heading);
-  font-style: italic;
-  color: var(--clr-accent);
-}
-
-/* ── Section Layout ── */
-.section {
-  padding-block: var(--section-py);
-}
-
-.section--light {
-  background-color: var(--clr-bg-light);
-}
-
-.section--dark {
-  background: var(--clr-dark);
-  color: rgba(240,250,243,0.85);
-}
-
-.section--dark h1,
-.section--dark h2,
-.section--dark h3,
-.section--dark h4 {
-  color: var(--clr-white);
-}
-
-.section--dark p {
-  color: rgba(250,247,242,0.8);
-}
-
-/* ── Section Header ── */
-.section-header {
-  text-align: center;
-  max-width: 680px;
-  margin-inline: auto;
-  margin-bottom: var(--sp-16);
-}
+/* ── SECTION HEADERS ── */
+.section-header { text-align: center; max-width: 720px; margin: 0 auto var(--sp-16); }
 
 .section-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
   font-family: var(--ff-body);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--clr-gold);
   margin-bottom: var(--sp-4);
 }
-
-.section-eyebrow::before {
+.section-eyebrow::before,
+.section-eyebrow::after {
   content: '';
   display: inline-block;
-  width: 2rem;
-  height: 2px;
+  width: 1.5rem;
+  height: 1px;
   background: var(--clr-gold);
+  opacity: 0.6;
 }
 
-h2.section-title, .section-title {
-  font-family: var(--ff-heading);
-  font-size: clamp(2rem, 4vw, 3.25rem);
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-  margin-bottom: var(--sp-4);
-  color: var(--clr-primary);
-}
+/* On dark sections, eyebrow stays gold */
+.dark-section .section-eyebrow { color: var(--clr-gold); }
 
-h2.section-title span, .section-title span {
-  color: var(--clr-gold);
+.section-title {
+  font-family: var(--ff-display);
+  font-size: var(--fs-4xl);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--clr-text-dark);
+  margin-bottom: var(--sp-5);
 }
+.section-title span { color: var(--clr-gold); font-style: italic; }
+.dark-section .section-title { color: var(--clr-text-light); }
 
 .section-subtitle {
-  font-size: var(--fs-md);
-  color: var(--clr-text-muted);
+  font-size: var(--fs-lg);
+  color: var(--clr-text-muted-dark);
   line-height: 1.7;
+  max-width: 580px;
+  margin: 0 auto;
 }
+.dark-section .section-subtitle { color: var(--clr-text-muted-light); }
 
-/* ── Utility ── */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  white-space: nowrap;
-  border-width: 0;
-}
+/* ── UTILITY ── */
+.text-center { text-align: center; }
+.text-gold    { color: var(--clr-gold); }
+.text-green   { color: var(--clr-green); }
+.sr-only { position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0); }
+\n
 
 .text-center { text-align: center; }
 .text-primary { color: var(--clr-primary); }

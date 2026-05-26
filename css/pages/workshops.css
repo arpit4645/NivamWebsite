@@ -2,8 +2,8 @@
   display: inline-flex;
   align-items: center;
   gap: var(--sp-2);
-  background: #2D8CFF;
-  color: #fff;
+  background: var(--clr-green);
+  color: var(--clr-white);
   font-size: var(--fs-xs);
   font-weight: var(--fw-semi);
   padding: 4px var(--sp-3);

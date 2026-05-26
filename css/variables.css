@@ -1,135 +1,113 @@
-/* ================================================
-   NIVAM — Design Tokens
-   ================================================ */
+/* ============================================
+   NIVAM — Design System Variables
+   Brand: Forest Green + Warm Gold
+   Philosophy: Darkness to Light
+   ============================================ */
 
 :root {
-  /* === BRAND PRIMARIES === */
-  --clr-primary:        #1A6B3A;   /* Deep Forest Green */
-  --clr-primary-dark:   #124D2A;   /* Darker green for hover states */
-  --clr-primary-light:  #E8F5EE;   /* Very light green tint for bg use */
 
-  --clr-gold:           #F2C12E;   /* Brand Gold */
-  --clr-gold-dark:      #C99B1A;   /* Deeper gold for hover */
-  --clr-gold-light:     #FDF6DC;   /* Pale gold for section backgrounds */
+  /* ── BRAND CORE ── */
+  --clr-green:          #1A6B3A;
+  --clr-green-dark:     #124D2A;
+  --clr-green-mid:      #1E8048;
+  --clr-green-light:    #E8F5EE;
+  --clr-green-glow:     rgba(26, 107, 58, 0.35);
 
-  /* === NEUTRALS (modern corporate) === */
-  --clr-dark:           #0F1F14;   /* Near-black with green undertone */
-  --clr-charcoal:       #1E2D24;   /* Deep dark green-charcoal */
-  --clr-text:           #1C2B22;   /* Body text */
-  --clr-text-muted:     #5A7063;   /* Muted paragraph text */
-  --clr-border:         #D4E6DA;   /* Subtle green-tinted border */
+  --clr-gold:           #F2C12E;
+  --clr-gold-dark:      #C99B1A;
+  --clr-gold-deep:      #A67C00;
+  --clr-gold-light:     #FDF6DC;
+  --clr-gold-glow:      rgba(242, 193, 46, 0.30);
 
-  /* === BACKGROUNDS === */
-  --clr-bg:             #F9FBF9;   /* Near-white with green breath */
-  --clr-bg-light:       #F0F7F3;   /* Light green-tinted section bg */
-  --clr-bg-gold:        #FEFAEE;   /* Warm gold-tinted section bg */
+  /* ── DARK BACKGROUNDS (Darkness to Light theme) ── */
+  --clr-bg-darkest:     #060E09;   /* near-black with green soul */
+  --clr-bg-dark:        #0C1810;   /* deep forest dark */
+  --clr-bg-mid:         #112016;   /* mid dark emerald */
+  --clr-bg-surface:     #162B1C;   /* card surface on dark bg */
+  --clr-bg-glass:       rgba(22, 43, 28, 0.60); /* glassmorphism base */
+
+  /* ── LIGHT SECTION BACKGROUNDS ── */
+  --clr-bg-light:       #F0F7F3;   /* soft green-tinted light bg */
+  --clr-bg-ivory:       #FAFAF7;   /* warm near-white */
+  --clr-bg-gold-tint:   #FEFAEE;   /* subtle gold-tinted bg */
   --clr-white:          #FFFFFF;
 
-  /* === ACCENT / UI === */
-  --clr-accent:         #F2C12E;   /* Gold as accent (same as brand gold) */
-  --clr-success:        #1A6B3A;
-  --clr-overlay:        rgba(15, 31, 20, 0.72);  /* Dark green overlay */
+  /* ── TEXT ── */
+  --clr-text-light:     #F2F7F4;   /* primary text on dark bg */
+  --clr-text-muted-light: rgba(242, 247, 244, 0.65);
+  --clr-text-dark:      #0F1E13;   /* primary text on light bg */
+  --clr-text-muted-dark: #5A7063;
 
-  /* === GRADIENTS === */
-  --grad-primary:       linear-gradient(135deg, #1A6B3A 0%, #124D2A 100%);
-  --grad-gold:          linear-gradient(135deg, #F2C12E 0%, #C99B1A 100%);
-  --grad-hero:          linear-gradient(160deg, #0F1F14 0%, #1A6B3A 60%, #1E4D2C 100%);
-  --grad-card-hover:    linear-gradient(135deg, #E8F5EE 0%, #FFFFFF 100%);
-  --grad-cta:           linear-gradient(135deg, #1A6B3A 0%, #0F1F14 100%);
+  /* ── BORDERS ── */
+  --clr-border-dark:    rgba(242, 193, 46, 0.15);   /* gold border on dark */
+  --clr-border-green:   rgba(26, 107, 58, 0.20);    /* green border on light */
+  --clr-border-light:   rgba(26, 107, 58, 0.12);
 
-  /* === TYPOGRAPHY === */
-  --ff-heading:  'Cormorant Garamond', Georgia, serif;
-  --ff-body:     'Poppins', sans-serif;
-  
-  /* Fallbacks for backward compat */
-  --font-heading:       var(--ff-heading);
-  --font-body:          var(--ff-body);
-  --font-primary:       var(--ff-body);
-  --font-devanagari:    'Noto Sans Devanagari', sans-serif;
-  --font-mono:          'Courier New', monospace;
+  /* ── GRADIENTS ── */
+  --grad-hero:        linear-gradient(160deg, #060E09 0%, #0C1810 40%, #1A6B3A 100%);
+  --grad-hero-radial: radial-gradient(ellipse at 70% 50%, rgba(26,107,58,0.4) 0%, transparent 70%);
+  --grad-gold:        linear-gradient(135deg, #F2C12E 0%, #C99B1A 100%);
+  --grad-gold-soft:   linear-gradient(135deg, #F2C12E 0%, #E8B86D 100%);
+  --grad-green:       linear-gradient(135deg, #1A6B3A 0%, #124D2A 100%);
+  --grad-dark:        linear-gradient(160deg, #060E09 0%, #0C1810 100%);
+  --grad-cta:         linear-gradient(135deg, #0C1810 0%, #1A6B3A 60%, #124D2A 100%);
+  --grad-card-dark:   linear-gradient(145deg, rgba(22,43,28,0.9) 0%, rgba(12,24,16,0.95) 100%);
+  --grad-glass:       linear-gradient(135deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.02) 100%);
+  --grad-section-light: linear-gradient(180deg, #FAFAF7 0%, #F0F7F3 100%);
 
-  /* Font Sizes */
-  --fs-xs:    0.8125rem; /* 13px */
-  --fs-sm:    0.875rem;  /* 14px */
-  --fs-base:  1rem;      /* 16px */
-  --fs-md:    1.125rem;  /* 18px */
-  --fs-lg:    1.25rem;
-  --fs-xl:    1.5rem;
-  --fs-2xl:   2rem;      /* 32px */
-  --fs-3xl:   2.5rem;    /* 40px */
-  --fs-4xl:   3rem;      /* 48px */
-  --fs-5xl:   4rem;      /* 64px */
-  --fs-6xl:   4.5rem;
+  /* ── GLOW EFFECTS ── */
+  --glow-gold:    0 0 40px rgba(242, 193, 46, 0.25), 0 0 80px rgba(242, 193, 46, 0.10);
+  --glow-green:   0 0 40px rgba(26, 107, 58, 0.30), 0 0 80px rgba(26, 107, 58, 0.12);
+  --glow-card:    0 8px 32px rgba(0, 0, 0, 0.40), 0 2px 8px rgba(242,193,46,0.08);
 
-  /* Font Weights */
-  --fw-light:   300;
-  --fw-regular: 400;
-  --fw-medium:  500;
-  --fw-semi:    600;
-  --fw-bold:    700;
-  --fw-black:   900;
+  /* ── SHADOWS ── */
+  --shadow-card-dark:  0 4px 24px rgba(0,0,0,0.40), 0 1px 4px rgba(242,193,46,0.06);
+  --shadow-card-light: 0 4px 24px rgba(26,107,58,0.10), 0 1px 4px rgba(26,107,58,0.05);
+  --shadow-hover:      0 16px 48px rgba(0,0,0,0.50), 0 4px 16px rgba(242,193,46,0.15);
+  --shadow-gold:       0 4px 20px rgba(242,193,46,0.40), 0 1px 6px rgba(242,193,46,0.20);
+  --shadow-btn:        0 4px 16px rgba(242,193,46,0.35);
+  --shadow-nav:        0 2px 24px rgba(0,0,0,0.30);
 
-  /* === SPACING === */
-  --space-xs:  4px;
-  --space-sm:  8px;
-  --space-md:  16px;
-  --space-lg:  24px;
-  --space-xl:  32px;
-  --space-2xl: 48px;
-  --space-3xl: 60px;
+  /* ── TYPOGRAPHY ── */
+  --ff-display:  'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --ff-body:     'Poppins', 'DM Sans', sans-serif;
 
-  --sp-1:    0.25rem;
-  --sp-2:    0.5rem;
-  --sp-3:    0.75rem;
-  --sp-4:    1rem;
-  --sp-5:    1.25rem;
-  --sp-6:    1.5rem;
-  --sp-8:    2rem;
-  --sp-10:   2.5rem;
-  --sp-12:   3rem;
-  --sp-16:   4rem;
-  --sp-20:   5rem;
-  --sp-24:   6rem;
-  --sp-32:   8rem;
+  --fs-xs:   0.75rem;
+  --fs-sm:   0.875rem;
+  --fs-base: 1rem;
+  --fs-lg:   1.125rem;
+  --fs-xl:   1.25rem;
+  --fs-2xl:  1.5rem;
+  --fs-3xl:  clamp(1.75rem, 3vw, 2.25rem);
+  --fs-4xl:  clamp(2.25rem, 4vw, 3rem);
+  --fs-5xl:  clamp(2.75rem, 5.5vw, 4.5rem);
+  --fs-hero: clamp(3rem, 7vw, 5.5rem);
 
-  /* === BORDER RADIUS === */
+  /* ── SPACING ── */
+  --sp-1: 0.25rem;  --sp-2: 0.5rem;   --sp-3: 0.75rem;
+  --sp-4: 1rem;     --sp-5: 1.25rem;  --sp-6: 1.5rem;
+  --sp-7: 1.75rem;  --sp-8: 2rem;     --sp-10: 2.5rem;
+  --sp-12: 3rem;    --sp-16: 4rem;    --sp-20: 5rem;
+  --sp-24: 6rem;    --sp-32: 8rem;
+
+  /* ── BORDER RADIUS ── */
   --radius-sm:   8px;
   --radius-md:   14px;
   --radius-lg:   20px;
-  --radius-pill: 50px;
-  --radius-full: 9999px;
+  --radius-xl:   28px;
+  --radius-2xl:  40px;
+  --radius-pill: 100px;
 
-  /* === SHADOWS === */
-  --shadow-card:  0 4px 24px rgba(26, 107, 58, 0.10);
-  --shadow-hover: 0 12px 40px rgba(26, 107, 58, 0.18);
-  --shadow-gold:  0 4px 20px rgba(242, 193, 46, 0.30);
-  --shadow-nav:   0 2px 20px rgba(15, 31, 20, 0.10);
-  
-  --shadow-sm:   var(--shadow-card);
-  --shadow-md:   var(--shadow-hover);
-  --shadow-lg:   var(--shadow-hover);
-  --shadow-xl:   var(--shadow-hover);
-  --shadow-glow: var(--shadow-gold);
+  /* ── MOTION ── */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 200ms;
+  --duration-mid:  400ms;
+  --duration-slow: 700ms;
 
-  /* === TRANSITIONS === */
-  --ease-out:  cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in:   cubic-bezier(0.7, 0, 0.84, 0);
-  --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
-  --ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
-  --transition-fast:   all 0.2s var(--ease-out);
-  --transition-base:   all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow:   all 0.6s var(--ease-out);
-
-  /* === LAYOUT === */
-  --container-max: 1200px;
-  --container-wide: 1400px;
-  --nav-height: 72px;
-  --section-py: 60px; /* section padding */
-
-  /* === Z-INDEX === */
-  --z-base:    1;
-  --z-above:   10;
-  --z-modal:   100;
-  --z-nav:     200;
-  --z-toast:   300;
+  /* ── LAYOUT ── */
+  --container-max: 1280px;
+  --container-pad: clamp(1.25rem, 5vw, 3rem);
+  --section-py:    clamp(5rem, 10vw, 9rem);
 }

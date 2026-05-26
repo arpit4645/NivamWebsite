@@ -205,3 +205,39 @@ window.NivamUtils = {
     }, duration);
   }
 };
+
+
+// Reveal on scroll using IntersectionObserver
+function initRevealObserver() {
+  const revealEls = document.querySelectorAll('[data-aos], .reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        // For data-aos elements, add aos-animate
+        if (entry.target.hasAttribute('data-aos')) {
+          entry.target.classList.add('aos-animate');
+        }
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  revealEls.forEach(el => observer.observe(el));
+}
+
+// Navbar scroll state
+function initNavbarScroll() {
+  const navbar = document.querySelector('.navbar, site-navbar');
+  if (!navbar) return;
+  const onScroll = () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initRevealObserver();
+  initNavbarScroll();
+});
