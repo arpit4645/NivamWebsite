@@ -162,11 +162,11 @@
   display: grid; grid-template-columns: auto 1fr;
   gap: var(--sp-10); align-items: center;
   background: var(--clr-white); border-radius: var(--radius-xl);
-  overflow: hidden; box-shadow: var(--shadow-md);
+  padding: var(--sp-6); box-shadow: var(--shadow-md);
   border: 1px solid rgba(26,107,58,0.09);
 }
-.founder-strip__img { width: 280px; height: 320px; object-fit: cover; object-position: top; display: block; }
-.founder-strip__content { padding: var(--sp-10) var(--sp-8) var(--sp-10) 0; }
+.founder-strip__img { width: 300px; height: 360px; object-fit: cover; object-position: center; border-radius: var(--radius-lg); display: block; }
+.founder-strip__content { padding: var(--sp-4) var(--sp-6) var(--sp-4) 0; }
 .founder-strip__name {
   font-size: var(--fs-2xl); font-weight: 700;
   color: var(--clr-green); margin-bottom: var(--sp-1);

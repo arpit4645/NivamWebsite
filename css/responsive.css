@@ -55,8 +55,8 @@
   .form-container     { padding: var(--sp-5) var(--sp-4) !important; }
 
   .founder-strip { grid-template-columns: 1fr; }
-  .founder-strip__img { width: 100%; height: 200px; }
-  .founder-strip__content { padding: var(--sp-6); }
+  .founder-strip__img { width: 100%; height: 320px; }
+  .founder-strip__content { padding: var(--sp-4) 0 0 0; }
 
   .btn--lg { padding: 0.8rem 1.8rem; font-size: var(--fs-sm); }
 
