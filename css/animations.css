@@ -1,66 +1,48 @@
-/* ── KEYFRAMES ── */
-
+/* ─── KEYFRAMES ─── */
 @keyframes float-hero {
   0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-12px); }
+  50%       { transform: translateY(-10px); }
 }
-
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.5; transform: scale(1.4); }
+  50%       { opacity: 0.5; transform: scale(1.5); }
 }
-
 @keyframes ring-pulse {
-  0%, 100% { opacity: 0.5; transform: scale(1); }
-  50%       { opacity: 1; transform: scale(1.03); }
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50%       { opacity: 0.9; transform: scale(1.03); }
 }
-
 @keyframes scroll-wheel {
   0%   { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(8px); opacity: 0; }
+  100% { transform: translateY(7px); opacity: 0; }
 }
-
-@keyframes shimmer {
-  0%   { left: -100%; }
-  100% { left: 250%; }
-}
-
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(28px); }
+  from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes fadeIn {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
-
-@keyframes glow-pulse {
-  0%, 100% { box-shadow: var(--shadow-gold); }
-  50%       { box-shadow: 0 0 40px rgba(242,193,46,0.50), 0 0 80px rgba(242,193,46,0.20); }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
 }
 
-/* ── AOS OVERRIDES ── */
+/* ─── AOS TUNING ─── */
 [data-aos] {
   transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
-  transition-duration: 650ms !important;
+  transition-duration: 600ms !important;
 }
 
-/* ── WILL-CHANGE for performance ── */
-.card, .btn, .program-card, .stat-card, .testimonial-card {
-  will-change: transform;
-}
-
-/* ── INTERSECTION OBSERVER based ── */
+/* ─── SCROLL REVEAL ─── */
 .reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+  opacity: 0; transform: translateY(20px);
+  transition: opacity 0.65s var(--ease-out), transform 0.65s var(--ease-out);
 }
-.reveal.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
+.reveal.revealed { opacity: 1; transform: translateY(0); }
 .reveal-delay-1 { transition-delay: 0.1s; }
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
+
+/* ─── WILL-CHANGE ─── */
+.card, .btn, .program-card, .stat-card, .testimonial-card { will-change: transform; }

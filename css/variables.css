@@ -19,69 +19,70 @@
   --clr-gold-light:     #FDF6DC;
   --clr-gold-glow:      rgba(242, 193, 46, 0.30);
 
-  /* ── DARK BACKGROUNDS (Darkness to Light theme) ── */
-  --clr-bg-darkest:     #060E09;   /* near-black with green soul */
-  --clr-bg-dark:        #0C1810;   /* deep forest dark */
-  --clr-bg-mid:         #112016;   /* mid dark emerald */
-  --clr-bg-surface:     #162B1C;   /* card surface on dark bg */
-  --clr-bg-glass:       rgba(22, 43, 28, 0.60); /* glassmorphism base */
+  /* ── DARK BACKGROUNDS ── */
+  --clr-bg-darkest:     #060E09;
+  --clr-bg-dark:        #0C1810;
+  --clr-bg-mid:         #112016;
+  --clr-bg-surface:     #162B1C;
+  --clr-bg-glass:       rgba(22, 43, 28, 0.60);
 
   /* ── LIGHT SECTION BACKGROUNDS ── */
-  --clr-bg-light:       #F0F7F3;   /* soft green-tinted light bg */
-  --clr-bg-ivory:       #FAFAF7;   /* warm near-white */
-  --clr-bg-gold-tint:   #FEFAEE;   /* subtle gold-tinted bg */
+  --clr-bg-light:       #F0F7F3;
+  --clr-bg-ivory:       #FAFAF7;
+  --clr-bg-gold-tint:   #FEFAEE;
   --clr-white:          #FFFFFF;
 
   /* ── TEXT ── */
-  --clr-text-light:     #F2F7F4;   /* primary text on dark bg */
+  --clr-text-light:     #F2F7F4;
   --clr-text-muted-light: rgba(242, 247, 244, 0.65);
-  --clr-text-dark:      #0F1E13;   /* primary text on light bg */
+  --clr-text-dark:      #0F1E13;
   --clr-text-muted-dark: #5A7063;
 
   /* ── BORDERS ── */
-  --clr-border-dark:    rgba(242, 193, 46, 0.15);   /* gold border on dark */
-  --clr-border-green:   rgba(26, 107, 58, 0.20);    /* green border on light */
+  --clr-border-dark:    rgba(242, 193, 46, 0.15);
+  --clr-border-green:   rgba(26, 107, 58, 0.20);
   --clr-border-light:   rgba(26, 107, 58, 0.12);
 
   /* ── GRADIENTS ── */
-  --grad-hero:        linear-gradient(160deg, #060E09 0%, #0C1810 40%, #1A6B3A 100%);
-  --grad-hero-radial: radial-gradient(ellipse at 70% 50%, rgba(26,107,58,0.4) 0%, transparent 70%);
-  --grad-gold:        linear-gradient(135deg, #F2C12E 0%, #C99B1A 100%);
-  --grad-gold-soft:   linear-gradient(135deg, #F2C12E 0%, #E8B86D 100%);
-  --grad-green:       linear-gradient(135deg, #1A6B3A 0%, #124D2A 100%);
-  --grad-dark:        linear-gradient(160deg, #060E09 0%, #0C1810 100%);
-  --grad-cta:         linear-gradient(135deg, #0C1810 0%, #1A6B3A 60%, #124D2A 100%);
-  --grad-card-dark:   linear-gradient(145deg, rgba(22,43,28,0.9) 0%, rgba(12,24,16,0.95) 100%);
-  --grad-glass:       linear-gradient(135deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.02) 100%);
+  --grad-hero:          linear-gradient(160deg, #060E09 0%, #0C1810 40%, #1A6B3A 100%);
+  --grad-hero-radial:   radial-gradient(ellipse at 70% 50%, rgba(26,107,58,0.4) 0%, transparent 70%);
+  --grad-gold:          linear-gradient(135deg, #F2C12E 0%, #C99B1A 100%);
+  --grad-gold-soft:     linear-gradient(135deg, #F2C12E 0%, #E8B86D 100%);
+  --grad-green:         linear-gradient(135deg, #1A6B3A 0%, #124D2A 100%);
+  --grad-dark:          linear-gradient(160deg, #060E09 0%, #0C1810 100%);
+  --grad-cta:           linear-gradient(135deg, #0C1810 0%, #1A6B3A 60%, #124D2A 100%);
+  --grad-card-dark:     linear-gradient(145deg, rgba(22,43,28,0.9) 0%, rgba(12,24,16,0.95) 100%);
+  --grad-glass:         linear-gradient(135deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.02) 100%);
   --grad-section-light: linear-gradient(180deg, #FAFAF7 0%, #F0F7F3 100%);
 
   /* ── GLOW EFFECTS ── */
-  --glow-gold:    0 0 40px rgba(242, 193, 46, 0.25), 0 0 80px rgba(242, 193, 46, 0.10);
-  --glow-green:   0 0 40px rgba(26, 107, 58, 0.30), 0 0 80px rgba(26, 107, 58, 0.12);
-  --glow-card:    0 8px 32px rgba(0, 0, 0, 0.40), 0 2px 8px rgba(242,193,46,0.08);
+  --glow-gold:          0 0 40px rgba(242, 193, 46, 0.25), 0 0 80px rgba(242, 193, 46, 0.10);
+  --glow-green:         0 0 40px rgba(26, 107, 58, 0.30), 0 0 80px rgba(26, 107, 58, 0.12);
+  --glow-card:          0 8px 32px rgba(0, 0, 0, 0.40), 0 2px 8px rgba(242,193,46,0.08);
 
   /* ── SHADOWS ── */
-  --shadow-card-dark:  0 4px 24px rgba(0,0,0,0.40), 0 1px 4px rgba(242,193,46,0.06);
-  --shadow-card-light: 0 4px 24px rgba(26,107,58,0.10), 0 1px 4px rgba(26,107,58,0.05);
-  --shadow-hover:      0 16px 48px rgba(0,0,0,0.50), 0 4px 16px rgba(242,193,46,0.15);
-  --shadow-gold:       0 4px 20px rgba(242,193,46,0.40), 0 1px 6px rgba(242,193,46,0.20);
-  --shadow-btn:        0 4px 16px rgba(242,193,46,0.35);
-  --shadow-nav:        0 2px 24px rgba(0,0,0,0.30);
+  --shadow-card-dark:   0 4px 24px rgba(0,0,0,0.40), 0 1px 4px rgba(242,193,46,0.06);
+  --shadow-card-light:  0 4px 24px rgba(26,107,58,0.10), 0 1px 4px rgba(26,107,58,0.05);
+  --shadow-hover:       0 16px 48px rgba(0,0,0,0.15), 0 4px 16px rgba(26,107,58,0.15);
+  --shadow-gold:        0 4px 20px rgba(242,193,46,0.40), 0 1px 6px rgba(242,193,46,0.20);
+  --shadow-btn:         0 4px 16px rgba(242,193,46,0.35);
+  --shadow-nav:         0 2px 24px rgba(0,0,0,0.30);
 
   /* ── TYPOGRAPHY ── */
-  --ff-display:  'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-  --ff-body:     'Poppins', 'DM Sans', sans-serif;
+  --ff-display:         'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --ff-body:            'Poppins', system-ui, sans-serif;
 
   --fs-xs:   0.75rem;
   --fs-sm:   0.875rem;
   --fs-base: 1rem;
+  --fs-md:   1.0625rem;
   --fs-lg:   1.125rem;
   --fs-xl:   1.25rem;
   --fs-2xl:  1.5rem;
   --fs-3xl:  clamp(1.75rem, 3vw, 2.25rem);
-  --fs-4xl:  clamp(2.25rem, 4vw, 3rem);
-  --fs-5xl:  clamp(2.75rem, 5.5vw, 4.5rem);
-  --fs-hero: clamp(3rem, 7vw, 5.5rem);
+  --fs-4xl:  clamp(2rem, 4vw, 2.75rem);
+  --fs-5xl:  clamp(2.5rem, 5.5vw, 4rem);
+  --fs-hero: clamp(2.8rem, 6vw, 5rem);
 
   /* ── SPACING ── */
   --sp-1: 0.25rem;  --sp-2: 0.5rem;   --sp-3: 0.75rem;
@@ -91,27 +92,30 @@
   --sp-24: 6rem;    --sp-32: 8rem;
 
   /* ── BORDER RADIUS ── */
-  --radius-sm:   8px;
-  --radius-md:   14px;
-  --radius-lg:   20px;
-  --radius-xl:   28px;
-  --radius-2xl:  40px;
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   18px;
+  --radius-xl:   24px;
+  --radius-2xl:  36px;
   --radius-pill: 100px;
+  --radius-full: 9999px;
 
   /* ── MOTION ── */
   --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-  --duration-fast: 200ms;
-  --duration-mid:  400ms;
-  --duration-slow: 700ms;
+  --duration-fast: 180ms;
+  --duration-mid:  380ms;
+  --duration-slow: 650ms;
 
   /* ── LAYOUT ── */
-  --container-max: 1280px;
-  --container-pad: clamp(1.25rem, 5vw, 3rem);
-  --section-py:    clamp(5rem, 10vw, 9rem);
+  --container-max: 1260px;
+  --container-pad: clamp(1rem, 4vw, 2.5rem);
+  --section-py:    clamp(4rem, 8vw, 8rem);
+  --nav-height:    80px;
+  --container-wide: 1400px;
 
-  /* ── BACKWARD COMPATIBILITY ALIASES & WEIGHTS ── */
+  /* ── BACKWARD COMPAT ALIASES ── */
   --clr-primary:        var(--clr-green);
   --clr-primary-dark:   var(--clr-green-dark);
   --clr-primary-light:  var(--clr-green-light);
@@ -130,6 +134,7 @@
   --font-heading:       var(--ff-display);
   --font-body:          var(--ff-body);
   --font-primary:       var(--ff-body);
+  --font-accent:        var(--ff-display);
   --font-devanagari:    'Noto Sans Devanagari', sans-serif;
 
   --fw-light:   300;
@@ -139,25 +144,20 @@
   --fw-bold:    700;
   --fw-black:   900;
 
-  --transition-fast:   all var(--duration-fast) var(--ease-out);
-  --transition-base:   all var(--duration-mid) var(--ease-smooth);
-  --transition-slow:   all var(--duration-slow) var(--ease-out);
+  --transition-fast: all var(--duration-fast) var(--ease-out);
+  --transition-base: all var(--duration-mid) var(--ease-smooth);
+  --transition-slow: all var(--duration-slow) var(--ease-out);
 
-  --shadow-sm:         var(--shadow-card-light);
-  --shadow-md:         var(--shadow-hover);
-  --shadow-lg:         var(--shadow-hover);
-  --shadow-xl:         var(--shadow-hover);
-  --shadow-glow:       var(--shadow-gold);
+  --shadow-sm:   var(--shadow-card-light);
+  --shadow-md:   0 8px 28px rgba(26,107,58,0.12);
+  --shadow-lg:   0 12px 40px rgba(26,107,58,0.15);
+  --shadow-xl:   0 20px 60px rgba(26,107,58,0.18);
+  --shadow-glow: var(--shadow-gold);
 
-  --container-wide:    1400px;
-  --nav-height:        72px;
+  --grad-primary: var(--grad-green);
+  --grad-accent:  var(--grad-gold);
+  --grad-card-hover: linear-gradient(135deg, #E8F5EE 0%, #FFFFFF 100%);
 
-  --space-xs:  4px;
-  --space-sm:  8px;
-  --space-md:  16px;
-  --space-lg:  24px;
-  --space-xl:  32px;
-  --space-2xl: 48px;
-  --space-3xl: 60px;
-
+  --space-xs: 4px; --space-sm: 8px; --space-md: 16px;
+  --space-lg: 24px; --space-xl: 32px; --space-2xl: 48px;
 }
