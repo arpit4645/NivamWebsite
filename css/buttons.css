@@ -1,15 +1,16 @@
 /* ─── BUTTONS ─── */
 .btn {
-  display: inline-flex; align-items: center; gap: 0.5rem;
+  display: inline-flex; align-items: center; gap: 0.6rem;
   font-family: var(--ff-body); font-weight: 600; font-size: var(--fs-sm);
   letter-spacing: 0.03em; text-decoration: none; cursor: pointer;
   border: none; outline: none; border-radius: var(--radius-pill);
   transition: all var(--duration-mid) var(--ease-out);
   position: relative; overflow: hidden; white-space: nowrap;
+  padding: 0.75rem 1.8rem; /* Premium default padding to prevent squishing */
 }
 /* Sizes */
 .btn--lg { padding: 0.875rem 2.2rem; font-size: var(--fs-base); }
-.btn--md { padding: 0.7rem 1.75rem; }
+.btn--md { padding: 0.75rem 1.8rem; }
 .btn--sm { padding: 0.45rem 1.3rem; font-size: var(--fs-xs); }
 .btn--full { width: 100%; justify-content: center; }
 
@@ -53,20 +54,21 @@
 .btn--dark:hover { box-shadow: 0 8px 32px rgba(26,107,58,0.40); transform: translateY(-2px); }
 
 /* Icons */
-.btn .lucide-icon { width: 1em; height: 1em; flex-shrink: 0; }
+.btn .lucide-icon { width: 1.1em; height: 1.1em; flex-shrink: 0; }
 .cta-arrow { transition: transform var(--duration-fast) var(--ease-out); margin-left: 3px; }
 .btn:hover .cta-arrow { transform: translateX(5px); }
 
 /* WHATSAPP BUTTON */
 .btn--whatsapp {
-  background: #25D366;
+  background: #128C7E;
   color: var(--clr-white);
-  box-shadow: 0 4px 16px rgba(37,211,102,0.25);
+  box-shadow: 0 4px 16px rgba(18,140,126,0.25);
 }
 .btn--whatsapp:hover {
-  background: #20BA56;
+  background: #0f7267;
   color: var(--clr-white);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(37,211,102,0.38);
+  box-shadow: 0 8px 24px rgba(18,140,126,0.38);
 }
+
 
