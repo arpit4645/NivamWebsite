@@ -56,3 +56,17 @@
 .btn .lucide-icon { width: 1em; height: 1em; flex-shrink: 0; }
 .cta-arrow { transition: transform var(--duration-fast) var(--ease-out); margin-left: 3px; }
 .btn:hover .cta-arrow { transform: translateX(5px); }
+
+/* WHATSAPP BUTTON */
+.btn--whatsapp {
+  background: #25D366;
+  color: var(--clr-white);
+  box-shadow: 0 4px 16px rgba(37,211,102,0.25);
+}
+.btn--whatsapp:hover {
+  background: #20BA56;
+  color: var(--clr-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37,211,102,0.38);
+}
+
