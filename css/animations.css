@@ -38,6 +38,11 @@
   50%       { transform: translateY(-12px); }
 }
 
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
 @keyframes float-rotate {
   0%, 100% { transform: translateY(0) rotate(0deg); }
   50%       { transform: translateY(-15px) rotate(3deg); }
@@ -76,29 +81,47 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* ── Section Reveal Animation ── */
+@keyframes sectionReveal {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.section-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.33, 1, 0.68, 1), 
+              transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.section-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ── Glassmorphism Utility ── */
 .glass-panel {
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 32px rgba(26,107,58,0.06);
 }
 
 .glass-panel--dark {
-  background: rgba(20, 82, 34, 0.85); /* Dark Green with opacity */
+  background: rgba(26,107,58,0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(242,193,46,0.15);
+  box-shadow: 0 8px 32px rgba(26,107,58,0.2);
 }
 
 /* ── AOS (Animate on Scroll) Enhancements ── */
 [data-aos] {
   opacity: 0;
   transition-property: opacity, transform;
-  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-  transition-duration: 0.8s;
+  transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+  transition-duration: 0.6s;
 }
 
 [data-aos].aos-animate {
@@ -124,7 +147,7 @@
   background: linear-gradient(
     90deg,
     var(--color-light-gray) 25%,
-    var(--color-white) 50%,
+    var(--clr-white) 50%,
     var(--color-light-gray) 75%
   );
   background-size: 200% 100%;
@@ -136,7 +159,7 @@
 .particle {
   position: absolute;
   border-radius: var(--radius-full);
-  background: rgba(245, 197, 24, 0.25); /* Gold with opacity */
+  background: rgba(242,193,46,0.25);
   animation: particle-float linear infinite;
   pointer-events: none;
   filter: blur(2px);

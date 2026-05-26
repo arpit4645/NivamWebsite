@@ -3,9 +3,10 @@
    ================================================ */
 
 .footer {
-  background: var(--color-dark-green);
-  color: var(--color-white);
+  background: var(--clr-primary);
+  color: rgba(250,247,242,0.7);
   padding-top: var(--sp-20);
+  border-top: 1px solid rgba(242,193,46,0.3);
 }
 
 .footer__main {
@@ -13,7 +14,7 @@
   grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
   gap: var(--sp-12);
   padding-bottom: var(--sp-12);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(242,193,46,0.15);
 }
 
 /* ── Brand Column ── */
@@ -32,13 +33,13 @@
   height: 80px;
   border-radius: var(--radius-md);
   object-fit: contain;
-  background: var(--color-white); /* Provides contrast over dark green footer */
+  background: var(--clr-white);
   padding: var(--sp-1);
 }
 
 .footer__desc {
   font-size: var(--fs-sm);
-  color: rgba(240,235,248,0.6);
+  color: rgba(250,247,242,0.6);
   line-height: 1.75;
   margin-bottom: var(--sp-6);
   max-width: 300px;
@@ -58,8 +59,8 @@
   height: 40px;
   border-radius: var(--radius-md);
   background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
-  color: rgba(240,235,248,0.7);
+  border: 1px solid rgba(242,193,46,0.15);
+  color: rgba(250,247,242,0.7);
   font-size: var(--fs-base);
   transition: var(--transition-fast);
   text-decoration: none;
@@ -68,7 +69,7 @@
 .footer__social-link:hover {
   background: var(--grad-accent);
   border-color: transparent;
-  color: var(--clr-white);
+  color: var(--clr-primary);
   transform: translateY(-3px);
 }
 
@@ -93,7 +94,7 @@
 
 .footer__link {
   font-size: var(--fs-sm);
-  color: rgba(240,235,248,0.6);
+  color: rgba(250,247,242,0.6);
   transition: var(--transition-fast);
   text-decoration: none;
   display: flex;
@@ -102,7 +103,7 @@
 }
 
 .footer__link:hover {
-  color: var(--color-gold);
+  color: var(--clr-gold);
   padding-left: var(--sp-1);
 }
 
@@ -112,7 +113,7 @@
   align-items: flex-start;
   gap: var(--sp-3);
   font-size: var(--fs-sm);
-  color: rgba(240,235,248,0.6);
+  color: rgba(250,247,242,0.6);
   margin-bottom: var(--sp-4);
   line-height: 1.5;
 }
@@ -121,16 +122,16 @@
   font-size: 1rem;
   flex-shrink: 0;
   margin-top: 2px;
-  color: var(--clr-accent-light);
+  color: var(--clr-gold);
 }
 
 .footer__contact-link {
-  color: rgba(240,235,248,0.6);
+  color: rgba(250,247,242,0.6);
   transition: var(--transition-fast);
   text-decoration: none;
 }
 
-.footer__contact-link:hover { color: var(--clr-accent-light); }
+.footer__contact-link:hover { color: var(--clr-gold); }
 
 /* ── Bottom Bar ── */
 .footer__bottom {
@@ -144,7 +145,7 @@
 
 .footer__copy {
   font-size: var(--fs-xs);
-  color: rgba(240,235,248,0.4);
+  color: rgba(250,247,242,0.4);
 }
 
 .footer__legal-links {
@@ -154,12 +155,12 @@
 
 .footer__legal-link {
   font-size: var(--fs-xs);
-  color: rgba(240,235,248,0.4);
+  color: rgba(250,247,242,0.4);
   transition: var(--transition-fast);
   text-decoration: none;
 }
 
-.footer__legal-link:hover { color: rgba(240,235,248,0.75); }
+.footer__legal-link:hover { color: var(--clr-gold); }
 
 /* ── Newsletter ── */
 .footer__newsletter {
@@ -183,7 +184,7 @@
   flex: 1;
   padding: 0.6rem 0.875rem;
   background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(242,193,46,0.2);
   border-right: none;
   border-radius: var(--radius-md) 0 0 var(--radius-md);
   color: var(--clr-white);
@@ -193,11 +194,11 @@
   transition: var(--transition-fast);
 }
 
-.footer__newsletter-input::placeholder { color: rgba(240,235,248,0.35); }
+.footer__newsletter-input::placeholder { color: rgba(250,247,242,0.35); }
 
 .footer__newsletter-input:focus {
   background: rgba(255,255,255,0.1);
-  border-color: rgba(255,255,255,0.22);
+  border-color: rgba(242,193,46,0.4);
 }
 
 .footer__newsletter-btn {
@@ -205,7 +206,7 @@
   background: var(--grad-accent);
   border: none;
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  color: var(--clr-white);
+  color: var(--clr-primary);
   font-size: var(--fs-sm);
   font-weight: var(--fw-semi);
   cursor: pointer;

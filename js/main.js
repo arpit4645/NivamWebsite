@@ -7,6 +7,7 @@
 // ── DOM Ready ──────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
+  initSectionReveal();
   initCounters();
   markActiveNavLink();
   initPageTransition();
@@ -33,6 +34,28 @@ function initScrollAnimations() {
   });
 
   els.forEach(el => observer.observe(el));
+}
+
+// ── Section Reveal (scroll-triggered fade-in) ─────────────────
+function initSectionReveal() {
+  const sections = document.querySelectorAll('.section, .stats-section, .trust-bar');
+  if (!sections.length) return;
+
+  sections.forEach(s => s.classList.add('section-reveal'));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.08,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  sections.forEach(s => observer.observe(s));
 }
 
 // ── Counter Animation ─────────────────────────────────────────
@@ -162,7 +185,7 @@ window.NivamUtils = {
     toast.id = 'nivam-toast';
     toast.style.cssText = `
       position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);
-      background:${type === 'success' ? '#43A047' : type === 'error' ? '#E53935' : '#3D1A5F'};
+      background:${type === 'success' ? '#43A047' : type === 'error' ? '#E53935' : '#1B2A4A'};
       color:white;padding:.75rem 1.5rem;border-radius:9999px;font-size:.875rem;
       font-weight:600;box-shadow:0 8px 32px rgba(0,0,0,.25);z-index:9999;
       opacity:0;transition:all .3s cubic-bezier(0.16,1,0.3,1);font-family:var(--font-body);

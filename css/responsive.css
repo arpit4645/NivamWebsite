@@ -104,6 +104,16 @@
   .grid-3,
   .grid-4 { grid-template-columns: 1fr; }
 
+  /* Vision & Mission grid — 1 column */
+  [style*="grid-template-columns:1fr 1fr"][style*="gap:var(--sp-8)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Why Nivam two-column grid — 1 column */
+  [style*="grid-template-columns:1fr 1fr"][style*="gap:var(--sp-12)"] {
+    grid-template-columns: 1fr !important;
+  }
+
   /* Programs */
   .programs-grid { grid-template-columns: 1fr; }
 
@@ -113,8 +123,21 @@
   /* Testimonials */
   .testimonials-grid { grid-template-columns: 1fr; }
 
-  /* Hero stats */
-  .hero__stats { flex-wrap: wrap; gap: var(--sp-5); }
+  /* Hero stats — 3-column grid */
+  .hero__stats { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-4);
+    text-align: center;
+  }
+
+  .hero__stat-num {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .hero__stat-label {
+    font-size: 0.7rem;
+  }
 
   /* Form grid */
   .form-grid--2 { grid-template-columns: 1fr; }
@@ -181,7 +204,7 @@
 
   .container { padding-inline: var(--sp-4); }
 
-  .hero__heading { font-size: 2.2rem; }
+  .hero__heading { font-size: clamp(1.8rem, 7vw, 2.5rem); }
 
   .hero__actions { flex-direction: column; width: 100%; }
 
@@ -200,7 +223,7 @@
 
   .footer__newsletter-input {
     border-radius: var(--radius-md);
-    border-right: 1px solid rgba(255,255,255,0.12);
+    border-right: 1px solid rgba(242,193,46,0.2);
   }
 
   .footer__newsletter-btn { border-radius: var(--radius-md); }

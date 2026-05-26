@@ -3,51 +3,50 @@
    ================================================ */
 
 :root {
-  /* ── 5.1 Brand Colors (Nivam Academy) ── */
-  --color-primary-green: #1B6B2F;
-  --color-dark-green: #145222;
-  --color-gold: #F5C518;
-  --color-light-green: #E8F5E9;
-  --color-light-yellow: #FFFDE7;
-  --color-dark-text: #2D2D2D;
-  --color-mid-gray: #555555;
-  --color-light-gray: #F5F5F5;
-  --color-border: #CCCCCC;
+  /* === BRAND PRIMARIES === */
+  --clr-primary:        #1A6B3A;   /* Deep Forest Green */
+  --clr-primary-dark:   #124D2A;   /* Darker green for hover states */
+  --clr-primary-light:  #E8F5EE;   /* Very light green tint for bg use */
 
-  /* ── Map old color variables to new theme ── */
-  --clr-primary:        var(--color-primary-green);
-  --clr-primary-light:  #248a3d;
-  --clr-primary-dark:   var(--color-dark-green);
-  --clr-accent:         var(--color-gold);
-  --clr-accent-light:   #f7d24f;
-  --clr-accent-dark:    #d4a800;
+  --clr-gold:           #F2C12E;   /* Brand Gold */
+  --clr-gold-dark:      #C99B1A;   /* Deeper gold for hover */
+  --clr-gold-light:     #FDF6DC;   /* Pale gold for section backgrounds */
 
-  --grad-primary:       linear-gradient(135deg, var(--color-dark-green) 0%, var(--color-primary-green) 100%);
-  --grad-accent:        linear-gradient(135deg, #d4a800 0%, var(--color-gold) 100%);
-  --grad-hero:          linear-gradient(135deg, var(--color-dark-green) 0%, var(--color-primary-green) 100%);
-  --grad-card:          linear-gradient(145deg, rgba(27,107,47,0.04) 0%, rgba(245,197,24,0.06) 100%);
+  /* === NEUTRALS (modern corporate) === */
+  --clr-dark:           #0F1F14;   /* Near-black with green undertone */
+  --clr-charcoal:       #1E2D24;   /* Deep dark green-charcoal */
+  --clr-text:           #1C2B22;   /* Body text */
+  --clr-text-muted:     #5A7063;   /* Muted paragraph text */
+  --clr-border:         #D4E6DA;   /* Subtle green-tinted border */
 
+  /* === BACKGROUNDS === */
+  --clr-bg:             #F9FBF9;   /* Near-white with green breath */
+  --clr-bg-light:       #F0F7F3;   /* Light green-tinted section bg */
+  --clr-bg-gold:        #FEFAEE;   /* Warm gold-tinted section bg */
   --clr-white:          #FFFFFF;
-  --clr-off-white:      var(--color-light-green);
-  --clr-bg:             #FFFFFF;
-  --clr-surface:        #FFFFFF;
-  --clr-border:         var(--color-border);
-  --clr-border-light:   #E0E0E0;
 
-  --clr-text:           var(--color-dark-text);
-  --clr-text-muted:     var(--color-mid-gray);
-  --clr-text-light:     #888888;
-  --clr-text-on-dark:   #FFFFFF;
+  /* === ACCENT / UI === */
+  --clr-accent:         #F2C12E;   /* Gold as accent (same as brand gold) */
+  --clr-success:        #1A6B3A;
+  --clr-overlay:        rgba(15, 31, 20, 0.72);  /* Dark green overlay */
 
-  /* ── 5.2 Typography ── */
-  --font-primary:       'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* === GRADIENTS === */
+  --grad-primary:       linear-gradient(135deg, #1A6B3A 0%, #124D2A 100%);
+  --grad-gold:          linear-gradient(135deg, #F2C12E 0%, #C99B1A 100%);
+  --grad-hero:          linear-gradient(160deg, #0F1F14 0%, #1A6B3A 60%, #1E4D2C 100%);
+  --grad-card-hover:    linear-gradient(135deg, #E8F5EE 0%, #FFFFFF 100%);
+  --grad-cta:           linear-gradient(135deg, #1A6B3A 0%, #0F1F14 100%);
+
+  /* === TYPOGRAPHY === */
+  --ff-heading:  'Cormorant Garamond', Georgia, serif;
+  --ff-body:     'Poppins', sans-serif;
+  
+  /* Fallbacks for backward compat */
+  --font-heading:       var(--ff-heading);
+  --font-body:          var(--ff-body);
+  --font-primary:       var(--ff-body);
   --font-devanagari:    'Noto Sans Devanagari', sans-serif;
   --font-mono:          'Courier New', monospace;
-
-  /* Map old font variables */
-  --font-heading:       var(--font-primary);
-  --font-body:          var(--font-primary);
-  --font-accent:        var(--font-devanagari);
 
   /* Font Sizes */
   --fs-xs:    0.8125rem; /* 13px */
@@ -70,7 +69,7 @@
   --fw-bold:    700;
   --fw-black:   900;
 
-  /* ── 5.3 Spacing ── */
+  /* === SPACING === */
   --space-xs:  4px;
   --space-sm:  8px;
   --space-md:  16px;
@@ -79,7 +78,6 @@
   --space-2xl: 48px;
   --space-3xl: 60px;
 
-  /* Map old spacing variables */
   --sp-1:    0.25rem;
   --sp-2:    0.5rem;
   --sp-3:    0.75rem;
@@ -94,43 +92,41 @@
   --sp-24:   6rem;
   --sp-32:   8rem;
 
-  /* ── 5.4 Border Radius ── */
-  --border-radius-sm: 4px;
-  --border-radius-md: 8px;
-  --border-radius-lg: 12px;
-  --border-radius-xl: 16px;
-
-  /* Map old border radius variables */
-  --radius-sm:   var(--border-radius-sm);
-  --radius-md:   var(--border-radius-md);
-  --radius-lg:   var(--border-radius-lg);
-  --radius-xl:   var(--border-radius-xl);
-  --radius-2xl:  24px;
+  /* === BORDER RADIUS === */
+  --radius-sm:   8px;
+  --radius-md:   14px;
+  --radius-lg:   20px;
+  --radius-pill: 50px;
   --radius-full: 9999px;
 
-  /* ── Shadows ── */
-  --shadow-sm:   0 2px 8px rgba(0,0,0,0.04);
-  --shadow-md:   0 4px 12px rgba(0,0,0,0.06);
-  --shadow-lg:   0 4px 20px rgba(0,0,0,0.08); /* card shadow */
-  --shadow-xl:   0 8px 30px rgba(0,0,0,0.14); /* hover shadow */
-  --shadow-glow: 0 0 32px rgba(245,197,24,0.35);
-  --shadow-card: 0 4px 20px rgba(0,0,0,0.08);
+  /* === SHADOWS === */
+  --shadow-card:  0 4px 24px rgba(26, 107, 58, 0.10);
+  --shadow-hover: 0 12px 40px rgba(26, 107, 58, 0.18);
+  --shadow-gold:  0 4px 20px rgba(242, 193, 46, 0.30);
+  --shadow-nav:   0 2px 20px rgba(15, 31, 20, 0.10);
+  
+  --shadow-sm:   var(--shadow-card);
+  --shadow-md:   var(--shadow-hover);
+  --shadow-lg:   var(--shadow-hover);
+  --shadow-xl:   var(--shadow-hover);
+  --shadow-glow: var(--shadow-gold);
 
-  /* ── Transitions ── */
+  /* === TRANSITIONS === */
   --ease-out:  cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in:   cubic-bezier(0.7, 0, 0.84, 0);
   --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
+  --ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
   --transition-fast:   all 0.2s var(--ease-out);
-  --transition-base:   all 0.3s ease;
+  --transition-base:   all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow:   all 0.6s var(--ease-out);
 
-  /* ── Layout ── */
+  /* === LAYOUT === */
   --container-max: 1200px;
   --container-wide: 1400px;
   --nav-height: 72px;
   --section-py: 60px; /* section padding */
 
-  /* ── Z-index ── */
+  /* === Z-INDEX === */
   --z-base:    1;
   --z-above:   10;
   --z-modal:   100;

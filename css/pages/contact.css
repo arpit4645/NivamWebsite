@@ -28,7 +28,7 @@
 .contact-method__sub { font-size: var(--fs-xs); color: var(--clr-text-muted); margin-top: 2px; }
 
 .contact-hours {
-  background: var(--grad-card);
+  background: var(--grad-card-hover);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-xl);
   padding: var(--sp-6);

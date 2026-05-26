@@ -4,35 +4,67 @@
 
 /* ── Base Card ── */
 .card {
-  background: var(--clr-surface);
+  background: var(--clr-white);
   border-radius: var(--radius-lg);
-  overflow: hidden;
   box-shadow: var(--shadow-card);
-  border: 1px solid var(--clr-border-light);
-  transition: var(--transition-base);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(26,107,58,0.06);
+  overflow: hidden;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
-  border-color: var(--clr-border);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(242,193,46,0.30);
+}
+
+.card__icon-wrapper {
+  background: rgba(26,107,58,0.04);
+  color: var(--clr-primary);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+}
+
+.card__title {
+  font-family: var(--ff-heading);
+  color: var(--clr-primary);
+  font-size: 1.5rem;
+}
+
+.card__text {
+  color: var(--clr-text-muted);
+  font-family: var(--ff-body);
 }
 
 /* ── Program Card ── */
 .program-card {
-  background: var(--clr-surface);
-  border-radius: var(--radius-lg);
+  background: var(--clr-white);
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: var(--shadow-card);
-  border: 1px solid var(--clr-border-light);
-  transition: var(--transition-base);
+  box-shadow: 0 4px 24px rgba(26,107,58,0.08);
+  border: 1px solid rgba(242,193,46,0.12);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+/* Gold gradient bar at top */
+.program-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, var(--clr-gold), var(--clr-gold-light));
+  z-index: 2;
 }
 
 .program-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 12px 40px rgba(26,107,58,0.15);
+  border-color: rgba(242,193,46,0.35);
 }
 
 .program-card__img-wrap {
@@ -77,8 +109,8 @@
   width: 48px;
   height: 48px;
   border-radius: var(--radius-md);
-  background: var(--grad-card);
-  border: 1px solid var(--clr-border);
+  background: var(--grad-card-hover);
+  border: 1px solid rgba(242,193,46,0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,18 +153,35 @@
 
 /* ── Testimonial Card ── */
 .testimonial-card {
-  background: var(--clr-surface);
-  border-radius: var(--radius-lg);
+  background: var(--clr-bg-gold);
+  border-radius: 16px;
   padding: var(--sp-8);
-  box-shadow: var(--shadow-card);
-  border: 1px solid var(--clr-border-light);
-  transition: var(--transition-base);
+  box-shadow: 0 4px 24px rgba(26,107,58,0.08);
+  border: 1px solid rgba(242,193,46,0.12);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  overflow: hidden;
+}
+
+/* Decorative gold quote mark */
+.testimonial-card::before {
+  content: '\201C';
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--clr-gold);
+  opacity: 0.12;
+  user-select: none;
+  pointer-events: none;
 }
 
 .testimonial-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 12px 40px rgba(26,107,58,0.15);
+  border-color: rgba(242,193,46,0.35);
 }
 
 .testimonial-card__quote-mark {
@@ -143,7 +192,7 @@
   font-size: 5rem;
   line-height: 1;
   color: var(--clr-accent);
-  opacity: 0.15;
+  opacity: 0.12;
   user-select: none;
 }
 
@@ -161,7 +210,7 @@
   line-height: 1.75;
   font-style: italic;
   margin-bottom: var(--sp-6);
-  font-family: var(--font-accent);
+  font-family: var(--font-heading);
 }
 
 .testimonial-card__author {
@@ -211,16 +260,16 @@
   display: flex;
   gap: var(--sp-5);
   padding: var(--sp-6);
-  background: var(--clr-surface);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--clr-border-light);
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition-base);
+  background: var(--clr-white);
+  border-radius: 16px;
+  border: 1px solid rgba(242,193,46,0.12);
+  box-shadow: 0 4px 24px rgba(26,107,58,0.08);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .feature-card:hover {
-  box-shadow: var(--shadow-md);
-  border-color: rgba(61,26,95,0.15);
+  box-shadow: 0 12px 40px rgba(26,107,58,0.15);
+  border-color: rgba(242,193,46,0.35);
   transform: translateX(4px);
 }
 
@@ -255,24 +304,25 @@
 .stat-card {
   text-align: center;
   padding: var(--sp-8) var(--sp-6);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: var(--radius-lg);
-  transition: var(--transition-base);
+  border: 1px solid rgba(242,193,46,0.2);
+  border-radius: 16px;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .stat-card:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.12);
   transform: translateY(-4px);
+  border-color: rgba(242,193,46,0.4);
 }
 
 .stat-card__num {
   font-family: var(--font-heading);
   font-size: clamp(var(--fs-3xl), 4vw, var(--fs-5xl));
   font-weight: var(--fw-bold);
-  color: var(--clr-white);
+  color: var(--clr-gold);
   line-height: 1;
   margin-bottom: var(--sp-2);
 }
@@ -283,26 +333,27 @@
 
 .stat-card__label {
   font-size: var(--fs-sm);
-  color: rgba(240,235,248,0.65);
+  color: rgba(250,247,242,0.65);
   font-weight: var(--fw-medium);
   letter-spacing: 0.04em;
 }
 
 /* ── Workshop Card ── */
 .workshop-card {
-  background: var(--clr-surface);
-  border-radius: var(--radius-lg);
+  background: var(--clr-white);
+  border-radius: 16px;
   overflow: hidden;
-  border: 1px solid var(--clr-border-light);
-  box-shadow: var(--shadow-card);
-  transition: var(--transition-base);
+  border: 1px solid rgba(242,193,46,0.12);
+  box-shadow: 0 4px 24px rgba(26,107,58,0.08);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   display: grid;
   grid-template-columns: auto 1fr;
 }
 
 .workshop-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 12px 40px rgba(26,107,58,0.15);
+  border-color: rgba(242,193,46,0.35);
 }
 
 .workshop-card__date {
@@ -339,7 +390,7 @@
 
 .workshop-card__tag {
   display: inline-block;
-  background: rgba(61,26,95,0.08);
+  background: rgba(26,107,58,0.06);
   color: var(--clr-primary);
   font-size: var(--fs-xs);
   font-weight: var(--fw-semi);

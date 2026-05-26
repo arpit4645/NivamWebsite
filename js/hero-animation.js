@@ -34,7 +34,7 @@ function initParticles() {
       opacity: ${opacity};
       animation-duration: ${dur}s;
       animation-delay: -${delay}s;
-      background: rgba(${Math.random() > 0.5 ? '201,123,75' : '180,140,220'}, 0.5);
+      background: rgba(${Math.random() > 0.5 ? '201,147,58' : '232,184,109'}, 0.4);
     `;
 
     container.appendChild(p);
