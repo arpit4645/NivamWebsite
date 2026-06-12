@@ -25,9 +25,21 @@
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="css/enhancements.css">
+<link rel="stylesheet" href="css/modern.css">
 <script src="js/components.js"></script>
 </head>
 <body>
+
+<!-- ══ LOADING SCREEN ══════════════════════════════════════ -->
+<div id="loading-screen" role="status" aria-label="Loading Nivam">
+  <div class="loading-screen__logo">
+    <img src="assets/images/logo.png" alt="Nivam">
+  </div>
+  <div class="loading-screen__tagline">Transform. Grow. Thrive.</div>
+  <div class="loading-screen__bar-track">
+    <div class="loading-screen__bar-fill"></div>
+  </div>
+</div>
 
 <site-navbar page="home" transparent></site-navbar>
 
@@ -47,7 +59,7 @@
         </div>
         <h1 class="hero__heading">
           <span id="hero-rotating-text">Transform Your</span>
-          <span class="accent-line">Inner World</span>
+          <span class="accent-line text-gradient">Inner World</span>
         </h1>
         <p class="hero__subtitle">Modern life coaching and transformational learning rooted in timeless wisdom.</p>
         <div class="hero__actions">
@@ -121,7 +133,7 @@
         <img src="assets/images/about-team.png" alt="Nivam team" class="about-split__img-accent" loading="lazy">
       </div>
       <div class="about-split__content" data-aos="fade-left" data-aos-delay="150">
-        <span class="section-eyebrow">About Nivam</span>
+        <span class="section-eyebrow" data-scramble>About Nivam</span>
         <h2 class="section-title">The Vision Behind <span>NIVAM</span></h2>
         <blockquote class="about-split__quote">"Inner Peace. Outer Success."</blockquote>
         <p>NIVAM Life Consultant is a transformational platform designed to help individuals create meaningful growth in every area of life.</p>
@@ -161,7 +173,7 @@
 <section class="section" id="what-we-do">
   <div class="container">
     <div class="section-header" data-aos="fade-up">
-      <span class="section-eyebrow">Transformation Areas</span>
+      <span class="section-eyebrow" data-scramble>Transformation Areas</span>
       <h2 class="section-title">A Journey of <span>Conscious Growth</span></h2>
       <p class="section-subtitle">We help you navigate life's complexities through structured learning and inner mastery.</p>
     </div>
@@ -194,11 +206,11 @@
 <section class="section section--light" id="programs-preview">
   <div class="container">
     <div class="section-header" data-aos="fade-up">
-      <span class="section-eyebrow">Discover Your Path</span>
+      <span class="section-eyebrow" data-scramble>Discover Your Path</span>
       <h2 class="section-title">Our Transformational <span>Programs</span></h2>
       <p class="section-subtitle">Structured learning experiences designed for personal evolution and conscious growth.</p>
     </div>
-    <div class="programs-grid stagger-children">
+    <div class="programs-bento">
       <article class="program-card" data-aos="fade-up" data-aos-delay="0">
         <div class="program-card__img-wrap">
           <img src="assets/images/programs/being-your-best.png" alt="Being Your Best Program" class="program-card__img" loading="lazy">
@@ -258,7 +270,7 @@
 <section class="section" id="delivery-formats">
   <div class="container">
     <div class="section-header" data-aos="fade-up">
-      <span class="section-eyebrow">Work With Us</span>
+      <span class="section-eyebrow" data-scramble>Work With Us</span>
       <h2 class="section-title">Three Ways to <span>Transform</span></h2>
       <p class="section-subtitle">Choose the format that fits your life — all led by founder <strong>Bharati Patel</strong>.</p>
     </div>
@@ -367,23 +379,75 @@
 <!-- ══ STATS ════════════════════════════════════════════════ -->
 <section class="stats-section" id="stats" aria-label="Impact statistics">
   <div class="container">
-    <div class="stats-grid">
-      <div class="stat-card" data-aos="zoom-in" data-aos-delay="0">
-        <div class="stat-card__num"><span data-counter="5000" data-counter-suffix="+">5000+</span></div>
-        <div class="stat-card__label">Lives Transformed</div>
+    <!-- SVG gradient definition (shared across all rings) -->
+    <svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true">
+      <defs>
+        <linearGradient id="ring-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#F2C12E"/>
+          <stop offset="60%" stop-color="#E8B86D"/>
+          <stop offset="100%" stop-color="#1A6B3A"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <div class="stats-rings-grid">
+
+      <!-- 5000+ Lives -->
+      <div class="stat-ring" data-aos="fade-up" data-aos-delay="0">
+        <div class="stat-ring__svg-wrap">
+          <svg class="stat-ring__svg" viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="stat-ring__track" cx="60" cy="60" r="54"/>
+            <circle class="stat-ring__fill" cx="60" cy="60" r="54" data-pct="94"/>
+          </svg>
+          <div class="stat-ring__center">
+            <span class="stat-ring__num" data-target="5000" data-suffix="+">5000+</span>
+          </div>
+        </div>
+        <div class="stat-ring__label">Lives Transformed</div>
       </div>
-      <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
-        <div class="stat-card__num"><span data-counter="12" data-counter-suffix="+">12+</span></div>
-        <div class="stat-card__label">Years of Expertise</div>
+
+      <!-- 12+ Years -->
+      <div class="stat-ring" data-aos="fade-up" data-aos-delay="100">
+        <div class="stat-ring__svg-wrap">
+          <svg class="stat-ring__svg" viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="stat-ring__track" cx="60" cy="60" r="54"/>
+            <circle class="stat-ring__fill" cx="60" cy="60" r="54" data-pct="78"/>
+          </svg>
+          <div class="stat-ring__center">
+            <span class="stat-ring__num" data-target="12" data-suffix="+">12+</span>
+          </div>
+        </div>
+        <div class="stat-ring__label">Years of Expertise</div>
       </div>
-      <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
-        <div class="stat-card__num"><span data-counter="200" data-counter-suffix="+">200+</span></div>
-        <div class="stat-card__label">Workshops Conducted</div>
+
+      <!-- 200+ Workshops -->
+      <div class="stat-ring" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat-ring__svg-wrap">
+          <svg class="stat-ring__svg" viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="stat-ring__track" cx="60" cy="60" r="54"/>
+            <circle class="stat-ring__fill" cx="60" cy="60" r="54" data-pct="85"/>
+          </svg>
+          <div class="stat-ring__center">
+            <span class="stat-ring__num" data-target="200" data-suffix="+">200+</span>
+          </div>
+        </div>
+        <div class="stat-ring__label">Workshops Conducted</div>
       </div>
-      <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
-        <div class="stat-card__num"><span data-counter="98" data-counter-suffix="%">98%</span></div>
-        <div class="stat-card__label">Satisfaction Rate</div>
+
+      <!-- 98% Satisfaction -->
+      <div class="stat-ring" data-aos="fade-up" data-aos-delay="300">
+        <div class="stat-ring__svg-wrap">
+          <svg class="stat-ring__svg" viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="stat-ring__track" cx="60" cy="60" r="54"/>
+            <circle class="stat-ring__fill" cx="60" cy="60" r="54" data-pct="98"/>
+          </svg>
+          <div class="stat-ring__center">
+            <span class="stat-ring__num" data-target="98" data-suffix="%">98%</span>
+          </div>
+        </div>
+        <div class="stat-ring__label">Satisfaction Rate</div>
       </div>
+
     </div>
   </div>
 </section>
@@ -392,13 +456,18 @@
 <section class="section testimonials-section" id="testimonials">
   <div class="container">
     <div class="section-header" data-aos="fade-up">
-      <span class="section-eyebrow">Transformation</span>
+      <span class="section-eyebrow" data-scramble>Real Stories</span>
       <h2 class="section-title">Stories of <span>Transformation</span></h2>
       <p class="section-subtitle">Every transformation begins with awareness. Discover how individuals have created meaningful change through NIVAM.</p>
     </div>
-    <div class="testimonials-grid stagger-children">
-      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
-        <div class="testimonial-card__quote-mark">"</div>
+  </div>
+
+  <!-- Infinite marquee (no container padding so cards bleed edge-to-edge) -->
+  <div class="testimonials-marquee-outer">
+    <div class="testimonials-marquee-track" aria-label="Testimonials">
+
+      <!-- Set 1 -->
+      <div class="testimonial-card">
         <div class="testimonial-card__stars"><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i></div>
         <p class="testimonial-card__text">The Parvarish program completely changed how I relate to my children. The tools I learned are practical, compassionate, and truly transformative.</p>
         <div class="testimonial-card__author">
@@ -409,10 +478,10 @@
           </div>
         </div>
       </div>
-      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="120">
-        <div class="testimonial-card__quote-mark">"</div>
+
+      <div class="testimonial-card">
         <div class="testimonial-card__stars"><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i></div>
-        <p class="testimonial-card__text">My son went from a shy, unmotivated teenager to a confident young man after Rising Leaders. The shift in him is remarkable.</p>
+        <p class="testimonial-card__text">My son went from a shy, unmotivated teenager to a confident young man after Rising Leaders. The shift in him is remarkable and visible to everyone.</p>
         <div class="testimonial-card__author">
           <div class="testimonial-card__avatar-placeholder">R</div>
           <div>
@@ -421,10 +490,10 @@
           </div>
         </div>
       </div>
-      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="240">
-        <div class="testimonial-card__quote-mark">"</div>
+
+      <div class="testimonial-card">
         <div class="testimonial-card__stars"><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i></div>
-        <p class="testimonial-card__text">Sambandh Hi Sukh saved our marriage. The sessions were deep, insightful and gave us tools we use every single day.</p>
+        <p class="testimonial-card__text">Sambandh Hi Sukh saved our marriage. The sessions were deep, insightful and gave us tools we use every single day. Truly life-changing.</p>
         <div class="testimonial-card__author">
           <div class="testimonial-card__avatar-placeholder">A</div>
           <div>
@@ -433,6 +502,116 @@
           </div>
         </div>
       </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-card__stars"><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i></div>
+        <p class="testimonial-card__text">Being Your Best helped me find clarity on my life purpose. I stopped drifting and started designing my life with intention. Highly recommend.</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar-placeholder">S</div>
+          <div>
+            <div class="testimonial-card__name">Suresh Agarwal</div>
+            <div class="testimonial-card__role">Entrepreneur · Bangalore</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-card__stars"><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i></div>
+        <p class="testimonial-card__text">Bharati's approach is unlike any coach I've worked with. She combines emotional depth with practical systems. The results speak for themselves.</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar-placeholder">N</div>
+          <div>
+            <div class="testimonial-card__name">Neha Kulkarni</div>
+            <div class="testimonial-card__role">Teacher · Nagpur</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-card__stars"><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i></div>
+        <p class="testimonial-card__text">The youth leadership program gave my daughter confidence she never had before. She's now leading her school's student council. NIVAM truly works.</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar-placeholder">M</div>
+          <div>
+            <div class="testimonial-card__name">Manish Trivedi</div>
+            <div class="testimonial-card__role">Father · Ahmedabad</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Set 2 (duplicated for seamless infinite loop) -->
+      <div class="testimonial-card" aria-hidden="true">
+        <div class="testimonial-card__stars"><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i></div>
+        <p class="testimonial-card__text">The Parvarish program completely changed how I relate to my children. The tools I learned are practical, compassionate, and truly transformative.</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar-placeholder">P</div>
+          <div>
+            <div class="testimonial-card__name">Priya Sharma</div>
+            <div class="testimonial-card__role">Mother of 2 · Mumbai</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" aria-hidden="true">
+        <div class="testimonial-card__stars"><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i></div>
+        <p class="testimonial-card__text">My son went from a shy, unmotivated teenager to a confident young man after Rising Leaders. The shift in him is remarkable and visible to everyone.</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar-placeholder">R</div>
+          <div>
+            <div class="testimonial-card__name">Rajesh Mehta</div>
+            <div class="testimonial-card__role">Parent · Delhi</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" aria-hidden="true">
+        <div class="testimonial-card__stars"><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i></div>
+        <p class="testimonial-card__text">Sambandh Hi Sukh saved our marriage. The sessions were deep, insightful and gave us tools we use every single day. Truly life-changing.</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar-placeholder">A</div>
+          <div>
+            <div class="testimonial-card__name">Anjali &amp; Vikram</div>
+            <div class="testimonial-card__role">Couple · Pune</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" aria-hidden="true">
+        <div class="testimonial-card__stars"><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i></div>
+        <p class="testimonial-card__text">Being Your Best helped me find clarity on my life purpose. I stopped drifting and started designing my life with intention. Highly recommend.</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar-placeholder">S</div>
+          <div>
+            <div class="testimonial-card__name">Suresh Agarwal</div>
+            <div class="testimonial-card__role">Entrepreneur · Bangalore</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" aria-hidden="true">
+        <div class="testimonial-card__stars"><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i></div>
+        <p class="testimonial-card__text">Bharati's approach is unlike any coach I've worked with. She combines emotional depth with practical systems. The results speak for themselves.</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar-placeholder">N</div>
+          <div>
+            <div class="testimonial-card__name">Neha Kulkarni</div>
+            <div class="testimonial-card__role">Teacher · Nagpur</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" aria-hidden="true">
+        <div class="testimonial-card__stars"><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i><i data-lucide="star" class="lucide-icon"></i></div>
+        <p class="testimonial-card__text">The youth leadership program gave my daughter confidence she never had before. She's now leading her school's student council. NIVAM truly works.</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar-placeholder">M</div>
+          <div>
+            <div class="testimonial-card__name">Manish Trivedi</div>
+            <div class="testimonial-card__role">Father · Ahmedabad</div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -455,13 +634,42 @@
 
 <site-footer></site-footer>
 
+<!-- ══ BOTTOM MOBILE NAV ═══════════════════════════════════ -->
+<nav class="bottom-nav" aria-label="Mobile bottom navigation">
+  <div class="bottom-nav__items">
+    <a href="index.html" class="bottom-nav__item active" aria-label="Home">
+      <i data-lucide="home" class="lucide-icon"></i>
+      <span>Home</span>
+    </a>
+    <a href="programs.html" class="bottom-nav__item" aria-label="Programs">
+      <i data-lucide="layout-grid" class="lucide-icon"></i>
+      <span>Programs</span>
+    </a>
+    <a href="book.html" class="bottom-nav__item bottom-nav__item--cta" aria-label="Book a Call">
+      <i data-lucide="calendar-check" class="lucide-icon"></i>
+      <span>Book</span>
+    </a>
+    <a href="workshops.html" class="bottom-nav__item" aria-label="Workshops">
+      <i data-lucide="users" class="lucide-icon"></i>
+      <span>Workshops</span>
+    </a>
+    <a href="contact.html" class="bottom-nav__item" aria-label="Contact">
+      <i data-lucide="message-circle" class="lucide-icon"></i>
+      <span>Contact</span>
+    </a>
+  </div>
+</nav>
+
 <script src="js/navbar.js"></script>
 <script src="js/hero-animation.js"></script>
 <script src="js/whatsapp.js"></script>
 <script src="js/counter.js"></script>
 <script src="js/main.js"></script>
 <script src="js/enhancements.js"></script>
+<!-- Lenis smooth scroll -->
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>lucide.createIcons();</script>
+<script src="js/modern.js"></script>
 </body>
 </html>
