@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="css/enhancements.css">
+<link rel="stylesheet" href="css/modern.css">
 <link rel="stylesheet" href="css/pages/book.css">
 <script src="js/components.js"></script>
 </head>
@@ -101,7 +102,9 @@
             </div>
           </div>
 
-          <form id="booking-form" action="https://formspree.io/f/YOUR_BOOKING_ID" method="POST" novalidate>
+          <form id="booking-form" action="https://formsubmit.co/ajax/nivamlifeconsultant@gmail.com" method="POST" novalidate>
+            <!-- Honeypot anti-spam (hidden from real users) -->
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
             <div class="form-grid" style="gap:var(--sp-5)">
 
               <div class="form-group">
@@ -175,5 +178,7 @@
 <script src="js/enhancements.js"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>lucide.createIcons();</script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="js/modern.js"></script>
 </body>
 </html>

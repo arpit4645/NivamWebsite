@@ -46,3 +46,34 @@
 
 /* ─── WILL-CHANGE ─── */
 .card, .btn, .program-card, .stat-card, .testimonial-card { will-change: transform; }
+
+/* ─── REDUCE MOTION — Respect user OS setting ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  /* Keep essential layout transitions but stop cosmetic ones */
+  .hero__img-frame,
+  .hero__particles,
+  .trust-bar__track,
+  .testimonials-marquee-track,
+  .loading-screen__bar-fill,
+  .stat-ring__fill,
+  [data-aos] {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  /* Ensure AOS elements are visible */
+  [data-aos].aos-animate,
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .enh-reveal { opacity: 1 !important; transform: none !important; }
+  .enh-stagger > * { opacity: 1 !important; transform: none !important; }
+}

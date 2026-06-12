@@ -37,6 +37,16 @@
 }
 
 .program-detail {
+  opacity: 1;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.program-detail.program-hidden {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+}
+
+.program-detail {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--sp-12);

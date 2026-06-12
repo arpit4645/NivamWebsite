@@ -66,10 +66,10 @@
                 <p class="footer__desc" style="margin-bottom:0.5rem;font-weight:600;">NIVAM Life Consultant &mdash; Guiding Lives Towards Light</p>
                 <p class="footer__desc">Empowering transformation through wisdom, awareness, and conscious growth.</p>
                 <div class="footer__socials">
-                  <a href="#" class="footer__social-link" aria-label="Instagram"><i data-lucide="instagram" class="lucide-icon"></i></a>
-                  <a href="#" class="footer__social-link" aria-label="Facebook"><i data-lucide="facebook" class="lucide-icon"></i></a>
-                  <a href="#" class="footer__social-link" aria-label="YouTube"><i data-lucide="youtube" class="lucide-icon"></i></a>
-                  <a href="#" class="footer__social-link" aria-label="LinkedIn"><i data-lucide="linkedin" class="lucide-icon"></i></a>
+                  <a href="https://www.instagram.com/nivamlifeconsultant" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Follow Nivam on Instagram"><i data-lucide="instagram" class="lucide-icon"></i></a>
+                  <a href="https://www.facebook.com/nivamlifeconsultant" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Follow Nivam on Facebook"><i data-lucide="facebook" class="lucide-icon"></i></a>
+                  <a href="https://www.youtube.com/@nivamlifeconsultant" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Nivam on YouTube"><i data-lucide="youtube" class="lucide-icon"></i></a>
+                  <a href="https://www.linkedin.com/company/nivam-life-consultant" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Nivam on LinkedIn"><i data-lucide="linkedin" class="lucide-icon"></i></a>
                 </div>
               </div>
               <div class="footer__col">
@@ -111,7 +111,7 @@
               </div>
             </div>
             <div class="footer__bottom">
-              <p class="footer__copy">&copy; 2025 Nivam Life Consultant. All rights reserved.</p>
+              <p class="footer__copy">&copy; 2026 Nivam Life Consultant. All rights reserved.</p>
               <div class="footer__legal-links">
                 <a href="privacy.html" class="footer__legal-link">Privacy</a>
                 <a href="terms.html" class="footer__legal-link">Terms</a>

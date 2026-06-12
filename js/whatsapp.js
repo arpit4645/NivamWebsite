@@ -5,7 +5,7 @@
 'use strict';
 
 const WHATSAPP_CONFIG = {
-  number: '919876543210',  // Replace with actual WhatsApp number (with country code, no +)
+  number: '918866067671',
   defaultMessage: 'Hello Nivam! I\'d like to know more about your programs.',
 };
 

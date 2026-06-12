@@ -69,6 +69,7 @@
 /* ─── MAGNETIC BUTTONS ─── */
 (function () {
   function init() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const buttons = document.querySelectorAll('.btn--primary, .btn--dark');
 
     buttons.forEach(function (btn) {
@@ -82,7 +83,7 @@
         const maxDist = Math.max(rect.width, rect.height) * 0.85;
 
         if (dist < maxDist) {
-          const factor = 0.32;
+          const factor = 0.18; // subtle pull
           btn.style.transform = 'translate(' + (dx * factor) + 'px, ' + (dy * factor) + 'px)';
         }
       });

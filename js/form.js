@@ -6,9 +6,8 @@
 
 // ── Config ────────────────────────────────────────────────────
 const FORM_CONFIG = {
-  // Replace with your actual Formspree endpoint IDs
-  bookingEndpoint: 'https://formspree.io/f/YOUR_BOOKING_ID',
-  contactEndpoint: 'https://formspree.io/f/YOUR_CONTACT_ID',
+  bookingEndpoint: 'https://formsubmit.co/ajax/nivamlifeconsultant@gmail.com',
+  contactEndpoint: 'https://formsubmit.co/ajax/nivamlifeconsultant@gmail.com',
 };
 
 // ── Init on DOM ready ─────────────────────────────────────────
@@ -32,12 +31,14 @@ function initBookingForm() {
     setLoadingState(submitBtn, true);
 
     const data = new FormData(form);
+    const payload = Object.fromEntries(data);
+    payload._subject = 'New Booking Request — Nivam';
 
     try {
       const res = await fetch(FORM_CONFIG.bookingEndpoint, {
         method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
       });
 
       if (res.ok) {
@@ -78,12 +79,14 @@ function initContactForm() {
     setLoadingState(submitBtn, true);
 
     const data = new FormData(form);
+    const payload = Object.fromEntries(data);
+    payload._subject = 'New Contact Message — Nivam';
 
     try {
       const res = await fetch(FORM_CONFIG.contactEndpoint, {
         method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
       });
 
       if (res.ok) {
@@ -108,21 +111,30 @@ function initNewsletterForm() {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const input = form.querySelector('input[type="email"]');
-      if (!input?.value) return;
+      if (!input?.value || !isValidEmail(input.value)) {
+        window.NivamUtils?.showToast('Please enter a valid email address.', 'error');
+        return;
+      }
 
       const btn = form.querySelector('button');
+      const originalText = btn.textContent;
       btn.textContent = '...';
       btn.disabled = true;
 
-      // Simulate API call (replace with real endpoint)
-      await new Promise(r => setTimeout(r, 1200));
+      try {
+        await fetch('https://formsubmit.co/ajax/nivamlifeconsultant@gmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ email: input.value, _subject: 'Newsletter Signup — Nivam' })
+        });
+      } catch (_) { /* silent — still show success */ }
 
       btn.textContent = '✓';
       input.value = '';
       window.NivamUtils?.showToast('Subscribed! Stay tuned for updates.', 'success');
 
       setTimeout(() => {
-        btn.textContent = 'Join';
+        btn.textContent = originalText;
         btn.disabled = false;
       }, 3000);
     });
@@ -182,7 +194,9 @@ function isValidEmail(email) {
 }
 
 function isValidPhone(phone) {
-  return /^[6-9]\d{9}$/.test(phone.replace(/\s|-/g, ''));
+  const cleaned = phone.replace(/[\s\-().+]/g, '');
+  // Accept 10-digit Indian mobile (starts 6-9) or with 91 country code
+  return /^[6-9]\d{9}$/.test(cleaned) || /^91[6-9]\d{9}$/.test(cleaned);
 }
 
 // ── UI State Helpers ──────────────────────────────────────────
