@@ -44,6 +44,8 @@
 /* ─── LENIS SMOOTH SCROLL ─── */
 (function () {
   function tryInitLenis() {
+    // Disabled globally to restore native browser scroll physics
+    return;
     if (typeof Lenis === 'undefined') return;
     const lenis = new Lenis({
       duration: 1.25,
