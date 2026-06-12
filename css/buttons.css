@@ -60,15 +60,16 @@
 
 /* WHATSAPP BUTTON */
 .btn--whatsapp {
-  background: #128C7E;
-  color: var(--clr-white);
-  box-shadow: 0 4px 16px rgba(18,140,126,0.25);
+  background: #25D366;
+  color: #0a3d1f;
+  font-weight: 700;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.40);
 }
 .btn--whatsapp:hover {
-  background: #0f7267;
-  color: var(--clr-white);
+  background: #20c05a;
+  color: #0a3d1f;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(18,140,126,0.38);
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.55);
 }
 
 
