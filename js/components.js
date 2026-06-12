@@ -63,7 +63,7 @@
                 <a href="index.html" class="footer__logo">
                   <img src="assets/images/logo.png" alt="Nivam" class="footer__logo-img">
                 </a>
-                <p class="footer__desc" style="margin-bottom:0.5rem;font-weight:600;">NIVAM — Guiding Lives Towards Light</p>
+                <p class="footer__desc" style="margin-bottom:0.5rem;font-weight:600;">NIVAM Life Consultant &mdash; Guiding Lives Towards Light</p>
                 <p class="footer__desc">Empowering transformation through wisdom, awareness, and conscious growth.</p>
                 <div class="footer__socials">
                   <a href="#" class="footer__social-link" aria-label="Instagram"><i data-lucide="instagram" class="lucide-icon"></i></a>
@@ -106,12 +106,12 @@
                 </div>
                 <div class="footer__contact-item">
                   <span class="footer__contact-icon"><i data-lucide="map-pin" class="lucide-icon"></i></span>
-                  <span>Mumbai, India · Online Worldwide</span>
+                  <span>811, IFC, VIP Road, Vesu, Surat – 395007 &middot; Online Worldwide</span>
                 </div>
               </div>
             </div>
             <div class="footer__bottom">
-              <p class="footer__copy">© 2025 Nivam. All rights reserved.</p>
+              <p class="footer__copy">&copy; 2025 Nivam Life Consultant. All rights reserved.</p>
               <div class="footer__legal-links">
                 <a href="privacy.html" class="footer__legal-link">Privacy</a>
                 <a href="terms.html" class="footer__legal-link">Terms</a>
