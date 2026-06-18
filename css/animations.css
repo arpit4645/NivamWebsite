@@ -58,8 +58,6 @@
   /* Keep essential layout transitions but stop cosmetic ones */
   .hero__img-frame,
   .hero__particles,
-  .trust-bar__track,
-  .testimonials-marquee-track,
   .loading-screen__bar-fill,
   .stat-ring__fill,
   [data-aos] {

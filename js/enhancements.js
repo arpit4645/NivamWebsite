@@ -60,38 +60,6 @@
   }
 
   /* ──────────────────────────────────────────────────────────
-     3. TRUST BAR INFINITE MARQUEE
-  ────────────────────────────────────────────────────────── */
-  function initMarquee() {
-    const inner = document.querySelector('.trust-bar__inner');
-    if (!inner) return;
-
-    // Collect all children (items + separators)
-    const children = Array.from(inner.children);
-    if (!children.length) return;
-
-    // Build the track with double content for seamless looping
-    const track = document.createElement('div');
-    track.className = 'trust-bar__track';
-
-    // First set
-    children.forEach(child => {
-      track.appendChild(child.cloneNode(true));
-    });
-    // Duplicate set for loop
-    children.forEach(child => {
-      const clone = child.cloneNode(true);
-      clone.setAttribute('aria-hidden', 'true');
-      track.appendChild(clone);
-    });
-
-    // Clear inner and append track
-    inner.innerHTML = '';
-    inner.appendChild(track);
-    inner.classList.add('marquee-enabled');
-  }
-
-  /* ──────────────────────────────────────────────────────────
      4. ANIMATED VERTICAL TIMELINE (about.html)
   ────────────────────────────────────────────────────────── */
   function initTimeline() {
@@ -163,8 +131,6 @@
 
     // State
     let current       = 0;
-    let autoTimer     = null;
-    const INTERVAL    = 4000;
     const TRANSITION  = 500;
 
     // Determine visible count based on viewport
@@ -201,26 +167,13 @@
         const dot = document.createElement('button');
         dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
         dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
-        dot.addEventListener('click', () => { goTo(i); resetTimer(); });
+        dot.addEventListener('click', () => goTo(i));
         dotsContainer.appendChild(dot);
       }
     }
 
-    function startTimer() {
-      autoTimer = setInterval(() => goTo(current + 1), INTERVAL);
-    }
-
-    function resetTimer() {
-      clearInterval(autoTimer);
-      startTimer();
-    }
-
-    prevBtn.addEventListener('click', () => { goTo(current - 1); resetTimer(); });
-    nextBtn.addEventListener('click', () => { goTo(current + 1); resetTimer(); });
-
-    // Pause on hover
-    wrapper.addEventListener('mouseenter', () => clearInterval(autoTimer));
-    wrapper.addEventListener('mouseleave', () => startTimer());
+    prevBtn.addEventListener('click', () => goTo(current - 1));
+    nextBtn.addEventListener('click', () => goTo(current + 1));
 
     // Rebuild on resize
     let resizeTimer;
@@ -238,7 +191,6 @@
     // Init
     buildDots();
     goTo(0);
-    startTimer();
   }
 
   /* ──────────────────────────────────────────────────────────
@@ -356,7 +308,6 @@
   onReady(() => {
     initScrollProgressBar();
     initNavbarScrollBlur();
-    initMarquee();
     initTimeline();
     initTestimonialsCarousel();
     initSectionRevealEnhanced();
