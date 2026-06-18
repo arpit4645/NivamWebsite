@@ -29,7 +29,6 @@
   box-shadow: var(--shadow-sm);
   transition: var(--transition-base);
   display: grid;
-  grid-template-columns: 110px 1fr;
   align-items: stretch;
 }
 
@@ -37,35 +36,6 @@
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
   border-color: rgba(242, 193, 46, 0.28);
-}
-
-.workshop-card__date {
-  background: var(--grad-green);
-  color: var(--clr-white);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--sp-5);
-  text-align: center;
-  border-right: 1px solid var(--clr-border-light);
-}
-
-.workshop-card__day {
-  font-family: var(--ff-display);
-  font-size: var(--fs-3xl);
-  font-weight: 700;
-  color: var(--clr-gold);
-  line-height: 1;
-}
-
-.workshop-card__month {
-  font-size: var(--fs-xs);
-  color: rgba(242, 247, 244, 0.85);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-weight: 600;
-  margin-top: 4px;
 }
 
 .workshop-card__body {
@@ -130,8 +100,7 @@
 }
 .past-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); border-color: rgba(242,193,46,0.25); }
 .past-card__emoji { font-size: 2rem; margin-bottom: var(--sp-3); }
-.past-card__title { font-size: var(--fs-base); font-weight: 700; color: var(--clr-green); margin-bottom: var(--sp-2); }
-.past-card__meta { font-size: var(--fs-xs); color: var(--clr-text-muted-dark); margin-bottom: var(--sp-3); }
+.past-card__title { font-size: var(--fs-base); font-weight: 700; color: var(--clr-green); margin-bottom: var(--sp-3); }
 .past-card__attendees { font-size: var(--fs-sm); color: var(--clr-text-muted-dark); }
 
 /* ─── FAQ ─── */
@@ -171,26 +140,9 @@
 /* ─── RESPONSIVE ─── */
 @media (max-width: 768px) {
   .past-workshops-grid { grid-template-columns: 1fr 1fr; }
-  .workshop-card { grid-template-columns: 90px 1fr; }
-  .workshop-card__day { font-size: var(--fs-2xl); }
 }
 @media (max-width: 576px) {
   .past-workshops-grid { grid-template-columns: 1fr; }
-  .workshop-card {
-    grid-template-columns: 1fr;
-  }
-  .workshop-card__date {
-    border-right: none;
-    border-bottom: 1px solid var(--clr-border-light);
-    padding-block: var(--sp-4);
-    flex-direction: row;
-    justify-content: center;
-    gap: var(--sp-2);
-  }
-  .workshop-card__month {
-    margin-top: 0;
-    font-size: var(--fs-xl);
-  }
   .workshop-card__body {
     padding: var(--sp-5);
   }
