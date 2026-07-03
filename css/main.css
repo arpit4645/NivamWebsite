@@ -40,7 +40,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--clr-gold);
+  color: var(--clr-gold-text);
   margin-bottom: var(--sp-3);
 }
 .section-eyebrow::before,
@@ -62,7 +62,7 @@ body {
   color: var(--clr-text-dark);
   margin-bottom: var(--sp-4);
 }
-.section-title span { color: var(--clr-gold); font-style: italic; }
+.section-title span { color: var(--clr-gold-deep); font-style: italic; }
 
 .section-subtitle {
   font-size: var(--fs-md);
@@ -75,6 +75,8 @@ body {
 /* Dark-section overrides */
 .section--dark .section-title,
 .section--darkest .section-title { color: var(--clr-text-light); }
+.section--dark .section-title span,
+.section--darkest .section-title span { color: var(--clr-gold); }
 .section--dark .section-eyebrow,
 .section--darkest .section-eyebrow { color: var(--clr-gold); }
 .section--dark .section-subtitle,

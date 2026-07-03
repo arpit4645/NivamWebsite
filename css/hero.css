@@ -143,6 +143,7 @@
 }
 .hero__img-main {
   width: 100%;
+  height: auto;
   border-radius: var(--radius-xl);
   position: relative;
   z-index: 2;
