@@ -25,6 +25,7 @@
 /* Glass card */
 .card--glass {
   background: var(--clr-bg-glass);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
   backdrop-filter: blur(16px) saturate(150%);
   border: 1px solid rgba(242,193,46,0.15);
   box-shadow: var(--glow-card);
