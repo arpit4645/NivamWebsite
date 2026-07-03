@@ -145,34 +145,35 @@ function initNewsletterForm() {
 // ── Validation ────────────────────────────────────────────────
 function validateForm(form) {
   let isValid = true;
+  let firstInvalidField = null;
 
   // Clear previous errors
   form.querySelectorAll('.form-error').forEach(el => el.remove());
   form.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
 
+  const markInvalid = (field, message) => {
+    showFieldError(field, message);
+    isValid = false;
+    if (!firstInvalidField) firstInvalidField = field;
+  };
+
   // Required fields
   form.querySelectorAll('[required]').forEach(field => {
-    if (!field.value.trim()) {
-      showFieldError(field, 'This field is required');
-      isValid = false;
-    }
+    if (!field.value.trim()) markInvalid(field, 'This field is required');
   });
 
   // Email validation
   form.querySelectorAll('input[type="email"]').forEach(field => {
-    if (field.value && !isValidEmail(field.value)) {
-      showFieldError(field, 'Please enter a valid email address');
-      isValid = false;
-    }
+    if (field.value && !isValidEmail(field.value)) markInvalid(field, 'Please enter a valid email address');
   });
 
   // Phone validation (optional but if filled)
   form.querySelectorAll('input[type="tel"]').forEach(field => {
-    if (field.value && !isValidPhone(field.value)) {
-      showFieldError(field, 'Please enter a valid 10-digit phone number');
-      isValid = false;
-    }
+    if (field.value && !isValidPhone(field.value)) markInvalid(field, 'Please enter a valid 10-digit phone number');
   });
+
+  // Scroll to first error only
+  firstInvalidField?.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
   return isValid;
 }
@@ -185,9 +186,6 @@ function showFieldError(field, message) {
   error.innerHTML = `<span>⚠</span> ${message}`;
 
   field.parentNode.insertBefore(error, field.nextSibling);
-
-  // Scroll to first error
-  field.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
 function isValidEmail(email) {
