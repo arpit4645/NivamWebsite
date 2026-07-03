@@ -1,8 +1,8 @@
 'use strict';
 /**
  * NIVAM — Modern UI Module
- * Handles: loading screen, Lenis smooth scroll,
- * magnetic buttons, text scramble, SVG stat rings.
+ * Handles: loading screen, magnetic buttons,
+ * text scramble, SVG stat rings.
  */
 
 /* ─── LOADING SCREEN ─── */
@@ -12,12 +12,7 @@
 
   function dismiss() {
     screen.classList.add('loaded');
-    // Re-enable scroll after dismiss
-    document.body.style.overflow = '';
   }
-
-  // Prevent scroll while loading
-  document.body.style.overflow = 'hidden';
 
   // Dismiss after 2 seconds OR on window load — whichever is later (max 3s)
   let loadFired = false;
@@ -39,33 +34,6 @@
 
   // Fallback: force dismiss at 3.5s regardless
   setTimeout(dismiss, 3500);
-})();
-
-/* ─── LENIS SMOOTH SCROLL ─── */
-(function () {
-  function tryInitLenis() {
-    // Disabled globally to restore native browser scroll physics
-    return;
-    if (typeof Lenis === 'undefined') return;
-    const lenis = new Lenis({
-      duration: 1.25,
-      easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
-      smoothWheel: true,
-      wheelMultiplier: 1.0,
-    });
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    // Expose for other scripts
-    window._lenis = lenis;
-  }
-
-  // Try after DOM, then again after full load
-  document.addEventListener('DOMContentLoaded', tryInitLenis);
-  window.addEventListener('load', tryInitLenis);
 })();
 
 /* ─── MAGNETIC BUTTONS ─── */
