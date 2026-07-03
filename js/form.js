@@ -117,6 +117,7 @@ function initNewsletterForm() {
       }
 
       const btn = form.querySelector('button');
+      if (!btn) return;
       const originalText = btn.textContent;
       btn.textContent = '...';
       btn.disabled = true;
