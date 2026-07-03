@@ -78,10 +78,10 @@
   flex-wrap: wrap;
   gap: var(--sp-4);
 }
-.footer__copy { font-size: var(--fs-xs); color: rgba(242,247,244,0.35); }
+.footer__copy { font-size: var(--fs-xs); color: rgba(242,247,244,0.55); }
 .footer__legal-links { display: flex; gap: var(--sp-5); }
 .footer__legal-link {
-  font-size: var(--fs-xs); color: rgba(242,247,244,0.35);
+  font-size: var(--fs-xs); color: rgba(242,247,244,0.55);
   transition: color var(--duration-fast);
 }
 .footer__legal-link:hover { color: var(--clr-gold); }

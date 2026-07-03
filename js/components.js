@@ -27,7 +27,7 @@
         <header id="navbar" class="navbar ${transparent ? 'navbar--transparent' : 'navbar--solid'}" role="banner">
           <div class="navbar__inner">
             <a href="index.html" class="navbar__logo" aria-label="Nivam Home">
-              <img src="assets/images/logo.png" alt="Nivam Logo" class="navbar__logo-img">
+              <img src="assets/images/logo.png" alt="Nivam Logo" class="navbar__logo-img" width="1024" height="1024">
             </a>
             <nav class="navbar__nav" aria-label="Primary navigation">
               ${desktopLinks}
@@ -61,7 +61,7 @@
             <div class="footer__main">
               <div class="footer__brand">
                 <a href="index.html" class="footer__logo">
-                  <img src="assets/images/logo.png" alt="Nivam" class="footer__logo-img">
+                  <img src="assets/images/logo.png" alt="Nivam" class="footer__logo-img" width="1024" height="1024">
                 </a>
                 <p class="footer__desc" style="margin-bottom:0.5rem;font-weight:600;">NIVAM Life Consultant &mdash; Guiding Lives Towards Light</p>
                 <p class="footer__desc">Empowering transformation through wisdom, awareness, and conscious growth.</p>
